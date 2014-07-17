@@ -22,13 +22,13 @@
     <favorites_list name="mvc" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45105568">
+    <splitter split-orientation="horizontal" split-proportion="0.48366013">
       <split-first>
         <leaf>
           <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/controller/home.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="26" column="0" selection-start="1055" selection-end="1107" vertical-scroll-proportion="0.35849056" vertical-offset="252" max-vertical-offset="1122">
+                <state line="23" column="111" selection-start="908" selection-end="908" vertical-scroll-proportion="0.44150943" vertical-offset="157" max-vertical-offset="1173">
                   <folding />
                 </state>
               </provider>
@@ -68,10 +68,10 @@
           <file leaf-file-name="articlesmodel.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/models/articlesmodel.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="74" column="26" selection-start="2074" selection-end="2074" vertical-scroll-proportion="-15.807693" vertical-offset="762" max-vertical-offset="1326">
+                <state line="74" column="26" selection-start="2074" selection-end="2074" vertical-scroll-proportion="-45.115383" vertical-offset="0" max-vertical-offset="1326">
                   <folding>
                     <element signature="e#7#89#0" expanded="false" />
-                    <marker date="1405563963896" expanded="true" signature="1011:1033" placeholder="SELECT * FRO..articles..." />
+                    <marker date="1405577448812" expanded="true" signature="1011:1033" placeholder="SELECT * FRO..articles..." />
                   </folding>
                 </state>
               </provider>
@@ -84,10 +84,10 @@
           <file leaf-file-name="articlesmodel.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/models/articlesmodel.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="76" column="5" selection-start="306" selection-end="2115" vertical-scroll-proportion="-46.423077" vertical-offset="0" max-vertical-offset="1326">
+                <state line="19" column="4" selection-start="306" selection-end="306" vertical-scroll-proportion="-3.8076923" vertical-offset="139" max-vertical-offset="1326">
                   <folding>
                     <element signature="e#7#89#0" expanded="false" />
-                    <marker date="1405563963896" expanded="true" signature="1011:1033" placeholder="SELECT * FRO..articles..." />
+                    <marker date="1405577448812" expanded="true" signature="1011:1033" placeholder="SELECT * FRO..articles..." />
                   </folding>
                 </state>
               </provider>
@@ -102,10 +102,22 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="commentsmodel.php" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="placesmodel.php" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/application/models/placesmodel.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="36" column="104" selection-start="1043" selection-end="1043" vertical-scroll-proportion="0.68490565" vertical-offset="249" max-vertical-offset="901">
+                  <folding>
+                    <marker date="1405585472017" expanded="true" signature="487:523" placeholder="SELECT * FRO..v_place..." />
+                    <marker date="1405585472017" expanded="true" signature="959:1134" placeholder="INSERT INTO ..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="commentsmodel.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/models/commentsmodel.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="102" column="25" selection-start="3096" selection-end="3096" vertical-scroll-proportion="0.7731398" vertical-offset="1308" max-vertical-offset="1904">
+                <state line="16" column="9" selection-start="294" selection-end="294" vertical-scroll-proportion="3.1923077" vertical-offset="355" max-vertical-offset="1904">
                   <folding>
                     <marker date="1405570067284" expanded="true" signature="1052:1073" placeholder="SELECT * FRO..comment..." />
                     <marker date="1405570067284" expanded="true" signature="2809:2912" placeholder="INSERT INTO ..." />
@@ -130,12 +142,13 @@
         <option value="$PROJECT_DIR$/application/models/Articles.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/views/_templates/header.php" />
-        <option value="$PROJECT_DIR$/application/models/articlesmodel.php" />
         <option value="$PROJECT_DIR$/application/models/activitiesmodel.php" />
         <option value="$PROJECT_DIR$/public/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/application/views/home/index.php" />
-        <option value="$PROJECT_DIR$/application/controller/home.php" />
         <option value="$PROJECT_DIR$/application/models/commentsmodel.php" />
+        <option value="$PROJECT_DIR$/application/models/articlesmodel.php" />
+        <option value="$PROJECT_DIR$/application/controller/home.php" />
+        <option value="$PROJECT_DIR$/application/models/placesmodel.php" />
       </list>
     </option>
   </component>
@@ -426,7 +439,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -551,13 +564,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/articlesmodel.php">
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="5" selection-start="306" selection-end="2115" vertical-scroll-proportion="-46.423077" vertical-offset="0" max-vertical-offset="1326">
-          <folding>
-            <element signature="e#7#89#0" expanded="false" />
-            <marker date="1405563963896" expanded="true" signature="1011:1033" placeholder="SELECT * FRO..articles..." />
-          </folding>
+        <state line="252" column="25" selection-start="3646" selection-end="3646" vertical-scroll-proportion="0.21246459" vertical-offset="4209" max-vertical-offset="104941">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -568,10 +578,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.css">
+    <entry file="file://$PROJECT_DIR$/application/models/commentsmodel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="252" column="25" selection-start="3646" selection-end="3646" vertical-scroll-proportion="0.21246459" vertical-offset="4209" max-vertical-offset="104941">
-          <folding />
+        <state line="16" column="9" selection-start="294" selection-end="294" vertical-scroll-proportion="3.1923077" vertical-offset="355" max-vertical-offset="1904">
+          <folding>
+            <marker date="1405570067284" expanded="true" signature="1052:1073" placeholder="SELECT * FRO..comment..." />
+            <marker date="1405570067284" expanded="true" signature="2809:2912" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/articlesmodel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="4" selection-start="306" selection-end="306" vertical-scroll-proportion="-3.8076923" vertical-offset="139" max-vertical-offset="1326">
+          <folding>
+            <element signature="e#7#89#0" expanded="false" />
+            <marker date="1405577448812" expanded="true" signature="1011:1033" placeholder="SELECT * FRO..articles..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -591,17 +614,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controller/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="1055" selection-end="1107" vertical-scroll-proportion="0.35849056" vertical-offset="252" max-vertical-offset="1122">
+        <state line="23" column="111" selection-start="908" selection-end="908" vertical-scroll-proportion="0.44150943" vertical-offset="157" max-vertical-offset="1173">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/commentsmodel.php">
+    <entry file="file://$PROJECT_DIR$/application/models/placesmodel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="25" selection-start="3096" selection-end="3096" vertical-scroll-proportion="0.7731398" vertical-offset="1308" max-vertical-offset="1904">
+        <state line="36" column="104" selection-start="1043" selection-end="1043" vertical-scroll-proportion="0.68490565" vertical-offset="249" max-vertical-offset="901">
           <folding>
-            <marker date="1405570067284" expanded="true" signature="1052:1073" placeholder="SELECT * FRO..comment..." />
-            <marker date="1405570067284" expanded="true" signature="2809:2912" placeholder="INSERT INTO ..." />
+            <marker date="1405585472017" expanded="true" signature="487:523" placeholder="SELECT * FRO..v_place..." />
+            <marker date="1405585472017" expanded="true" signature="959:1134" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>

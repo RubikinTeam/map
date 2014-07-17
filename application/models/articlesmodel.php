@@ -75,4 +75,4 @@ class ArticlesModel
         $query->execute();
         return $query->fetchAll();
     }
-} 
+}

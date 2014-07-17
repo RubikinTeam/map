@@ -20,6 +20,9 @@ class Home extends Controller
         $articles = $articles_model->getSomeArticles(0, 3, 4);
         $comments_model = $this->loadModel('commentsmodel');
         $comments = $comments_model->getSomeComments(2, 2, 1, 3 );
+        $place_model = $this->loadModel('placesmodel');
+        echo $place_model->addOnePlace('place name', 'place description', 'place phone', 'place email', 1, 0, 1);
+        //$comments_model->addComment(1, 2, "Nguyen Duong Truc", "Demo comment adding on table comment");
         // debug message to show where you are, just for the demo
         echo 'Message from Controller: You are in the controller home, using the method index()';
         // load views. within the views we can echo out $songs and $amount_of_songs easily
