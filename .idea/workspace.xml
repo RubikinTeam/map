@@ -50,10 +50,10 @@
           <file leaf-file-name="articlesmodel.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/models/articlesmodel.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="74" column="26" selection-start="2074" selection-end="2074" vertical-scroll-proportion="-15.807693" vertical-offset="762" max-vertical-offset="1326">
+                <state line="74" column="26" selection-start="2083" selection-end="2083" vertical-scroll-proportion="-15.807693" vertical-offset="762" max-vertical-offset="1326">
                   <folding>
                     <element signature="e#7#89#0" expanded="false" />
-                    <marker date="1405532987492" expanded="true" signature="1011:1033" placeholder="SELECT * FRO..articles..." />
+                    <marker date="1405563597040" expanded="true" signature="1020:1042" placeholder="SELECT * FRO..articles..." />
                   </folding>
                 </state>
               </provider>
@@ -66,10 +66,10 @@
           <file leaf-file-name="articlesmodel.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/models/articlesmodel.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="31" column="23" selection-start="806" selection-end="806" vertical-scroll-proportion="0.80217785" vertical-offset="0" max-vertical-offset="1326">
+                <state line="29" column="58" selection-start="762" selection-end="762" vertical-scroll-proportion="0.74047184" vertical-offset="0" max-vertical-offset="1326">
                   <folding>
                     <element signature="e#7#89#0" expanded="false" />
-                    <marker date="1405532987492" expanded="true" signature="1011:1033" placeholder="SELECT * FRO..articles..." />
+                    <marker date="1405563597040" expanded="true" signature="1020:1042" placeholder="SELECT * FRO..articles..." />
                   </folding>
                 </state>
               </provider>
@@ -540,10 +540,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/articlesmodel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="23" selection-start="806" selection-end="806" vertical-scroll-proportion="0.80217785" vertical-offset="0" max-vertical-offset="1326">
+        <state line="29" column="58" selection-start="762" selection-end="762" vertical-scroll-proportion="0.74047184" vertical-offset="0" max-vertical-offset="1326">
           <folding>
             <element signature="e#7#89#0" expanded="false" />
-            <marker date="1405532987492" expanded="true" signature="1011:1033" placeholder="SELECT * FRO..articles..." />
+            <marker date="1405563597040" expanded="true" signature="1020:1042" placeholder="SELECT * FRO..articles..." />
           </folding>
         </state>
       </provider>

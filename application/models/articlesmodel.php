@@ -27,7 +27,7 @@ class ArticlesModel
      *      = 1 : theo thoi gian tu xa den gan
      *      = 2 : theo thoi gian tu gan den xa
      *      = 3 : theo luong like tu it den nhieu
-     *      = 4 : theo luong like tu nhieu den it
+     *      = 4 : theo luong like tu nhieu den it va nhieu
      *      = 0: Khong order
      * @param $quantity
      *      = 0 neu muon lay tat ca
