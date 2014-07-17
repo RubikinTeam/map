@@ -30,6 +30,17 @@ class PlacesModel
         if (count($result) > 0) return $result;
         else return 0;
     }
+
+    /** Ham insert vao csdl thong tin 1 dia diem moi
+     * @param $name
+     * @param $description
+     * @param $phone
+     * @param $email
+     * @param $addressId
+     * @param $locationId
+     * @param $authorId
+     * @return int tra ve 1 neu insert thanh cong, nguoc lai tra ve 0
+     */
     public function addOnePlace($name, $description, $phone, $email, $addressId, $locationId, $authorId)
     {
         if (isset($name)&&isset($description)&&isset($phone)&&isset($email)&&isset($addressId)&&isset($locationId)&&isset($authorId))
