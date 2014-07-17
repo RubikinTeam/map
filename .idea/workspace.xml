@@ -50,10 +50,10 @@
           <file leaf-file-name="articlesmodel.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/models/articlesmodel.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="74" column="26" selection-start="2083" selection-end="2083" vertical-scroll-proportion="-15.807693" vertical-offset="762" max-vertical-offset="1326">
+                <state line="74" column="26" selection-start="2074" selection-end="2074" vertical-scroll-proportion="-15.807693" vertical-offset="762" max-vertical-offset="1326">
                   <folding>
                     <element signature="e#7#89#0" expanded="false" />
-                    <marker date="1405563597040" expanded="true" signature="1020:1042" placeholder="SELECT * FRO..articles..." />
+                    <marker date="1405563963896" expanded="true" signature="1011:1033" placeholder="SELECT * FRO..articles..." />
                   </folding>
                 </state>
               </provider>
@@ -63,13 +63,24 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="articlesmodel.php" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="articlesmodel.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/models/articlesmodel.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="29" column="58" selection-start="762" selection-end="762" vertical-scroll-proportion="0.74047184" vertical-offset="0" max-vertical-offset="1326">
+                <state line="76" column="5" selection-start="306" selection-end="2115" vertical-scroll-proportion="-42.23077" vertical-offset="109" max-vertical-offset="1326">
                   <folding>
                     <element signature="e#7#89#0" expanded="false" />
-                    <marker date="1405563597040" expanded="true" signature="1020:1042" placeholder="SELECT * FRO..articles..." />
+                    <marker date="1405563963896" expanded="true" signature="1011:1033" placeholder="SELECT * FRO..articles..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="activitiesmodel.php" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/application/models/activitiesmodel.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="78" column="29" selection-start="2192" selection-end="2192" vertical-scroll-proportion="0.75317603" vertical-offset="911" max-vertical-offset="1462">
+                  <folding>
+                    <marker date="1405566123737" expanded="true" signature="1022:1043" placeholder="SELECT * FRO..comment..." />
                   </folding>
                 </state>
               </provider>
@@ -94,6 +105,7 @@
         <option value="$PROJECT_DIR$/application/views/home/index.php" />
         <option value="$PROJECT_DIR$/application/controller/home.php" />
         <option value="$PROJECT_DIR$/application/models/articlesmodel.php" />
+        <option value="$PROJECT_DIR$/application/models/activitiesmodel.php" />
       </list>
     </option>
   </component>
@@ -540,10 +552,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/articlesmodel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="58" selection-start="762" selection-end="762" vertical-scroll-proportion="0.74047184" vertical-offset="0" max-vertical-offset="1326">
+        <state line="76" column="5" selection-start="306" selection-end="2115" vertical-scroll-proportion="-42.23077" vertical-offset="109" max-vertical-offset="1326">
           <folding>
             <element signature="e#7#89#0" expanded="false" />
-            <marker date="1405563597040" expanded="true" signature="1020:1042" placeholder="SELECT * FRO..articles..." />
+            <marker date="1405563963896" expanded="true" signature="1011:1033" placeholder="SELECT * FRO..articles..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/activitiesmodel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="29" selection-start="2192" selection-end="2192" vertical-scroll-proportion="0.75317603" vertical-offset="911" max-vertical-offset="1462">
+          <folding>
+            <marker date="1405566123737" expanded="true" signature="1022:1043" placeholder="SELECT * FRO..comment..." />
           </folding>
         </state>
       </provider>

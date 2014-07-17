@@ -3,26 +3,27 @@
 /**
  * Created by PhpStorm.
  * User: Nguyen
- * Date: 7/16/14
- * Time: 10:17 PM
+ * Date: 7/17/14
+ * Time: 9:39 AM
  */
-class ArticlesModel
+class ActivitesModel
 {
-    public function __construct($db)
+public function __construct($db)
+{
+    try {
+        $this->db = $db;
+    } catch (PDOException $e)
     {
-        try {
-            $this->db = $db;
-        } catch (PDOException $e) {
-            exit("Database couldn't established");
-        }
+        exit ("Database is not established!");
     }
 
+}
     /**
      * Ham tra ve mot mang cac article theo mot so tieu chuan nhat dinh
-     *      * @param $status
-     *      = 1 : articles da duoc duyet
-     *      = 2 : articles chua duyet
-     *      = 0: khong rang buoc ve trang thai
+     *      * @param $type
+     *      = 1 : comment cua article
+     *      = 2 : comment cua activites
+     * @param $ownerId : Id cua doi tuong can lay comment (articles, activites, place)
      * @param $order :
      *      = 1 : theo thoi gian tu xa den gan
      *      = 2 : theo thoi gian tu gan den xa
@@ -31,25 +32,27 @@ class ArticlesModel
      *      = 0: Khong order
      * @param $quantity
      *      = 0 neu muon lay tat ca
-     *      = n (n > 0): Lay n articles dau tien
+     *      = n (n > 0): Lay n comment dau tien
      * @return mixed
      */
-    public function getSomeArticles($status, $condition, $quantity)
+    public function getSomeComment($type, $ownerId, $order, $quantity)
     {
-        $sql = "SELECT * FROM articles";
-        switch ($status) {
+        $sql = "SELECT * FROM comment";
+        switch ($type) {
             case 1:
-                $sql .= " WHERE status = 1 ";
+                $sql .= " WHERE type = 1 ";
                 break;
             case 2:
-                $sql .= " WHERE status = 2 ";
+                $sql .= " WHERE type = 2 ";
                 break;
-            case 0:
+            case 3:
+                $sql .= " WHERE type = 3 ";
                 break;
             default:
                 break;
         }
-        switch ($condition) {
+        $sql .= " AND ownerId = $ownerId ";
+        switch ($order) {
             case 1:
                 $sql .= " ORDER BY `date` ASC ";
                 break;
@@ -75,4 +78,4 @@ class ArticlesModel
         $query->execute();
         return $query->fetchAll();
     }
-} 
+}
