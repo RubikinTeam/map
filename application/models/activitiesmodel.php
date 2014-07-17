@@ -6,7 +6,7 @@
  * Date: 7/17/14
  * Time: 9:39 AM
  */
-class ActivitesModel
+class ActivitiesModel
 {
 public function __construct($db)
 {
@@ -35,7 +35,7 @@ public function __construct($db)
      *      = n (n > 0): Lay n comment dau tien
      * @return mixed
      */
-    public function getSomeComment($type, $ownerId, $order, $quantity)
+    public function getSomeComments($type, $ownerId, $order, $quantity)
     {
         $sql = "SELECT * FROM comment";
         switch ($type) {
