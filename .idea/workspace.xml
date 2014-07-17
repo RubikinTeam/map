@@ -37,7 +37,7 @@
           <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/views/home/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="14" selection-start="822" selection-end="822" vertical-scroll-proportion="0.5773585" vertical-offset="102" max-vertical-offset="833">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="543">
                   <folding />
                 </state>
               </provider>
@@ -156,12 +156,12 @@
         <option value="$PROJECT_DIR$/application/views/_templates/header.php" />
         <option value="$PROJECT_DIR$/application/models/activitiesmodel.php" />
         <option value="$PROJECT_DIR$/public/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/application/views/home/index.php" />
         <option value="$PROJECT_DIR$/application/models/commentsmodel.php" />
         <option value="$PROJECT_DIR$/application/models/placesmodel.php" />
         <option value="$PROJECT_DIR$/application/controller/home.php" />
         <option value="$PROJECT_DIR$/application/models/articlesmodel.php" />
         <option value="$PROJECT_DIR$/application/models/imagesmodel.php" />
+        <option value="$PROJECT_DIR$/application/views/home/index.php" />
       </list>
     </option>
   </component>
@@ -647,7 +647,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/home/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="14" selection-start="822" selection-end="822" vertical-scroll-proportion="0.5773585" vertical-offset="102" max-vertical-offset="833">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="543">
           <folding />
         </state>
       </provider>
