@@ -40,31 +40,42 @@
                     </div>
                 </form>
             </div>
-
-            <div class="element place-right">
-                <a class="dropdown-toggle" href="#">
-                    <span class="icon-cog"></span>
-                </a>
-                <ul class="dropdown-menu place-right" data-role="dropdown">
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Download</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Buy Now</a></li>
-                </ul>
-            </div>
-
-            <button class="element image-button image-left place-right">
-                Sergey Pimenov
-                <img src="{{ constant('URL') }}public/img/avatar.png">
-            </button>
+            {% if userLogged == 0 %}
+                <div class="element place-right">
+                    <a class="element brand" id="userLoginButton" href="#">Đăng nhập &nbsp<span
+                                class="icon-user"></span></a>
+                </div>
+            {% else %}
+                <div class="element place-right">
+                    <a class="dropdown-toggle" href="#">
+                        <span class="icon-cog"></span>
+                    </a>
+                    <ul class="dropdown-menu place-right" data-role="dropdown">
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Download</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Buy Now</a></li>
+                    </ul>
+                </div>
+                </div>
+                <span class="element-divider place-right"></span>
+                <a class="element place-right" href="#"><span class="icon-exit"></span></a>
+                <span class="element-divider place-right"></span>
+                <button class="element image-button image-left place-right">
+                    {{ userLogged.fname }}
+                    <img src="images/211858_100001930891748_287895609_q.jpg"/>
+                </button>
+            {% endif %}
         </nav>
     </nav>
 </header>
+<!-- -->
 <!-- Content, will be passed here via Twig -->
 {% block content %} {% endblock %}
 <footer>
     <div class="page-footer-content">
         <h4 class="text-center"><strong>VMAP PROJECT</strong></h4>
+
         <p class="text-center">© 2014 Map Team.</p>
     </div>
 </footer>
@@ -72,5 +83,6 @@
 <script src="{{ constant('URL') }}public/js/jquery/jquery.min.js"></script>
 <script src="{{ constant('URL') }}public/js/jquery/jquery.widget.min.js"></script>
 <script src="{{ constant('URL') }}public/js/metro.min.js"></script>
+<script src="{{ constant('URL') }}public/js/application/function.js"></script>
 </body>
 </html>

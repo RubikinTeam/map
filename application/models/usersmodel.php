@@ -22,7 +22,8 @@ class UsersModel
      * @param $email
      * @return bool : TRUE neu user da ton tai, FALSE: user chua ton tai
      */
-    public function checkUserExist($email){
+    public function checkUserExist($email)
+    {
         $sql = "SELECT id FROM `user` WHERE `email` = '$email'";
         $query = $this->db->prepare($sql);
         $query->execute();
@@ -48,14 +49,12 @@ class UsersModel
         $number = rand();
         $code = md5($number);
         $code = substr($code, 0, 10);
-        if(!$this->checkUserExist($email))
-        {
+        if (!$this->checkUserExist($email)) {
             $sql = "insert into user(fname,lname,email,password,activationCode) values('$fname','$lname','$email','md5($pw)','$code');";
             $query = $this->db->prepare($sql);
             $query->execute();
             return 1;
-        }else
-        {
+        } else {
             return 0;
         }
     }
@@ -66,7 +65,7 @@ class UsersModel
      * @param $code
      * @return bool
      */
-    public function checkActivationUser($email,$code)
+    public function checkActivationUser($email, $code)
     {
         $sql = "SELECT id FROM `user` WHERE `email` = '$email' and `activationCode`='$code'";
         $query = $this->db->prepare($sql);
@@ -84,58 +83,97 @@ class UsersModel
      * @param $code
      * @return string
      */
-    public function userLogin($email, $password)
+    public function ActivationUser($email, $code)
     {
-        if (isset($email)&&isset($password))
-        {
-            //$sql = "SELECT * FROM "
-        }
-    }
-    public function ActivationUser($email,$code)
-    {
-        if($this->checkActivationUser($email,$code))
-        {
-            $sql= "UPDATE user SET groupID=1 WHERE email='$email'";
+        if ($this->checkActivationUser($email, $code)) {
+            $sql = "UPDATE user SET groupID=1 WHERE email='$email'";
             $query = $this->db->prepare($sql);
             $query->execute();
             return "tai khoan da duoc kich hoat";
-        }
-        else
-        {
+        } else {
             return "Kich hoat khong thanh cong";
         }
     }
-    public function updateUser ($email,$fname, $lname, $dob , $job, $phone)
+
+    /** User Login
+     * @param $email
+     * @param $password
+     * @return int
+     */
+    public function userLogin($email, $password)
+    {
+        if (!is_null($email) && !is_null($password)) {
+            $sql = "SELECT * FROM user WHERE email = '$email' AND password = '$password'";
+            $query = $this->db->prepare($sql);
+            $query->execute();
+            $result = $query->fetchAll();
+            //var_dump($result);
+            if (count($result) == 1) {
+                session_start();
+                $_SESSION['fname'] = $result[0]->fname;
+                $_SESSION['groupId'] = $result[0]->groupId;
+                if ($result[0]->imageUrl == '') {
+                    $_SESSION['image'] = URL . "/public/img/avatars/default.jpg";
+                } else {
+                    $_SESSION['image'] = URL . $result[0]->imageUrl;
+                }
+                header("location: ".URL);
+                return 1;
+            } else {
+                header("location: ".URL);
+                return 0;
+            }
+        } else {
+            header("location: ".URL);
+            return 0;
+        }
+    }
+
+    /**
+     * Check if user is logged
+     * @return array|int
+     */
+    public function checkUserLogged()
+    {
+        session_start();
+        if (isset($_SESSION['groupId'])) {
+            $userInfo = array('fname' => $_SESSION['fname'], 'groupId' => $_SESSION['groupId'], 'image' => $_SESSION['image']);
+            return $userInfo;
+        } else {
+            return 0;
+        }
+    }
+
+    public function updateUser($email, $fname, $lname, $dob, $job, $phone)
     {
         $sql = "SELECT * FROM `user` WHERE `email` = '$email'";
         $query = $this->db->query($sql);
         $query->execute();
         $result = $query->fetchAll();
-       foreach ($result as $re)
-       {
-           $thisfname = $re->fname;
-           $thislname = $re->lname;
-           $thisdob = $re->dob;
-           $thisaddressId = $re->addressId;
-           $thisjob = $re->job;
-           $thisphone = $re->phone;
-            if((strcmp($re->fname,$fname))){
-                $thisfname=$fname;
+        foreach ($result as $re) {
+            $thisfname = $re->fname;
+            $thislname = $re->lname;
+            $thisdob = $re->dob;
+            $thisaddressId = $re->addressId;
+            $thisjob = $re->job;
+            $thisphone = $re->phone;
+            if ((strcmp($re->fname, $fname))) {
+                $thisfname = $fname;
             }
-           if((strcmp($re->lname,$lname))){
-               $thislname=$lname;
-           }
-           if((strcmp($re->dob,$dob))){
-               $thisdob=$dob;
-           }
-           if((strcmp($re->job,$job))){
-               $thisjob=$job;
-           }
-           if((strcmp($re->phone,$phone))){
-               $thisphone=$phone;
-           }
-       }
-        $sql= "UPDATE user SET fname ='$thisfname',lname ='$thislname',dob ='$thisdob',job ='$thisjob',phone ='$thisphone' WHERE email='$email'";
+            if ((strcmp($re->lname, $lname))) {
+                $thislname = $lname;
+            }
+            if ((strcmp($re->dob, $dob))) {
+                $thisdob = $dob;
+            }
+            if ((strcmp($re->job, $job))) {
+                $thisjob = $job;
+            }
+            if ((strcmp($re->phone, $phone))) {
+                $thisphone = $phone;
+            }
+        }
+        $sql = "UPDATE user SET fname ='$thisfname',lname ='$thislname',dob ='$thisdob',job ='$thisjob',phone ='$thisphone' WHERE email='$email'";
         $query = $this->db->prepare($sql);
         $query->execute();
         return "tai khoan da duoc cap nhat";
