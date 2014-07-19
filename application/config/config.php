@@ -29,3 +29,12 @@ define('DB_HOST', 'localhost');
 define('DB_NAME', 'map_db');
 define('DB_USER', 'root');
 define('DB_PASS', '');
+
+/**
+ * Configuration for: Views
+ *
+ * PATH_VIEWS is the path where your view files are. Don't forget the trailing slash!
+ * PATH_VIEW_FILE_TYPE is the ending of your view files, like .php, .twig or similar.
+ */
+define('PATH_VIEWS', 'application/views/');
+define('PATH_VIEW_FILE_TYPE', '.twig');
