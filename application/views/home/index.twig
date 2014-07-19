@@ -1,14 +1,13 @@
 {% extends "_templates/base.twig" %}
 {% block content %}
-    <div class="container">
-        <div class="main-content clearfix">
-            <div class="tile-area no-padding clearfix">
-                <div class="tile-group no-margin no-padding clearfix" style="width: 100%">
-                    <div class="tile double quadro-vertical bg-gray ol-transparent" style="float: right; ">
-                        <div class="tile-content">
-                            <div class="brand">
-                                <span class="label fg-white">ads here...</span>
-                            </div>
+    <div class="main-content clearfix">
+        <div class="tile-area no-padding clearfix">
+            <div class="tile-group no-margin no-padding clearfix" style="width: 100%">
+                <div class="tile double quadro-vertical bg-gray ol-transparent" style="float: right; ">
+                    <div class="tile-content">
+                        <div class="brand">
+                            <span class="label fg-white">ads here...</span>
+
                         </div>
                     </div>
 
@@ -35,59 +34,65 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tile bg-lightBlue ol-transparent">
-                        <div class="tile-content icon">
-                            <span class="icon-windows"></span>
-                        </div>
-                    </div>
-                    <div class="tile bg-orange ol-transparent">
-                        <div class="tile-content icon">
-                            <span class="icon-music"></span>
-                        </div>
-                    </div>
-                    <div class="tile ol-transparent bg-teal">
-                        <div class="tile-content icon">
-                            <span class="icon-facebook"></span>
-                        </div>
-                    </div>
-                    <div class="tile ol-transparent bg-green">
-                        <div class="tile-content icon">
-                            <span class="icon-twitter"></span>
-                        </div>
-                    </div>
-
-                    <div class="tile triple double-vertical ol-transparent bg-white" data-role="live"
-                         data-effect="slideDown">
-                        {% for activity in activities %}
-                            <div class="tile-content activity">
-                                <div class="panel no-border">
-                                    <div class="panel-header bg-darkRed fg-white">{{ activity.name }}</div>
-                                    <div class="panel-content fg-dark nlp nrp">
-                                        <img src="{{ constant('URL') }}public/img/avatar.png"
-                                             class="place-left margin10 nlm ntm size2">
-                                        {{ activity.description }}
-                                    </div>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </div>
-                    <div class="tile triple double-vertical ol-transparent bg-white" data-role="live"
-                         data-effect="slideRight">
-                        {% for article in articles %}
-                            <div class="tile-content article">
-                                <div class="panel no-border">
-                                    <div class="panel-header bg-pink fg-white">{{ article.title }}</div>
-                                    <div class="panel-content fg-dark nlp nrp">
-                                        <img src="{{ constant('URL') }}public/img/avatar.png"
-                                             class="place-left margin10 nlm ntm size2">
-                                        {{ article.sumary }}
-                                    </div>
-                                </div>
-                            </div>
-                        {% endfor %}
+                </div>
+                <div class="tile bg-lightBlue ol-transparent">
+                    <div class="tile-content icon">
+                        <span class="icon-location"></span>
                     </div>
                 </div>
-                <!-- End first group -->
+                <div class="tile bg-orange ol-transparent">
+                    <div class="tile-content icon">
+                        <span class="icon-newspaper"></span>
+                    </div>
+                </div>
+                <div class="tile ol-transparent bg-teal">
+                    <div class="tile-content icon">
+                        <span class="icon-search"></span>
+                    </div>
+                </div>
+                <div class="tile ol-transparent bg-green">
+                    <div class="tile-content icon">
+                        <span class="icon-share-2"></span>
+                    </div>
+                <!-- Show some activities -->
+                <div class="tile triple double-vertical ol-transparent bg-white" data-role="live" data-effect="slideDown">
+                    {% for activity in activities %}
+                        <div class="tile-content activity">
+                            <div class="panel no-border">
+                                <div class="panel-header bg-darkRed fg-white">
+                                    <a href="{{ constant('URL') }}activities/detail/{{ activity.id }}" style="color:white; font-size:20px;">
+                                        {{ activity.name }}
+                                    </a>
+                                </div>
+                                <div class="panel-content fg-dark nlp nrp">
+                                    <img src="{{ constant('URL') }}public/img/avatar.png" class="place-left margin10 nlm ntm size2">
+                                    {{ activity.description }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- End show some activities -->
+                <!-- Show some articles -->
+                <div class="tile triple double-vertical ol-transparent bg-white"  data-role="live" data-effect="slideRight">
+                    {% for article in articles %}
+                        <div class="tile-content article">
+                            <div class="panel no-border">
+                                <div class="panel-header bg-pink fg-white">
+                                    <a href="{{ constant('URL') }}articles/detail/{{ article.id }}" style="color:white; font-size:20px;">
+                                        Title {{ article.title }}
+                                    </a>
+                                </div>
+                                <div class="panel-content fg-dark nlp nrp">
+                                    <img src="{{ constant('URL') }}public/img/avatar.png" class="place-left margin10 nlm ntm size2">
+                                    {{ article.sumary }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- End show some articles -->
+            </div> <!-- End first group -->
 
                 <div class="tile-group no-margin no-padding clearfix" style="width: 100%">
                     <div class="tile double ol-transparent"></div>

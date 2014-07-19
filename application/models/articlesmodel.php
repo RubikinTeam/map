@@ -8,7 +8,7 @@
  */
 class ArticlesModel
 {
-    public function __construct($db)
+    public function __construct(PDO $db)
     {
         try {
             $this->db = $db;
@@ -76,5 +76,15 @@ class ArticlesModel
         $query = $this->db->prepare($sql);
         $query->execute();
         return $query->fetchAll();
+    }
+
+    public function getArticleById($id)
+    {
+        $query = $this->db->prepare("SET NAMES 'UTF8'");
+        $query->execute();
+        $sql = "SELECT * FROM articles WHERE id = $id";
+        $query = $this->db->prepare($sql);
+        $query->execute();
+        return $query->fetch(PDO::FETCH_OBJ);
     }
 }
