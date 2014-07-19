@@ -37,9 +37,22 @@ $(function() {
 /**
  * Load google Map
  */
-function load() {
-    if (GBrowserIsCompatible) {
-        var map = new GMap(document.getElementById("map"));
-        map.setCenter(new GLatLng(37.4419, -122.1419), 13);
-    }
+window.onload = function() {
+    var mapDiv = document.getElementById('map-canvas');
+    var latlng = new google.maps.LatLng(37.09, -95.71);
+    var options = {
+        zoom: 12,
+        center: new google.maps.LatLng(-28.643387, 153.612224),
+        mapTypeControl: true,
+        disableDefaultUI: true,
+        mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            position: google.maps.ControlPosition.BOTTOM_CENTER
+        },
+        panControl: true,
+        panControlOptions: {
+            position: google.maps.ControlPosition.TOP_RIGHT
+        }
+    };
+    var map = new google.maps.Map(mapDiv, options);
 }
