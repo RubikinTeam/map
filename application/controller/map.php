@@ -9,6 +9,8 @@ class Map extends Controller
 {
     public function index()
     {
-        require 'application/views/map/index.php';
+        $users_model = $this->loadModel('usersmodel');
+        $userLogged = $users_model->checkUserLogged();
+        $this->render('map/index', array('userLogged' => $userLogged));
     }
 }

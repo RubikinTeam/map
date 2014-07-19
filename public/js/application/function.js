@@ -34,3 +34,12 @@ $(function() {
         });
     });
 })
+/**
+ * Load google Map
+ */
+function load() {
+    if (GBrowserIsCompatible) {
+        var map = new GMap(document.getElementById("map"));
+        map.setCenter(new GLatLng(37.4419, -122.1419), 13);
+    }
+}

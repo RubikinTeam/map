@@ -759,7 +759,7 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
         var delta = 0; // default value
 
         // technique from:
-        // http://blog.paranoidferret.com/index.php/2007/10/31/javascript-tutorial-the-scroll-wheel/
+        // http://blog.paranoidferret.com/index.twig/2007/10/31/javascript-tutorial-the-scroll-wheel/
 
         if (typeof (event.wheelDelta) == "number") {
             delta = event.wheelDelta;
@@ -1153,7 +1153,7 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
         elmt = self.$GetElement(elmt);
 
         // technique from:
-        // http://blog.paranoidferret.com/index.php/2007/08/10/javascript-working-with-events/
+        // http://blog.paranoidferret.com/index.twig/2007/08/10/javascript-working-with-events/
 
         if (elmt.addEventListener) {
             if (eventName == "mousewheel") {
@@ -1182,7 +1182,7 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
         elmt = self.$GetElement(elmt);
 
         // technique from:
-        // http://blog.paranoidferret.com/index.php/2007/08/10/javascript-working-with-events/
+        // http://blog.paranoidferret.com/index.twig/2007/08/10/javascript-working-with-events/
 
         if (elmt.removeEventListener) {
             if (eventName == "mousewheel") {
@@ -1256,7 +1256,7 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
         event = self.$GetEvent(event);
 
         // technique from:
-        // http://blog.paranoidferret.com/index.php/2007/08/10/javascript-working-with-events/
+        // http://blog.paranoidferret.com/index.twig/2007/08/10/javascript-working-with-events/
 
         if (event.preventDefault) {
             event.preventDefault();     // W3C for preventing default
@@ -1270,7 +1270,7 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
         event = self.$GetEvent(event);
 
         // technique from:
-        // http://blog.paranoidferret.com/index.php/2007/08/10/javascript-working-with-events/
+        // http://blog.paranoidferret.com/index.twig/2007/08/10/javascript-working-with-events/
 
         if (event.stopPropagation) {
             event.stopPropagation();    // W3C for stopping propagation

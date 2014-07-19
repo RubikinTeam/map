@@ -42,13 +42,12 @@
             </div>
             {% if userLogged == 0 %}
                 <div class="element place-right">
-                    <a class="element brand" id="userLoginButton" href="#">Đăng nhập &nbsp<span
-                                class="icon-user"></span></a>
+                    <a class="element" id="userLoginButton" href = "#"><span class="icon-user"></span>&nbsp;&nbsp;Đăng nhập</a>
                 </div>
             {% else %}
                 <div class="element place-right">
                     <a class="dropdown-toggle" href="#">
-                        <span class="icon-cog"></span>
+                        <span class="icon-cog"></span>&nbsp;&nbsp;</span>
                     </a>
                     <ul class="dropdown-menu place-right" data-role="dropdown">
                         <li><a href="#">Products</a></li>
@@ -59,11 +58,12 @@
                 </div>
                 </div>
                 <span class="element-divider place-right"></span>
-                <a class="element place-right" href="#"><span class="icon-exit"></span></a>
+                <a class="element place-right" href="{{ constant('URL') ~ 'home/userlogout/' }}"><span
+                            class="icon-exit"></span></a>
                 <span class="element-divider place-right"></span>
                 <button class="element image-button image-left place-right">
-                    {{ userLogged.fname }}
-                    <img src="images/211858_100001930891748_287895609_q.jpg"/>
+                    {{ userLogged.fname ~ ' ' ~ userLogged.lname }}
+                    <img src="{{ userLogged.imageUrl }}"/>
                 </button>
             {% endif %}
         </nav>

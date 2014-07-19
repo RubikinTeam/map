@@ -111,20 +111,21 @@ class UsersModel
             if (count($result) == 1) {
                 session_start();
                 $_SESSION['fname'] = $result[0]->fname;
+                $_SESSION['lname'] = $result[0]->lname;
                 $_SESSION['groupId'] = $result[0]->groupId;
                 if ($result[0]->imageUrl == '') {
                     $_SESSION['image'] = URL . "/public/img/avatars/default.jpg";
                 } else {
                     $_SESSION['image'] = URL . $result[0]->imageUrl;
                 }
-                header("location: ".URL);
+                header("location: " . URL);
                 return 1;
             } else {
-                header("location: ".URL);
+                header("location: " . URL);
                 return 0;
             }
         } else {
-            header("location: ".URL);
+            header("location: " . URL);
             return 0;
         }
     }
@@ -137,7 +138,7 @@ class UsersModel
     {
         session_start();
         if (isset($_SESSION['groupId'])) {
-            $userInfo = array('fname' => $_SESSION['fname'], 'groupId' => $_SESSION['groupId'], 'image' => $_SESSION['image']);
+            $userInfo = array('fname' => $_SESSION['fname'], 'lname' => $_SESSION['lname'], 'groupId' => $_SESSION['groupId'], 'imageUrl' => $_SESSION['image']);
             return $userInfo;
         } else {
             return 0;
