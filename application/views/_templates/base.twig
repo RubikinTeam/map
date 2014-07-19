@@ -7,57 +7,70 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>VMap Project</title>
-    <link href="{{ constant('URL') }}public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ constant('URL') }}public/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="{{ constant('URL') }}public/css/site.css" rel="stylesheet">
+    <link href="{{ constant('URL') }}public/css/metro-bootstrap.css" rel="stylesheet">
+    <link href="{{ constant('URL') }}public/css/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="{{ constant('URL') }}public/css/iconFont.css" rel="stylesheet">
+    <link href="{{ constant('URL') }}public/css/style.css" rel="stylesheet">
 </head>
-<body>
-    <header class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <h1><a href="{{ constant('URL') }}home">VMap Project</a></h1>
-            </div>
-            <div class="navbar-collapse collapse pull-right" style="height: 1px;">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Place<span class="badge">4</span></a></li>
-                    <li><a href="#">Activity<span class="badge">2</span></a></li>
-                    <li><a href="#">Article<span class="badge">2</span></a></li>
-                    <li>
-                        <div class="btn-group">
-                            <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
-                                <img src="{{ constant('URL') }}public/img/avatar.png">
-                                <span>Username</span>
-                            </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#"><span>Profile</span></a></li>
-                                <li><a href="#"><span>Logout</span></a></li>
-                            </ul>
-                        </div>
-                    </li>
+<body class="metro">
+<header>
+    <nav class="navigation-bar bg-green fixed-top shadow">
+        <nav class="navigation-bar-content container">
+            <div class="element">
+                <a class="dropdown-toggle" href="#">METRO UI CSS</a>
+                <ul class="dropdown-menu" data-role="dropdown">
+                    <li><a href="#">Main</a></li>
+                    <li><a href="#">File Open</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Print...</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Exit</a></li>
                 </ul>
             </div>
-        </div>
-    </header>
-    <!-- Content, will be passed here via Twig -->
-    {% block content %} {% endblock %}
-    <footer>
-        <div class="modal-footer">
-            <h4 class="text-center"><strong>VMAP PROJECT</strong></h4>
-            <p class="text-center">© 2014 Map Team.</p>
-        </div>
-    </footer>
-    <script src="{{ constant('URL') }}public/js/jquery-2.1.0.min.js"></script>
-    <script src="{{ constant('URL') }}public/js/bootstrap.min.js"></script>
-    <script src="{{ constant('URL') }}public/js/jssor.core.js"></script>
-    <script src="{{ constant('URL') }}public/js/jssor.slider.js"></script>
-    <script src="{{ constant('URL') }}public/js/jssor.utils.js"></script>
-    <script src="{{ constant('URL') }}public/js/slider.js"></script>
+
+            <span class="element-divider"></span>
+            <a class="element brand" href="#"><span class="icon-home"></span></a>
+            <span class="element-divider"></span>
+
+            <div class="element input-element">
+                <form>
+                    <div class="input-control text">
+                        <input type="text" placeholder="Search...">
+                        <button class="btn-search"></button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="element place-right">
+                <a class="dropdown-toggle" href="#">
+                    <span class="icon-cog"></span>
+                </a>
+                <ul class="dropdown-menu place-right" data-role="dropdown">
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Buy Now</a></li>
+                </ul>
+            </div>
+
+            <button class="element image-button image-left place-right">
+                Sergey Pimenov
+                <img src="{{ constant('URL') }}public/img/avatar.png">
+            </button>
+        </nav>
+    </nav>
+</header>
+<!-- Content, will be passed here via Twig -->
+{% block content %} {% endblock %}
+<footer>
+    <div class="page-footer-content">
+        <h4 class="text-center"><strong>VMAP PROJECT</strong></h4>
+        <p class="text-center">© 2014 Map Team.</p>
+    </div>
+</footer>
+<script src="{{ constant('URL') }}public/js/jquery/jquery-2.1.0.min.js"></script>
+<script src="{{ constant('URL') }}public/js/jquery/jquery.min.js"></script>
+<script src="{{ constant('URL') }}public/js/jquery/jquery.widget.min.js"></script>
+<script src="{{ constant('URL') }}public/js/metro.min.js"></script>
 </body>
 </html>

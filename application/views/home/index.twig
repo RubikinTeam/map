@@ -1,152 +1,180 @@
 {% extends "_templates/base.twig" %}
 {% block content %}
     <div class="main-content-master">
-        <div class="container">
-            <div id="sliderb_container" class="sliderb-container">
-                <div data-u="loading" style="position: absolute; top: 0; left: 0;">
-                    <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block; background-color: #000; top: 0; left: 0;width: 100%;height:100%;">
-                    </div>
-                    <div style="position: absolute; display: block; background: url({{ constant('URL') }}public/img/loading.gif) no-repeat center center; top: 0; left: 0;width: 100%;height:100%;">
-                    </div>
-                </div>
-                <div data-u="slides" class="slider">
-                    <div>
-                        <img data-u="image" src="{{ constant('URL') }}public/img/landscape/01.jpg">
-                        <div data-u="thumb">Do you notice it is draggable by mouse/finger?</div>
-                    </div>
-                    <div>
-                        <img data-u="image" src="{{ constant('URL') }}public/img/landscape/02.jpg">
-                        <div data-u="thumb">Did you drag by either horizontal or vertical?</div>
-                    </div>
-                    <div>
-                        <img data-u="image" src="{{ constant('URL') }}public/img/landscape/03.jpg">
-                        <div data-u="thumb">Do you notice navigator responses when drag?</div>
-                    </div>
-                    <div>
-                        <img data-u=image src="{{ constant('URL') }}public/img/landscape/04.jpg" />
-                        <div data-u="thumb">Do you notice arrow responses when click?</div>
-                    </div>
-                </div>
-                <div data-u="thumbnavigator" class="sliderb-T" style="position: absolute; bottom: 0; left: 0; height:45px; width:600px;">
-                    <div style="filter: alpha(opacity=40); opacity:0.4; position: absolute; display: block; background-color: #000000; top: 0; left: 0; width: 100%; height: 100%;">
-                    </div>
-                    <div data-u="slides">
-                        <div data-u="prototype" style="POSITION: absolute; WIDTH: 600px; HEIGHT: 45px; TOP: 0; LEFT: 0;">
-                            <thumbnailtemplate style="font-family: verdana; font-weight: normal; POSITION: absolute; WIDTH: 100%; HEIGHT: 100%; TOP: 0; LEFT: 0; color:#fff; line-height: 45px; font-size:20px; padding-left:10px;"></thumbnailtemplate>
+        <div class=" tite-area tile-area-dark">
+            <div class="tile-group six">
+                <a class="tile double bg-lightBlue live" data-role="live-tile" data-effect="slideUp" data-click="transform">
+                    <div class="tile-content email">
+                        <div class="email-image">
+                            <img src="{{ constant('URL') }}public/img/avatar.png">
+                        </div>
+                        <div class="email-data">
+                            <span class="email-data-title">Barak Obama</span>
+                            <span class="email-data-subtitle">You're invited</span>
+                            <span class="email-data-text">I hope that you can make and make</span>
                         </div>
                     </div>
+                    <div class="tile-content email">
+                        <div class="email-image">
+                            <img src="{{ constant('URL') }}public/img/avatar.png">
+                        </div>
+                        <div class="email-data">
+                            <span class="email-data-title">Jolie &amp; Bred</span>
+                            <span class="email-data-subtitle">You're invited</span>
+                            <span class="email-data-text">I hope that you can make and make</span>
+                        </div>
+                    </div>
+                    <div class="tile-content email">
+                        <div class="email-image">
+                            <img src="{{ constant('URL') }}public/img/avatar.png">
+                        </div>
+                        <div class="email-data">
+                            <span class="email-data-title">Arny</span>
+                            <span class="email-data-subtitle">You're invited</span>
+                            <span class="email-data-text">I hope that you can make and make</span>
+                        </div>
+                    </div>
+                    <div class="brand">
+                        <div class="label"><h3 class="no-margin fg-white"><span class="icon-mail"></span></h3></div>
+                        <div class="badge">3</div>
+                    </div>
+                </a>
+                <a class="tile double bg-violet" data-click="transform">
+                    <div class="tile-content">
+                        <div class="text-right padding10 ntp">
+                            <h1 class="fg-white no-margin">10</h1>
+                            <p class="fg-white">Sunday</p>
+                        </div>
+                    </div>
+                    <div class="brand">
+                        <div class="label"><h3 class="no-margin fg-white"><span class="icon-calendar"></span></h3></div>
+                    </div>
+                </a>
+                <div class="tile" data-click="transform">
+                    <div class="tile-content image">
+                        <img src="{{ constant('URL') }}public/img/avatar.png">
+                    </div>
+                    <div class="brand">
+                        <div class="label fg-amber">Photos</div>
+                    </div>
                 </div>
-                <div data-u="navigator" class="jssorb01" style="position: absolute; bottom: 16px; right: 10px;">
-                    <div data-u="prototype" style="POSITION: absolute; WIDTH: 12px; HEIGHT: 12px;"></div>
+                <!-- small tites -->
+                <a href="#" class="tile half bg-darkRed" data-click="transform">
+                    <div class="tile-content icon">
+                        <span class="icon-camera"></span>
+                    </div>
+                </a>
+                <a href="#" class="tile half bg-darkOrange" data-click="transform">
+                    <div class="tile-content icon">
+                        <span class="icon-headphones"></span>
+                    </div>
+                </a>
+                <a href="#" class="tile half bg-green" data-click="transform">
+                    <div class="tile-content icon">
+                        <span class="icon-steering-wheel"></span>
+                    </div>
+                </a>
+                <a href="#" class="tile half bg-darkPink" data-click="transform">
+                    <div class="tile-content icon">
+                        <span class="icon-pictures"></span>
+                    </div>
+                </a>
+                <!-- end small tites -->
+                <a class="tile double double-vertical bg-steel" data-click="transform">
+                    <div class="tile-content" style="background: url(images/clouds2.png)">
+                        <div class="padding10">
+                            <h1 class="fg-white ntm">57°</h1>
+                            <h2 class="fg-white no-margin">San Francisco</h2>
+                            <h5 class="fg-white no-margin">Party Cloudy</h5>
+                            <p class="tertiary-text fg-white no-margin">Today</p>
+                            <p class="tertiary-text fg-white">63°/55° Mostly Clear</p>
+                            <p class="tertiary-text fg-white no-margin">Tomorrow</p>
+                            <p class="tertiary-text fg-white">64°/54° Mostly Clear</p>
+                        </div>
+
+                    </div>
+                    <div class="tile-status">
+                        <div class="label">Weather</div>
+                    </div>
+                </a>
+                <!-- end title -->
+                <div class="tile double" data-click="transform">
+                    <div class="tile-content image-set">
+                        <img src="{{ constant('URL') }}public/img/avatar.png">
+                        <img src="{{ constant('URL') }}public/img/avatar.png">
+                        <img src="{{ constant('URL') }}public/img/avatar.png">
+                        <img src="{{ constant('URL') }}public/img/avatar.png">
+                        <img src="{{ constant('URL') }}public/img/avatar.png">
+                    </div>
                 </div>
-                <span data-u="arrowleft" class="arrowleft jssora05l"></span>
-                <span data-u="arrowright" class="arrowright jssora05r"></span>
+                <!-- end tite -->
+                <a href="#" class="tile bg-lightBlue" data-click="transform">
+                    <div class="tile-content icon">
+                        <span class="icon-IE"></span>
+                    </div>
+                    <div class="brand">
+                        <div class="label">Internet Explorer</div>
+                    </div>
+                </a>
+                <a href="#" class="tile bg-darkOrange" data-click="transform">
+                    <div class="tile-content icon">
+                        <span class="icon-help"></span>
+                    </div>
+                    <div class="brand">
+                        <div class="label">Help+Tips</div>
+                    </div>
+                </a>
+                <a class="tile double bg-lightBlue" data-click="transform">
+                    <div class="tile-content image">
+                        <img src="{{ constant('URL') }}public/img/avatar.png">
+                    </div>
+                    <div class="brand">
+                        <div class="label">Desktop</div>
+                    </div>
+                </a>
+                <a class="tile double bg-darkGreen" data-click="transform">
+                    <div class="tile-content icon">
+                        <span class="icon-cart-2"></span>
+                    </div>
+                    <div class="brand">
+                        <div class="label">Store</div>
+                    </div>
+                </a>
             </div>
-        </div>
-
-        <div class="main-content container">
-            <div class="content-title">
-                    <span class="pull-left">
-                        <span class="text"><strong>HOẠT ĐỘNG NỔI BẬT</strong></span>
-                    </span>
-                    <span class="pull-right">
-                        <span data-u="arrowleft" class="arrowleft jssora03l">
-                        </span>
-                        <span data-u="arrowright" class="arrowright jssora03r">
-                        </span>
-                    </span>
-            </div>
-            <div id="slider1_container" class="slider1-container">
-
-                <!-- Loading Screen -->
-                <div data-u="loading" style="position: absolute; top: 0; left: 0;">
-                    <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-                background-color: #000; top: 0; left: 0;width: 100%;height:100%;">
+            <div class="tile-group double">
+                <div class="tile-group-title">Games</div>
+                <div class="tile bg-dark" data-click="transform">
+                    <div class="tile-content icon">
+                        <img src="{{ constant('URL') }}public/img/avatar.png">
                     </div>
-                    <div style="position: absolute; display: block; background: url({{ constant('URL') }}public/img/loading.gif) no-repeat center center;
-                top: 0; left: 0;width: 100%;height:100%;">
+                    <div class="brand">
+                        <div class="label">Crysis 2</div>
                     </div>
                 </div>
-
-                <!-- Slides Container -->
-                <div data-u="slides" style="position: absolute; left: 0; top: 0; width: 1140px; height: 450px; overflow: hidden;">
-                    <div class="article-box">
-                        <h3 class="article-title">Title 1</h3>
-                        <div class="status"><span class="address">17/7/2014</span></div>
-                        <div class="short-desc">
-                            Fully responsive 3D carousel that allows to display media or HTML content with an unique and original layout. It’s perfect for presentations, for anyone who wants to obtain a great impact on their visitors.
-                        </div>
+                <div class="tile bg-dark" data-click="transform">
+                    <div class="tile-content icon">
+                        <img src="{{ constant('URL') }}public/img/avatar.png">
                     </div>
-                    <div class="article-box">
-                        <h3 class="article-title">Title 1</h3>
-                        <div class="status"><span class="address">17/7/2014</span></div>
-                        <div class="short-desc">
-                            Fully responsive 3D carousel that allows to display media or HTML content with an unique and original layout. It’s perfect for presentations, for anyone who wants to obtain a great impact on their visitors.
-                        </div>
-                    </div>
-                    <div class="article-box">
-                        <h3 class="article-title">Title 1</h3>
-                        <div class="status"><span class="address">17/7/2014</span></div>
-                        <div class="short-desc">
-                            Fully responsive 3D carousel that allows to display media or HTML content with an unique and original layout. It’s perfect for presentations, for anyone who wants to obtain a great impact on their visitors.
-                        </div>
-                    </div>
-                    <div class="article-box">
-                        <h3 class="article-title">Title 1</h3>
-                        <div class="status"><span class="address">17/7/2014</span></div>
-                        <div class="short-desc">
-                            Fully responsive 3D carousel that allows to display media or HTML content with an unique and original layout. It’s perfect for presentations, for anyone who wants to obtain a great impact on their visitors.
-                        </div>
-                    </div>
-                    <div class="article-box">
-                        <h3 class="article-title">Title 1</h3>
-                        <div class="status"><span class="address">17/7/2014</span></div>
-                        <div class="short-desc">
-                            Fully responsive 3D carousel that allows to display media or HTML content with an unique and original layout. It’s perfect for presentations, for anyone who wants to obtain a great impact on their visitors.
-                        </div>
+                    <div class="brand">
+                        <div class="label">Battlefield 4</div>
                     </div>
                 </div>
-
-            </div>
-        </div>
-
-        <div class="main-content container">
-            <div class="content-title">
-                    <span class="pull-left">
-                        <span class="text"><strong>BÀI VIẾT NỔI BẬT</strong></span>
-                    </span>
-                    <span class="pull-right">
-                        <span data-u="arrowleft" class="arrowleft jssora03l">
-                        </span>
-                        <span data-u="arrowright" class="arrowright jssora03r">
-                        </span>
-                    </span>
-            </div>
-            <div id="slider2_container" class="slider1-container">
-
-                <!-- Loading Screen -->
-                <div data-u="loading" style="position: absolute; top: 0; left: 0;">
-                    <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-                background-color: #000; top: 0; left: 0;width: 100%;height:100%;">
+                <div class="tile bg-dark" data-click="transform">
+                    <div class="tile-content icon">
+                        <img src="{{ constant('URL') }}public/img/avatar.png">
                     </div>
-                    <div style="position: absolute; display: block; background: url({{ constant('URL') }}public/img/loading.gif) no-repeat center center;
-                top: 0; left: 0;width: 100%;height:100%;">
+                    <div class="brand">
+                        <div class="label">Diablo III</div>
                     </div>
                 </div>
-
-                <!-- Slides Container -->
-                <div data-u="slides" style="position: absolute; left: 0; top: 0; width: 1140px; height: 450px; overflow: hidden;">
-                    {% for article in articles %}
-                        <div class="article-box">
-                            <h3 class="article-title">{{ article.title }}</h3>
-                            <div class="status"><span class="address">{{ article.date }}</span></div>
-                            <div class="short-desc">
-                                {{ article.sumary }}
-                            </div>
-                        </div>
-                    {% endfor %}
+                <div class="tile bg-dark" data-click="transform">
+                    <div class="tile-content icon">
+                        <img src="{{ constant('URL') }}public/img/avatar.png">
+                    </div>
+                    <div class="brand">
+                        <div class="label">Grid 2</div>
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
