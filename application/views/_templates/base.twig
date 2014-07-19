@@ -41,13 +41,11 @@
                 </form>
             </div>
             {% if userLogged == 0 %}
-                <div class="element place-right">
-                    <a class="element" id="userLoginButton" href = "#"><span class="icon-user"></span>&nbsp;&nbsp;Đăng nhập</a>
-                </div>
+                <a class="element place-right" id="userLoginButton" href = "#"><span class="icon-user"></span>&nbsp;&nbsp;Đăng nhập</a>
             {% else %}
                 <div class="element place-right">
                     <a class="dropdown-toggle" href="#">
-                        <span class="icon-cog"></span>&nbsp;&nbsp;</span>
+                        <span class="icon-cog"></span>&nbsp;&nbsp;
                     </a>
                     <ul class="dropdown-menu place-right" data-role="dropdown">
                         <li><a href="#">Products</a></li>
@@ -55,7 +53,6 @@
                         <li><a href="#">Support</a></li>
                         <li><a href="#">Buy Now</a></li>
                     </ul>
-                </div>
                 </div>
                 <span class="element-divider place-right"></span>
                 <a class="element place-right" href="{{ constant('URL') ~ 'home/userlogout/' }}"><span
