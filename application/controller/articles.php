@@ -25,7 +25,16 @@ class Articles extends Controller
     {
         if (isset($_POST["submit_add_comment"])) {
             $comments_model = $this->loadModel('CommentsModel');
-            $comments_model->addComment(1, $id, 'Anonymous', $_POST["comment"]);
+
+            $users_model = $this->loadModel('UsersModel');
+            $userLogged = $users_model->checkUserLogged();
+
+            if($userLogged == 0) {
+                $comments_model->addComment(1, $id, 'Anonymous', $_POST["comment"]);
+            }
+            else {
+                $comments_model->addComment(1, $id, $userLogged['fname'].' '.$userLogged['lname'], $_POST["comment"]);
+            }
         }
         header('location: ' . URL . 'articles/detail/' . $id);
     }
