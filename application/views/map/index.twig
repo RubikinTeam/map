@@ -1,14 +1,14 @@
 {% extends "_templates/base.twig" %}
 {% block content %}
     <script
-            src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAA33EjxkLYsh9SEveh_MphphQP1yR2bHJW2Brl_bW_l0KXsyt8cxTKO5Zz-UKoJ6IepTlZRxN8nfTRgw">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMO6grIC9wDQ6rvbhXx3dAeV5__UsqVtY&sensor=true">
     </script>
     <body onload="load()">
     <div class="container">
         <div class="row">
             <div class="span6">
                 <div class="input-control text">
-                    <input type="text" placeholder="Nhập từ khóa tìm kiếm"/>
+                    <input type="text" placeholder="Nhập từ khóa tìm kiếm..."/>
                     <button class="btn-search"></button>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                     </ul>
                 </nav>
             </div>
-            <div id="map" style="width: 900px;height: 600px;float: right" class="span11">
+            <div id="map-canvas" style="width: 900px;height: 600px;float: right;">
             </div>
             <div style="clear: both"></div>
         </div>
