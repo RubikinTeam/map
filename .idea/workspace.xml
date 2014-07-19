@@ -50,11 +50,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="28" selection-start="829" selection-end="830" vertical-scroll-proportion="0.71350366" vertical-offset="0" max-vertical-offset="548">
+            <state line="37" column="3" selection-start="829" selection-end="830" vertical-scroll-proportion="-15.846154" vertical-offset="132" max-vertical-offset="680">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usersmodel.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/models/usersmodel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="14" selection-start="2432" selection-end="2432" vertical-scroll-proportion="0.41121495" vertical-offset="1310" max-vertical-offset="2516">
+              <folding>
+                <marker date="1405738120357" expanded="true" signature="530:576" placeholder="SELECT id FR..." />
+                <marker date="1405738120357" expanded="true" signature="1330:1443" placeholder="insert into ..." />
+                <marker date="1405738120357" expanded="true" signature="1837:1912" placeholder="SELECT id FR..." />
+                <marker date="1405738120357" expanded="true" signature="2440:2453" placeholder="SELECT * FRO..." />
+                <marker date="1405738120357" expanded="true" signature="2609:2655" placeholder="UPDATE user ..." />
+                <marker date="1405738120357" expanded="true" signature="2982:3027" placeholder="SELECT * FRO..." />
+                <marker date="1405738120357" expanded="true" signature="3859:3987" placeholder="UPDATE user ..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,9 +102,10 @@
         <option value="$PROJECT_DIR$/application/controller/map.php" />
         <option value="$PROJECT_DIR$/application/views/map/index.php" />
         <option value="$PROJECT_DIR$/application/controller/songs.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/controller/home.php" />
         <option value="$PROJECT_DIR$/application/libs/controller.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/application/models/usersmodel.php" />
       </list>
     </option>
   </component>
@@ -167,6 +185,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MapPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -495,8 +531,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="28" selection-start="829" selection-end="830" vertical-scroll-proportion="0.71350366" vertical-offset="0" max-vertical-offset="548">
+        <state line="37" column="3" selection-start="829" selection-end="830" vertical-scroll-proportion="-15.846154" vertical-offset="132" max-vertical-offset="680">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/usersmodel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="14" selection-start="2432" selection-end="2432" vertical-scroll-proportion="0.41121495" vertical-offset="1310" max-vertical-offset="2516">
+          <folding>
+            <marker date="1405738120357" expanded="true" signature="530:576" placeholder="SELECT id FR..." />
+            <marker date="1405738120357" expanded="true" signature="1330:1443" placeholder="insert into ..." />
+            <marker date="1405738120357" expanded="true" signature="1837:1912" placeholder="SELECT id FR..." />
+            <marker date="1405738120357" expanded="true" signature="2440:2453" placeholder="SELECT * FRO..." />
+            <marker date="1405738120357" expanded="true" signature="2609:2655" placeholder="UPDATE user ..." />
+            <marker date="1405738120357" expanded="true" signature="2982:3027" placeholder="SELECT * FRO..." />
+            <marker date="1405738120357" expanded="true" signature="3859:3987" placeholder="UPDATE user ..." />
+          </folding>
         </state>
       </provider>
     </entry>

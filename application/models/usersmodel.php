@@ -17,16 +17,6 @@ class UsersModel
         }
     }
 
-    public function getAllUsers()
-    {
-        $query = $this->db->prepare("SET NAMES 'UTF8'");
-        $query->execute();
-        $sql = "SELECT * FROM user";
-        $query = $this->db->prepare($sql);
-        $query->execute();
-        return $query->fetchAll();
-    }
-
     /**
      * Ham kiem tra user co email la $email da to tai hay chua
      * @param $email
@@ -49,7 +39,7 @@ class UsersModel
      * @param $lname
      * @param $email
      * @param $pw
-     * @return string
+     * @return int 1: Add user successful 0: unsuccessful
      */
     public function addUser($fname, $lname, $email, $pw)
     {
@@ -60,13 +50,13 @@ class UsersModel
         $code = substr($code, 0, 10);
         if(!$this->checkUserExist($email))
         {
-            $sql = "insert into user(fname,lname,email,password,activationCode) values('$fname','$lname','$email','$pw','$code');";
+            $sql = "insert into user(fname,lname,email,password,activationCode) values('$fname','$lname','$email','md5($pw)','$code');";
             $query = $this->db->prepare($sql);
             $query->execute();
-            return "tao tai khoan thanh cong";
+            return 1;
         }else
         {
-            return "tai khoan da ton tai";
+            return 0;
         }
     }
 
@@ -89,11 +79,18 @@ class UsersModel
     }
 
     /**
-     * ham kich hoat tai khoang, groupID=0 chuyen sang groupID=1, tai khoang da kich hoat
+     * ham kich hoat tai khoang, groupID=0 chuyen sang groupID=1, tai khoan da kich hoat
      * @param $email
      * @param $code
      * @return string
      */
+    public function userLogin($email, $password)
+    {
+        if (isset($email)&&isset($password))
+        {
+            //$sql = "SELECT * FROM "
+        }
+    }
     public function ActivationUser($email,$code)
     {
         if($this->checkActivationUser($email,$code))
