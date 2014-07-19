@@ -36,6 +36,8 @@ class ArticlesModel
      */
     public function getSomeArticles($status, $condition, $quantity)
     {
+        $query = $this->db->prepare("SET NAMES 'UTF8'");
+        $query->execute();
         $sql = "SELECT * FROM articles";
         switch ($status) {
             case 1:

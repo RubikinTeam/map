@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>VMap Project</title>
+    <link href="{{ constant('URL') }}public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ constant('URL') }}public/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="{{ constant('URL') }}public/css/site.css" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1><a href="{{ constant('URL') }}home">VMap Project</a></h1>
+            </div>
+            <div class="navbar-collapse collapse pull-right" style="height: 1px;">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Place<span class="badge">4</span></a></li>
+                    <li><a href="#">Activity<span class="badge">2</span></a></li>
+                    <li><a href="#">Article<span class="badge">2</span></a></li>
+                    <li>
+                        <div class="btn-group">
+                            <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
+                                <img src="{{ constant('URL') }}public/img/avatar.png">
+                                <span>Username</span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#"><span>Profile</span></a></li>
+                                <li><a href="#"><span>Logout</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Content, will be passed here via Twig -->
+    {% block content %} {% endblock %}
+    <footer>
+        <div class="modal-footer">
+            <h4 class="text-center"><strong>VMAP PROJECT</strong></h4>
+            <p class="text-center">© 2014 Map Team.</p>
+        </div>
+    </footer>
+    <script src="{{ constant('URL') }}public/js/jquery-2.1.0.min.js"></script>
+    <script src="{{ constant('URL') }}public/js/bootstrap.min.js"></script>
+    <script src="{{ constant('URL') }}public/js/jssor.core.js"></script>
+    <script src="{{ constant('URL') }}public/js/jssor.slider.js"></script>
+    <script src="{{ constant('URL') }}public/js/jssor.utils.js"></script>
+    <script src="{{ constant('URL') }}public/js/slider.js"></script>
+</body>
+</html>

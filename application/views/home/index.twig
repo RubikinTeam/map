@@ -1,0 +1,153 @@
+{% extends "_templates/base.twig" %}
+{% block content %}
+    <div class="main-content-master">
+        <div class="container">
+            <div id="sliderb_container" class="sliderb-container">
+                <div data-u="loading" style="position: absolute; top: 0; left: 0;">
+                    <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block; background-color: #000; top: 0; left: 0;width: 100%;height:100%;">
+                    </div>
+                    <div style="position: absolute; display: block; background: url({{ constant('URL') }}public/img/loading.gif) no-repeat center center; top: 0; left: 0;width: 100%;height:100%;">
+                    </div>
+                </div>
+                <div data-u="slides" class="slider">
+                    <div>
+                        <img data-u="image" src="{{ constant('URL') }}public/img/landscape/01.jpg">
+                        <div data-u="thumb">Do you notice it is draggable by mouse/finger?</div>
+                    </div>
+                    <div>
+                        <img data-u="image" src="{{ constant('URL') }}public/img/landscape/02.jpg">
+                        <div data-u="thumb">Did you drag by either horizontal or vertical?</div>
+                    </div>
+                    <div>
+                        <img data-u="image" src="{{ constant('URL') }}public/img/landscape/03.jpg">
+                        <div data-u="thumb">Do you notice navigator responses when drag?</div>
+                    </div>
+                    <div>
+                        <img data-u=image src="{{ constant('URL') }}public/img/landscape/04.jpg" />
+                        <div data-u="thumb">Do you notice arrow responses when click?</div>
+                    </div>
+                </div>
+                <div data-u="thumbnavigator" class="sliderb-T" style="position: absolute; bottom: 0; left: 0; height:45px; width:600px;">
+                    <div style="filter: alpha(opacity=40); opacity:0.4; position: absolute; display: block; background-color: #000000; top: 0; left: 0; width: 100%; height: 100%;">
+                    </div>
+                    <div data-u="slides">
+                        <div data-u="prototype" style="POSITION: absolute; WIDTH: 600px; HEIGHT: 45px; TOP: 0; LEFT: 0;">
+                            <thumbnailtemplate style="font-family: verdana; font-weight: normal; POSITION: absolute; WIDTH: 100%; HEIGHT: 100%; TOP: 0; LEFT: 0; color:#fff; line-height: 45px; font-size:20px; padding-left:10px;"></thumbnailtemplate>
+                        </div>
+                    </div>
+                </div>
+                <div data-u="navigator" class="jssorb01" style="position: absolute; bottom: 16px; right: 10px;">
+                    <div data-u="prototype" style="POSITION: absolute; WIDTH: 12px; HEIGHT: 12px;"></div>
+                </div>
+                <span data-u="arrowleft" class="arrowleft jssora05l"></span>
+                <span data-u="arrowright" class="arrowright jssora05r"></span>
+            </div>
+        </div>
+
+        <div class="main-content container">
+            <div class="content-title">
+                    <span class="pull-left">
+                        <span class="text"><strong>HOẠT ĐỘNG NỔI BẬT</strong></span>
+                    </span>
+                    <span class="pull-right">
+                        <span data-u="arrowleft" class="arrowleft jssora03l">
+                        </span>
+                        <span data-u="arrowright" class="arrowright jssora03r">
+                        </span>
+                    </span>
+            </div>
+            <div id="slider1_container" class="slider1-container">
+
+                <!-- Loading Screen -->
+                <div data-u="loading" style="position: absolute; top: 0; left: 0;">
+                    <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000; top: 0; left: 0;width: 100%;height:100%;">
+                    </div>
+                    <div style="position: absolute; display: block; background: url({{ constant('URL') }}public/img/loading.gif) no-repeat center center;
+                top: 0; left: 0;width: 100%;height:100%;">
+                    </div>
+                </div>
+
+                <!-- Slides Container -->
+                <div data-u="slides" style="position: absolute; left: 0; top: 0; width: 1140px; height: 450px; overflow: hidden;">
+                    <div class="article-box">
+                        <h3 class="article-title">Title 1</h3>
+                        <div class="status"><span class="address">17/7/2014</span></div>
+                        <div class="short-desc">
+                            Fully responsive 3D carousel that allows to display media or HTML content with an unique and original layout. It’s perfect for presentations, for anyone who wants to obtain a great impact on their visitors.
+                        </div>
+                    </div>
+                    <div class="article-box">
+                        <h3 class="article-title">Title 1</h3>
+                        <div class="status"><span class="address">17/7/2014</span></div>
+                        <div class="short-desc">
+                            Fully responsive 3D carousel that allows to display media or HTML content with an unique and original layout. It’s perfect for presentations, for anyone who wants to obtain a great impact on their visitors.
+                        </div>
+                    </div>
+                    <div class="article-box">
+                        <h3 class="article-title">Title 1</h3>
+                        <div class="status"><span class="address">17/7/2014</span></div>
+                        <div class="short-desc">
+                            Fully responsive 3D carousel that allows to display media or HTML content with an unique and original layout. It’s perfect for presentations, for anyone who wants to obtain a great impact on their visitors.
+                        </div>
+                    </div>
+                    <div class="article-box">
+                        <h3 class="article-title">Title 1</h3>
+                        <div class="status"><span class="address">17/7/2014</span></div>
+                        <div class="short-desc">
+                            Fully responsive 3D carousel that allows to display media or HTML content with an unique and original layout. It’s perfect for presentations, for anyone who wants to obtain a great impact on their visitors.
+                        </div>
+                    </div>
+                    <div class="article-box">
+                        <h3 class="article-title">Title 1</h3>
+                        <div class="status"><span class="address">17/7/2014</span></div>
+                        <div class="short-desc">
+                            Fully responsive 3D carousel that allows to display media or HTML content with an unique and original layout. It’s perfect for presentations, for anyone who wants to obtain a great impact on their visitors.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="main-content container">
+            <div class="content-title">
+                    <span class="pull-left">
+                        <span class="text"><strong>BÀI VIẾT NỔI BẬT</strong></span>
+                    </span>
+                    <span class="pull-right">
+                        <span data-u="arrowleft" class="arrowleft jssora03l">
+                        </span>
+                        <span data-u="arrowright" class="arrowright jssora03r">
+                        </span>
+                    </span>
+            </div>
+            <div id="slider2_container" class="slider1-container">
+
+                <!-- Loading Screen -->
+                <div data-u="loading" style="position: absolute; top: 0; left: 0;">
+                    <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000; top: 0; left: 0;width: 100%;height:100%;">
+                    </div>
+                    <div style="position: absolute; display: block; background: url({{ constant('URL') }}public/img/loading.gif) no-repeat center center;
+                top: 0; left: 0;width: 100%;height:100%;">
+                    </div>
+                </div>
+
+                <!-- Slides Container -->
+                <div data-u="slides" style="position: absolute; left: 0; top: 0; width: 1140px; height: 450px; overflow: hidden;">
+                    {% for article in articles %}
+                        <div class="article-box">
+                            <h3 class="article-title">{{ article.title }}</h3>
+                            <div class="status"><span class="address">{{ article.date }}</span></div>
+                            <div class="short-desc">
+                                {{ article.sumary }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
