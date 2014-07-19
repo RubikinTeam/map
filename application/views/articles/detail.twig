@@ -1,0 +1,58 @@
+{% extends "_templates/base.twig" %}
+{% block content %}
+    <div class="main-content clearfix">
+        <nav class="breadcrumbs small">
+            <ul>
+                <li><a href="{{ constant('URL') }}home"><i class="icon-home"></i></a></li>
+                <li><a href="#">Bài viết</a></li>
+            </ul>
+        </nav>
+        <div class="grid">
+            <div class="row">
+                <div class="span9">
+                    <!--Article's content-->
+                    <h2><strong>Title {{ article.title }}</strong></h2>
+                    <p>{{ article.date }}</p>
+                    <p><strong>{{ article.sumary }}</strong></p>
+
+                    <p>{{ article.detail }}</p>
+                    <div class="margin20"></div>
+
+                    <!-- Article's comments-->
+                    <div class="listview-outlook" data-role="listview">
+                        <div class="list-group">
+                            <div class="group-title">Bình luận ({{ comments|length }})</div>
+                            <div class="group-content">
+                                {% for comment in comments %}
+                                    <div class="list-content">
+                                        <p>{{ comment.content }}</p>
+                                        <strong>{{ comment.name }}</strong>
+                                        <p>{{ comment.date }}</p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <form action="{{ constant('URL') }}articles/addComment/{{ article.id }}" method="POST">
+                        <input type="text" name="comment" placeholder="Ý kiến của bạn" required/>
+                        <input type="submit" name="submit_add_comment" value="Gửi" />
+                    </form>
+                </div>
+                <div class="span3">
+                    <div class="panel">
+                        <div class="panel-header">
+                            Bài viết khác
+                        </div>
+                        <div class="panel-content">
+                            <ul>
+                                {% for article in otherArticles %}
+                                    <li><a href="{{ constant('URL') }}articles/detail/{{ article.id }}">Chua co title nen de the nay cho de test {{ article.id }}{{ article.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

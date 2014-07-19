@@ -6,7 +6,7 @@
  * Date: 7/17/14
  * Time: 9:39 AM
  */
-class ActivitiesModel extends Controller
+class ActivitiesModel
 {
     public function __construct(PDO $db)
     {

@@ -18,6 +18,10 @@ class Home extends Controller
     {
         $articles_model = $this->loadModel('articlesmodel');
         $articles = $articles_model->getSomeArticles(0, 3, 6);
+
+        $activities_model = $this->loadModel('ActivitiesModel');
+        $activities = $activities_model->getSomeActivities(0, 3, 6);
+
         $comments_model = $this->loadModel('commentsmodel');
         $comments = $comments_model->getSomeComments(2, 2, 1, 3 );
         $place_model = $this->loadModel('placesmodel');
@@ -29,7 +33,7 @@ class Home extends Controller
         // debug message to show where you are, just for the demo
         //echo 'Message from Controller: You are in the controller home, using the method index()';
 	// render the view, pass the data
-        $this->render('home/index', array('articles' => $articles, 'comments' => $comments, 'userLogged'=>$userLogged));
+        $this->render('home/index', array('articles' => $articles, 'activities' => $activities, 'userLogged'=>$userLogged));
 	}
     public function userLogin()
     {
