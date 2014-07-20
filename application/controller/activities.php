@@ -2,23 +2,23 @@
 /**
  * Created by PhpStorm.
  * User: Duyen
- * Date: 7/19/14
- * Time: 3:17 PM
+ * Date: 7/21/14
+ * Time: 12:26 AM
  */
 
-class Articles extends Controller
+class Activities extends Controller
 {
     public function detail($id)
     {
-        $articles_model = $this->loadModel('ArticlesModel');
-        $article = $articles_model->getArticleById($id);
+        $activities_model = $this->loadModel('ActivitiesModel');
+        $activity = $activities_model->getActivityById($id);
 
-        $otherArticles = $articles_model->getSomeArticles(0, 2, 6);
+        $otherActivities = $activities_model->getSomeActivities(0, 2, 6);
 
         $comments_model = $this->loadModel('CommentsModel');
-        $comments = $comments_model->getSomeComments(1, $id, 2, 0);
+        $comments = $comments_model->getSomeComments(2, $id, 2, 0);
 
-        $this->render('articles/detail', array('article' => $article, 'comments' => $comments, 'otherArticles' => $otherArticles));
+        $this->render('activities/detail', array('activity' => $activity, 'comments' => $comments, 'otherActivities' => $otherActivities));
     }
 
     public function addComment($id)
@@ -36,6 +36,6 @@ class Articles extends Controller
                 $comments_model->addComment($_POST["type"], $id, $userLogged['fname'].' '.$userLogged['lname'], $_POST["comment"]);
             }
         }
-        header('location: ' . URL . 'articles/detail/' . $id);
+        header('location: ' . URL . 'activities/detail/' . $id);
     }
 }

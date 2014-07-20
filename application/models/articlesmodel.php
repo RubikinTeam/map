@@ -23,7 +23,7 @@ class ArticlesModel
      *      = 1 : articles da duoc duyet
      *      = 2 : articles chua duyet
      *      = 0: khong rang buoc ve trang thai
-     * @param $order :
+     * @param $condition:
      *      = 1 : theo thoi gian tu xa den gan
      *      = 2 : theo thoi gian tu gan den xa
      *      = 3 : theo luong like tu it den nhieu
@@ -78,6 +78,10 @@ class ArticlesModel
         return $query->fetchAll();
     }
 
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function getArticleById($id)
     {
         $query = $this->db->prepare("SET NAMES 'UTF8'");

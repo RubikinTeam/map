@@ -1,34 +1,33 @@
 {% extends "_templates/base.twig" %}
 {% block javascripts %}
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
+    <script>
+        (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
             js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=576254322458716&version=v2.0";
             fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+        }({d: document, s: 'script', id: 'facebook-jssdk'}));
+    </script>
 {% endblock %}
 {% block content %}
     <div class="main-content clearfix">
         <nav class="breadcrumbs small">
             <ul>
                 <li><a href="{{ constant('URL') }}home"><i class="icon-home"></i></a></li>
-                <li><a href="#">Bài viết</a></li>
+                <li><a href="#">Hoạt động</a></li>
             </ul>
         </nav>
         <div class="grid">
             <div class="row">
                 <div class="span9">
-                    <!--Article's content-->
-                    <h2><strong>Title {{ article.title }}</strong></h2>
-                    <p>by {{ article.name }} on {{ article.date }}</p>
-                    <p><strong>{{ article.sumary }}</strong></p>
-
-                    <p>{{ article.detail }}</p>
+                    <!--Activity's content-->
+                    <h2><strong>{{ activity.name }}</strong></h2>
+                    <p>{{ activity.description }}</p>
                     <div class="margin20"></div>
 
-                    <!-- Article's comments-->
+                    <!-- Activity's comments-->
                     <div class="tab-control" data-role="tab-control">
                         <ul class="tabs">
                             <li><h2>Bình Luận</h2></li>
@@ -37,17 +36,17 @@
                         </ul>
                         <div class="frames">
                             <div class="frame" id="_tab_1">
-                                <div class="fb-comments" data-href="{{ constant('URL') }}articles/detail/{{ article.id }}" data-width="658" data-numposts="5" data-colorscheme="light"></div>
+                                <div class="fb-comments" data-href="{{ constant('URL') }}activities/detail/{{ activity.id }}" data-width="658" data-numposts="5" data-colorscheme="light"></div>
                             </div>
                             <div class="frame" id="_tab_2">
                                 <div class="listview-outlook">
                                     <div class="list">
                                         <div class="list-content">
-                                            <form action="{{ constant('URL') }}articles/addComment/{{ article.id }}" method="POST">
+                                            <form action="{{ constant('URL') }}activities/addComment/{{ activity.id }}" method="POST">
                                                 <textarea class="list-title place-right" name="comment" placeholder="Ý kiến của bạn" required></textarea>
                                                 <span class="list-subtitle">&nbsp;</span>
                                                 <label>
-                                                    <input type="text" name="type" value="1" style="display:none;"/>
+                                                    <input type="text" name="type" value="2" style="display:none;"/>
                                                 </label>
                                                 <input class="place-right" type="submit" name="submit_add_comment" value="Gửi" />
                                             </form>
@@ -74,16 +73,31 @@
                             </div>
                         </div>
                     </div>
+                    <div class="margin20"></div>
+                    <!-- View Map -->
+                    <div class=""></div>
                 </div>
                 <div class="span4">
                     <div class="panel">
                         <div class="panel-header">
-                            Bài viết khác
+                            Thông tin hoạt động
+                        </div>
+                        <div class="panel-content">
+                            <div class="countdown" data-style-background="bg-lightRed" data-role="countdown" data-stoptimer="{{ activity.startday }}"></div>
+                            <p>Ngày bắt đầu: {{ activity.startday }}</p>
+                            <p>Ngày kết thúc: {{ activity.endday }}</p>
+                            <p>Địa điểm: <a href="">Xem bản đồ</a></p>
+                        </div>
+                    </div>
+                    <div class="margin20"></div>
+                    <div class="panel">
+                        <div class="panel-header">
+                            Hoạt động khác
                         </div>
                         <div class="panel-content">
                             <ul>
-                                {% for article in otherArticles %}
-                                    <li><a href="{{ constant('URL') }}articles/detail/{{ article.id }}">Chua co title nen de the nay cho de test {{ article.id }}{{ article.title }}</a></li>
+                                {% for activity in otherActivities %}
+                                    <li><a href="{{ constant('URL') }}activities/detail/{{ activity.id }}">{{ activity.name }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div>
