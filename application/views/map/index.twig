@@ -1,102 +1,103 @@
 {% extends "_templates/base.twig" %}
-{% block content %}
-    <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMO6grIC9wDQ6rvbhXx3dAeV5__UsqVtY&sensor=true">
+{% block javascripts %}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMO6grIC9wDQ6rvbhXx3dAeV5__UsqVtY&sensor=true">
     </script>
+{% endblock %}
+{% block content %}
     <body onload="load()">
-    <div class="container">
-        <div class="row">
-            <div class="span6">
-                <div class="input-control text">
-                    <input type="text" placeholder="Nhập từ khóa tìm kiếm..."/>
-                    <button class="btn-search"></button>
+        <div class="main-content clearfix">
+            <div class="row">
+                <div class="span6">
+                    <div class="input-control text">
+                        <input type="text" placeholder="Nhập từ khóa tìm kiếm..."/>
+                        <button class="btn-search"></button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="span3" style="float: left">
-                <nav class="sidebar light">
-                    <ul>
-                        <li class="title">Loại hình</li>
-                        <li class="active" onmouseup="getLocation(0)"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
-                        <li class="stick bg-red">
-                            <a class="dropdown-toggle" href="#"><i class="icon-tree-view"></i>Hoạt động</a>
-                            <ul class="dropdown-menu" data-role="dropdown">
-                                <li><a href="">Subitem 1</a></li>
-                                <li><a href="">Subitem 2</a></li>
-                                <li><a href="">Subitem 3</a></li>
-                                <li class="divider"></li>
-                                <li><a href="">Subitem 4</a></li>
-                                <li class="disabled"><a href="">Subitem 4</a></li>
-                            </ul>
-                        </li>
+            <div class="row">
+                <div class="span3" style="float: left">
+                    <nav class="sidebar light">
+                        <ul>
+                            <li class="title">Loại hình</li>
+                            <li class="active" onmouseup="getLocation(0)"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
+                            <li class="stick bg-red">
+                                <a class="dropdown-toggle" href="#"><i class="icon-tree-view"></i>Hoạt động</a>
+                                <ul class="dropdown-menu" data-role="dropdown">
+                                    <li><a href="">Subitem 1</a></li>
+                                    <li><a href="">Subitem 2</a></li>
+                                    <li><a href="">Subitem 3</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="">Subitem 4</a></li>
+                                    <li class="disabled"><a href="">Subitem 4</a></li>
+                                </ul>
+                            </li>
 
-                        <li class="stick bg-yellow">
-                            <a class="dropdown-toggle" href="#"><i class="icon-location"></i>Địa điểm</a>
-                            <ul class="dropdown-menu" data-role="dropdown">
-                                <li><a href="">Subitem 1</a></li>
-                                <li><a href="">Subitem 2</a></li>
-                                <li><a href="">Subitem 3</a></li>
-                                <li class="divider"></li>
-                                <li><a href="">Subitem 4</a></li>
-                                <li class="disabled"><a href="">Subitem 4</a></li>
-                            </ul>
-                        </li>
-                        <li class="stick bg-green">
-                            <a class="dropdown-toggle" href="#"><i class="icon-newspaper"></i>Bài viết</a>
-                            <ul class="dropdown-menu" data-role="dropdown">
-                                <li><a href="">Subitem 1</a></li>
-                                <li><a href="">Subitem 2</a></li>
-                                <li><a href="">Subitem 3</a></li>
-                                <li class="divider"></li>
-                                <li><a href="">Subitem 4</a></li>
-                                <li class="disabled"><a href="">Subitem 4</a></li>
-                            </ul>
-                        </li>
+                            <li class="stick bg-yellow">
+                                <a class="dropdown-toggle" href="#"><i class="icon-location"></i>Địa điểm</a>
+                                <ul class="dropdown-menu" data-role="dropdown">
+                                    <li><a href="">Subitem 1</a></li>
+                                    <li><a href="">Subitem 2</a></li>
+                                    <li><a href="">Subitem 3</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="">Subitem 4</a></li>
+                                    <li class="disabled"><a href="">Subitem 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="stick bg-green">
+                                <a class="dropdown-toggle" href="#"><i class="icon-newspaper"></i>Bài viết</a>
+                                <ul class="dropdown-menu" data-role="dropdown">
+                                    <li><a href="">Subitem 1</a></li>
+                                    <li><a href="">Subitem 2</a></li>
+                                    <li><a href="">Subitem 3</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="">Subitem 4</a></li>
+                                    <li class="disabled"><a href="">Subitem 4</a></li>
+                                </ul>
+                            </li>
 
-                        <li class="title">Vị trí</li>
-                        <li class="active"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
-                        <li class="stick bg-yellow">
-                            <a class="dropdown-toggle" href="#"><i class="icon-compass"></i>TP.Hồ Chí Minh</a>
-                            <ul class="dropdown-menu" data-role="dropdown">
-                                <li><a href="">Subitem 1</a></li>
-                                <li><a href="">Subitem 2</a></li>
-                                <li><a href="">Subitem 3</a></li>
-                                <li class="divider"></li>
-                                <li><a href="">Subitem 4</a></li>
-                                <li class="disabled"><a href="">Subitem 4</a></li>
-                            </ul>
-                        </li>
-                        <li class="stick bg-green">
-                            <a class="dropdown-toggle" href="#"><i class="icon-cars"></i>Ngoại thành</a>
-                            <ul class="dropdown-menu" data-role="dropdown">
-                                <li><a href="">Subitem 1</a></li>
-                                <li><a href="">Subitem 2</a></li>
-                                <li><a href="">Subitem 3</a></li>
-                                <li class="divider"></li>
-                                <li><a href="">Subitem 4</a></li>
-                                <li class="disabled"><a href="">Subitem 4</a></li>
-                            </ul>
-                        </li>
-                        <li class="stick bg-green">
-                            <a class="dropdown-toggle" href="#"><i class="icon-earth"></i>Nước ngoài</a>
-                            <ul class="dropdown-menu" data-role="dropdown">
-                                <li><a href="">Subitem 1</a></li>
-                                <li><a href="">Subitem 2</a></li>
-                                <li><a href="">Subitem 3</a></li>
-                                <li class="divider"></li>
-                                <li><a href="">Subitem 4</a></li>
-                                <li class="disabled"><a href="">Subitem 4</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+                            <li class="title">Vị trí</li>
+                            <li class="active"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
+                            <li class="stick bg-yellow">
+                                <a class="dropdown-toggle" href="#"><i class="icon-compass"></i>TP.Hồ Chí Minh</a>
+                                <ul class="dropdown-menu" data-role="dropdown">
+                                    <li><a href="">Subitem 1</a></li>
+                                    <li><a href="">Subitem 2</a></li>
+                                    <li><a href="">Subitem 3</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="">Subitem 4</a></li>
+                                    <li class="disabled"><a href="">Subitem 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="stick bg-green">
+                                <a class="dropdown-toggle" href="#"><i class="icon-cars"></i>Ngoại thành</a>
+                                <ul class="dropdown-menu" data-role="dropdown">
+                                    <li><a href="">Subitem 1</a></li>
+                                    <li><a href="">Subitem 2</a></li>
+                                    <li><a href="">Subitem 3</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="">Subitem 4</a></li>
+                                    <li class="disabled"><a href="">Subitem 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="stick bg-green">
+                                <a class="dropdown-toggle" href="#"><i class="icon-earth"></i>Nước ngoài</a>
+                                <ul class="dropdown-menu" data-role="dropdown">
+                                    <li><a href="">Subitem 1</a></li>
+                                    <li><a href="">Subitem 2</a></li>
+                                    <li><a href="">Subitem 3</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="">Subitem 4</a></li>
+                                    <li class="disabled"><a href="">Subitem 4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="map-canvas" style="width: 810px;height: 540px;float: right;">
+                </div>
+                <div id = "locationList" class = "span3">Locations list</div>
+                <div style="clear: both"></div>
             </div>
-            <div id="map-canvas" style="width: 900px;height: 600px;float: right;">
-            </div>
-            <div id = "locationList" class = "span3">Locations list</div>
-            <div style="clear: both"></div>
         </div>
-    </div>
     </body>
 {% endblock %}
