@@ -17,9 +17,9 @@ $(function () {
             padding: 10,
             onShow: function (_dialog) {
                 var content = '<form class="user-input" action = "home/userLogin/" method="POST">' +
-                    '<label>Email</label>' +
-                    '<div class="input-control text"><input type="text" name="email"><button class="btn-clear"></button></div>' +
-                    '<label>Mật khẩu</label>' +
+                    '<label for = "email">Email</label>' +
+                    '<div class="input-control text"><input type="text"><button class="btn-clear"></button></div>' +
+                    '<label for = "password">Mật khẩu</label>' +
                     '<div class="input-control password"><input type="password" name="password"><button class="btn-reveal"></button></div>' +
                     '<div class="input-control checkbox"><label><input type="checkbox" name="c1" checked/><span class="check"></span>Ghi nhớ</label></div>' +
                     '<div class="form-actions">' +
@@ -34,20 +34,11 @@ $(function () {
         });
     });
 })
-/**
- * Load google Map
- */
-window.onload = function () {
-    var position = new google.maps.LatLng(11.8649, 106.612);
-    var options = {
-        zoom: 12,
-        center: position,
-        mapTypeControl: true,
-        disableDefaultUI: true,
-        panControl: true
-    };
-    var map = new google.maps.Map(document.getElementById('map-canvas'), options);
-}
+window.onload = getLocation(0);
+//$("#map-type-all").on('click', getLocation(0));
+//$("#map-location-all").on('click', getLocation(0));
+//$("#map-activities-all").on('click', getActivityByType(0));
+//document.getElementById("map-activities-all").addEventListener('click',getActivityByType(0));
 function getLocation(id) {
     if (window.XMLHttpRequest) {
         ajax = new XMLHttpRequest();
@@ -67,11 +58,11 @@ function getLocation(id) {
                 panControl: true
             };
             var map = new google.maps.Map(document.getElementById('map-canvas'), options);
-            var markers = [];
+            //var markers = [];
             var infoContents = [];
-            var infoWindows = [];
+            //var infoWindows = [];
             for (var i = 0; i < n; i += 1) {
-                markers[i] =
+                var marker =
                     new google.maps.Marker(
                         {
                             position: new google.maps.LatLng(obj[i].lat, obj[i].long),
@@ -79,40 +70,77 @@ function getLocation(id) {
                             title: obj[i].lat + ' | ' + obj[i].long
                         }
                     );
-                infoContents[i] = 'Cơ sở: ' + obj[i].name + '</br>'
-                    + 'Địa chỉ: số ' + obj[i].no + ' ' + obj[i].street + ', phường ' + obj[i].ward + ', Quận '
+                infoContents[i] = '<div style="width: 200px"><b>Cơ sở:</b> ' + obj[i].name + '</br>'
+                    + '<b>Địa chỉ:</b> số ' + obj[i].no + ' ' + obj[i].street + ', phường ' + obj[i].ward + ', Quận '
                     + obj[i].dist + ', ' + obj[i].city + '</br>'
-                    + 'Điện thoại: ' + obj[i].phone + '</br>'
-                    + 'Email: ' + obj[i].email + '</br>';
-                google.maps.event.addListener(markers[i], 'click', function () {
-                    infoWindows[i] = new google.maps.InfoWindow({
-                        content: infoContents[i],
-                        maxWidth: 200
-                    });
-                    infoWindows[i].open(map, markers[i]);
-                });
-                // alert(infoContents[i])
+                    + '<b>Điện thoại:</b> ' + obj[i].phone + '</br>'
+                    + '<b>Email:</b> ' + obj[i].email + '</br>'
+                    + '<a href = "#" style="text-align: left">Xem thêm...</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = "#" style="align-self: flex-end">Bài viết liên quan</a></div>';
+                var infoWindow = new google.maps.InfoWindow(), marker, i;
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        infoWindow.setContent(infoContents[i]);
+                        infoWindow.open(map, marker);
+                    }
+                })(marker, i));
                 textContent = textContent + (obj[i].lat + " - " + obj[i].long + "</br>");
             }
-              google.maps.event.addListener(markers[0], 'click', function () {
-                infoWindows[0] = new google.maps.InfoWindow({
-                    content: infoContents[0],
-                    maxWidth: 200
-                });
-                infoWindows[0].open(map, markers[0]);
-            });
-            google.maps.event.addListener(markers[1], 'click', function () {
-                infoWindows[1] = new google.maps.InfoWindow({
-                    content: infoContents[1],
-                    maxWidth: 200
-                });
-                infoWindows[1].open(map, markers[1]);
-            });
             document.getElementById('locationList').innerHTML = textContent;
-
         }
     }
     ajax.open("POST", "map/getLocationById/", true);
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajax.send("id=" + id);
+}
+
+function getActivityByType(type) {
+    if (window.XMLHttpRequest) {
+        ajax = new XMLHttpRequest();
+    }
+    ajax.onreadystatechange = function () {
+        if (ajax.readyState == 4 && ajax.status == 200) {
+            var text = ajax.responseText;
+            //alert(text);
+            var obj = JSON.parse(text);
+            var n = Object.keys(obj).length;
+            var textContent = "";
+            var position = new google.maps.LatLng(10.8649, 106.612);
+            var options = {
+                zoom: 12,
+                center: position,
+                mapTypeControl: true,
+                disableDefaultUI: true,
+                panControl: true
+            };
+            var map = new google.maps.Map(document.getElementById('map-canvas'), options);
+            var infoContents = [];
+            for (var i = 0; i < n; i += 1) {
+                var marker =
+                    new google.maps.Marker(
+                        {
+                            position: new google.maps.LatLng(obj[i].lat, obj[i].long),
+                            map: map,
+                            title: obj[i].lat + ' | ' + obj[i].long
+                        }
+                    );
+                infoContents[i] = '<div style="width: 300px"><b>Hoạt động:</b>' + obj[i].activityName + '</br>'
+                    + '<b>Ngày bắt đầu:</b>'+ obj[i].startday + '</br>' + '<b>Ngày kết thúc: </b> ' + obj[i].endday + '</br>'
+                    + '<b>Đơn vị tổ chức: </b> ' + '<a href = "vplaces/detail/' + obj[i].placeId + '">'
+                    +  obj[i].placeName + '</a></br>'
+                    + '<a href = "activities/detail/' + obj[i].activityId + '">Chi tiết...</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = "#" style="align-self: flex-end">Bài viết liên quan</a></div>';
+                var infoWindow = new google.maps.InfoWindow(), marker, i;
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        infoWindow.setContent(infoContents[i]);
+                        infoWindow.open(map, marker);
+                    }
+                })(marker, i));
+                textContent = textContent + (obj[i].lat + " - " + obj[i].long + "</br>");
+            }
+            document.getElementById('locationList').innerHTML = textContent;
+        }
+    }
+    ajax.open("POST", "activities/getActivityShortDesByType/", true);
+    ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    ajax.send("type=" +type);
 }
