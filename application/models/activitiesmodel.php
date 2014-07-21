@@ -23,7 +23,7 @@ class ActivitiesModel
      *      = 1 : activities da duoc duyet
      *      = 2 : activities chua duyet
      *      = 0: khong rang buoc ve trang thai
-     * @param $order :
+     * @param $condition :
      *      = 1 : theo thoi gian tu xa den gan
      *      = 2 : theo thoi gian tu gan den xa
      *      = 3 : theo luong like tu it den nhieu
@@ -76,5 +76,15 @@ class ActivitiesModel
         $query = $this->db->prepare($sql);
         $query->execute();
         return $query->fetchAll();
+    }
+
+    public function getActivityById($id)
+    {
+        $query = $this->db->prepare("SET NAMES 'UTF8'");
+        $query->execute();
+        $sql = "SELECT * FROM activities WHERE id = $id";
+        $query = $this->db->prepare($sql);
+        $query->execute();
+        return $query->fetch(PDO::FETCH_OBJ);
     }
 }
