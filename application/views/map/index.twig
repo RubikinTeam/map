@@ -10,17 +10,17 @@
                 <nav class="sidebar light">
                     <ul>
                         <li class="title">Loại hình</li>
-                        <li class="active" onmouseup="getLocation(0)"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
+                        <li class="active" id = "map-type-all"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
                         <li class="stick bg-red">
-                            <a class="dropdown-toggle" href="#"><i class="icon-tree-view"></i>Hoạt động</a>
+                            <a class="dropdown-toggle" name = "map-activities-all" onclick="getActivityByType(0)" href="#"><i class="icon-tree-view"></i>Hoạt động</a>
                             <ul class="dropdown-menu" data-role="dropdown">
                                 <li><a href="">Vì cộng đồng</a></li>
-                                <li><a href="">An sinh xã hội</a></li>
-                                <li><a href="">Tuyên truyền - GD</a></li>
-                                <li><a href="">Cải tạo môi trường</a></li>
-                                <li><a href="">Đền ơn đáp nghĩa</a></li>
-                                <li><a href="">Chuyên môn</a></li>
-                                <li><a href="">Khác</a></li>
+                                <li onclick="getActivityByType(2)"><a href="" onclick="getActivityByType(1)">An sinh xã hội</a></li>
+                                <li onclick="getActivityByType(3)"><a href="">Tuyên truyền - GD</a></li>
+                                <li onclick="getActivityByType(4)"><a href="">Cải tạo môi trường</a></li>
+                                <li onclick="getActivityByType(5)"><a href="">Đền ơn đáp nghĩa</a></li>
+                                <li onclick="getActivityByType(6)"><a href="">Chuyên môn</a></li>
+                                <li onclick="getActivityByType(7)"><a href="">Khác</a></li>
                                 <!--<li class="divider"></li><li class="disabled"><a href="">Subitem 4</a></li>-->
                             </ul>
                         </li>
@@ -43,7 +43,7 @@
                         </li>
 
                         <li class="title">Vị trí</li>
-                        <li class="active"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
+                        <li class="active" id = "map-location-all"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
                         <li class="stick bg-red">
                             <a class="dropdown-toggle" href="#"><i class="icon-cars"></i>Ngoại thành</a>
                             <ul class="dropdown-menu" data-role="dropdown">

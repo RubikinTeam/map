@@ -20,7 +20,7 @@ class Home extends Controller
         $articles = $articles_model->getSomeArticles(0, 3, 6);
 
         $activities_model = $this->loadModel('ActivitiesModel');
-        $activities = $activities_model->getSomeActivities(0, 3, 6);
+        $activities = $activities_model->getSomeActivities(0, 0, 3, 6);
 
         $comments_model = $this->loadModel('commentsmodel');
         $comments = $comments_model->getSomeComments(2, 2, 1, 3);

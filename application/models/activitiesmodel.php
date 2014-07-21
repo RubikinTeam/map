@@ -19,7 +19,10 @@ class ActivitiesModel
 
     /**
      * Ham tra ve mot mang cac activity theo mot so tieu chuan nhat dinh
-     *      * @param $status
+     * @param: $type
+     *      = 0 : Tat ca
+     *      = n > 0: Cac loai hoat dong
+     * @param $status
      *      = 1 : activities da duoc duyet
      *      = 2 : activities chua duyet
      *      = 0: khong rang buoc ve trang thai
@@ -34,7 +37,7 @@ class ActivitiesModel
      *      = n (n > 0): Lay n activities dau tien
      * @return mixed
      */
-    public function getSomeActivities($status, $condition, $quantity)
+    public function getSomeActivities($type, $status, $condition, $quantity)
     {
         $query = $this->db->prepare("SET NAMES 'UTF8'");
         $query->execute();
@@ -50,6 +53,9 @@ class ActivitiesModel
                 break;
             default:
                 break;
+        }
+        if ($type > 0) {
+            $sql .= " AND `type` = $type ";
         }
         switch ($condition) {
             case 1:
@@ -78,7 +84,39 @@ class ActivitiesModel
         return $query->fetchAll();
     }
 
-    public function getActivityById($id)
+    public function getActivityShortDesByType($type)
+    {
+        $query = $this->db->prepare("SET NAMES 'UTF8'");
+        $query->execute();
+        $sql = "SELECT a.`id` AS activityId, a.`name` AS activityName, a.startday, a.endday,
+        v.id AS placeId, v.`name` AS placeName,
+        l.lat, l.long FROM activities a JOIN v_place v
+        ON a.vplaceId = v.id JOIN location l ON a.locationId = l.id";
+        if ($type > 0){
+            $sql .= " WHERE a.type = $type";
+        }
+        $query = $this->db->prepare($sql);
+        $query->execute();
+        $array = $query->fetchAll();
+        if (count($array) > 0) {
+            $text = '[';
+            foreach ($array as $element) {
+                $text .= '{"lat" : "' . $element->lat . '", "long" : "' . $element->long .
+                    '", "activityName" : "' . $element->activityName .
+                    '", "activityId" : "' . $element->activityId . '", "startday" : "' . $element->startday . '", "endday" : "' . $element->endday .
+                    '", "placeId" : "' . $element->placeId . '", "placeName" : "' . $element->placeName . '"},';
+            }
+            $text = rtrim($text, ",");
+            $text .= "]";
+            return $text;
+        } else {
+            return 0;
+        }
+
+    }
+
+    public
+    function getActivityById($id)
     {
         $query = $this->db->prepare("SET NAMES 'UTF8'");
         $query->execute();

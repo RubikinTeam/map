@@ -26,7 +26,7 @@
       <file leaf-file-name="index.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/home/index.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="39" selection-start="2142" selection-end="2143" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="2125">
+            <state line="34" column="39" selection-start="2142" selection-end="2143" vertical-scroll-proportion="-0.0" vertical-offset="578" max-vertical-offset="2125">
               <folding />
             </state>
           </provider>
@@ -35,15 +35,15 @@
       <file leaf-file-name="index.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/map/index.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="61" selection-start="969" selection-end="969" vertical-scroll-proportion="0.06563707" vertical-offset="255" max-vertical-offset="1921">
+            <state line="17" column="108" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.57227725" vertical-offset="0" max-vertical-offset="1921">
               <folding>
                 <element signature="e#252#276#0" expanded="true" />
                 <element signature="e#335#354#0" expanded="true" />
-                <element signature="e#5639#5726#0" expanded="true" />
-                <element signature="e#5767#5787#0" expanded="true" />
-                <element signature="e#5888#5915#0" expanded="true" />
-                <element signature="e#6001#6049#0" expanded="true" />
-                <element signature="e#6161#6180#0" expanded="true" />
+                <element signature="e#5932#6019#0" expanded="true" />
+                <element signature="e#6060#6080#0" expanded="true" />
+                <element signature="e#6181#6208#0" expanded="true" />
+                <element signature="e#6294#6342#0" expanded="true" />
+                <element signature="e#6454#6473#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,12 +52,58 @@
       <file leaf-file-name="function.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/application/function.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="15" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1581">
+            <state line="102" column="14" selection-start="4642" selection-end="4642" vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="1649">
               <folding>
-                <marker date="1405936174698" expanded="false" signature="2833:2845" placeholder="..." />
-                <marker date="1405936174698" expanded="false" signature="3247:3263" placeholder="..." />
-                <marker date="1405936174698" expanded="false" signature="3349:3369" placeholder="..." />
+                <element signature="n#!!block;n#getLocation#0" expanded="false" />
+                <marker date="1405958800948" expanded="false" signature="3070:3082" placeholder="..." />
+                <marker date="1405958800948" expanded="false" signature="3484:3500" placeholder="..." />
+                <marker date="1405958800948" expanded="false" signature="3586:3606" placeholder="..." />
+                <marker date="1405958800948" expanded="true" signature="5616:5628" placeholder="..." />
+                <marker date="1405958800948" expanded="true" signature="6128:6148" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activitiesmodel.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/activitiesmodel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="108" column="38" selection-start="3570" selection-end="3570" vertical-scroll-proportion="-19.846153" vertical-offset="1320" max-vertical-offset="2261">
+              <folding>
+                <marker date="1405958290148" expanded="true" signature="1199:1223" placeholder="SELECT * FRO..activities..." />
+                <marker date="1405958290148" expanded="true" signature="2557:2927" placeholder="SELECT a.`id..." />
+                <marker date="1405958290148" expanded="true" signature="2557:2804" placeholder="SELECT a.`id..." />
+                <marker date="1405958290148" expanded="true" signature="3831:3870" placeholder="SELECT * FRO..activities..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controller/map.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="5" selection-start="535" selection-end="535" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="459">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="locationsmodel.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/locationsmodel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="9" selection-start="1427" selection-end="1427" vertical-scroll-proportion="-13.730769" vertical-offset="306" max-vertical-offset="867">
+              <folding>
+                <marker date="1405850478740" expanded="true" signature="368:544" placeholder="SELECT `name..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activities.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controller/activities.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="74" selection-start="366" selection-end="366" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="799">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,25 +111,8 @@
       <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controller/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="21" selection-start="1544" selection-end="1544" vertical-scroll-proportion="0.0" vertical-offset="371" max-vertical-offset="1003">
+            <state line="22" column="62" selection-start="741" selection-end="741" vertical-scroll-proportion="-8.884615" vertical-offset="143" max-vertical-offset="1003">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="usersmodel.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/usersmodel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="59" selection-start="3473" selection-end="3473" vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="3213">
-              <folding>
-                <marker date="1405869861162" expanded="true" signature="535:581" placeholder="SELECT id FR..." />
-                <marker date="1405869861162" expanded="true" signature="1328:1441" placeholder="insert into ..." />
-                <marker date="1405869861162" expanded="true" signature="1829:1904" placeholder="SELECT id FR..." />
-                <marker date="1405869861162" expanded="true" signature="2433:2479" placeholder="UPDATE user ..." />
-                <marker date="1405869861162" expanded="true" signature="2914:2982" placeholder="SELECT * FRO..user..." />
-                <marker date="1405869861162" expanded="true" signature="4518:4563" placeholder="SELECT * FRO..." />
-                <marker date="1405869861162" expanded="true" signature="5434:5562" placeholder="UPDATE user ..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -109,43 +138,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="articles.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controller/articles.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/articles/detail.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="19" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="1700">
-              <folding>
-                <marker date="1405908498689" expanded="true" signature="4576:5527" placeholder="..." />
-                <marker date="1405908498689" expanded="true" signature="4576:5516" placeholder="..." />
-                <marker date="1405908498689" expanded="true" signature="4576:5501" placeholder="..." />
-                <marker date="1405908498689" expanded="true" signature="4576:4780" placeholder="..." />
-                <marker date="1405908498689" expanded="true" signature="4576:4757" placeholder="..." />
-                <marker date="1405908498689" expanded="true" signature="4576:4730" placeholder="..." />
-                <marker date="1405908498689" expanded="true" signature="4576:4699" placeholder="..." />
-                <marker date="1405908498689" expanded="true" signature="4576:4664" placeholder="..." />
-                <marker date="1405908498689" expanded="true" signature="4816:5482" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/_templates/base.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="39" selection-start="3880" selection-end="3880" vertical-scroll-proportion="-9.346154" vertical-offset="1236" max-vertical-offset="2176">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -159,7 +151,6 @@
         <option value="$PROJECT_DIR$/application/_install/01-create-database.sql" />
         <option value="$PROJECT_DIR$/application/models/Articles.php" />
         <option value="$PROJECT_DIR$/application/views/_templates/header.php" />
-        <option value="$PROJECT_DIR$/application/models/activitiesmodel.php" />
         <option value="$PROJECT_DIR$/public/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/application/models/commentsmodel.php" />
         <option value="$PROJECT_DIR$/application/models/placesmodel.php" />
@@ -172,14 +163,16 @@
         <option value="$PROJECT_DIR$/application/views/map/index.php" />
         <option value="$PROJECT_DIR$/application/controller/songs.php" />
         <option value="$PROJECT_DIR$/application/libs/controller.php" />
-        <option value="$PROJECT_DIR$/application/controller/home.php" />
         <option value="$PROJECT_DIR$/application/controller/map.php" />
         <option value="$PROJECT_DIR$/application/models/locationsmodel.php" />
         <option value="$PROJECT_DIR$/application/models/usersmodel.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/views/home/index.twig" />
-        <option value="$PROJECT_DIR$/public/js/application/function.js" />
         <option value="$PROJECT_DIR$/application/views/_templates/base.twig" />
+        <option value="$PROJECT_DIR$/application/controller/activities.php" />
+        <option value="$PROJECT_DIR$/application/controller/home.php" />
+        <option value="$PROJECT_DIR$/application/models/activitiesmodel.php" />
+        <option value="$PROJECT_DIR$/public/js/application/function.js" />
         <option value="$PROJECT_DIR$/application/views/map/index.twig" />
       </list>
     </option>
@@ -550,7 +543,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21450152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21676737" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -606,22 +599,17 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/locationsmodel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="57" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="867" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/usersmodel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="59" selection-start="3473" selection-end="3473" vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="3213">
           <folding>
-            <marker date="1405869861162" expanded="true" signature="535:581" placeholder="SELECT id FR..." />
-            <marker date="1405869861162" expanded="true" signature="1328:1441" placeholder="insert into ..." />
-            <marker date="1405869861162" expanded="true" signature="1829:1904" placeholder="SELECT id FR..." />
-            <marker date="1405869861162" expanded="true" signature="2433:2479" placeholder="UPDATE user ..." />
-            <marker date="1405869861162" expanded="true" signature="2914:2982" placeholder="SELECT * FRO..user..." />
-            <marker date="1405869861162" expanded="true" signature="4518:4563" placeholder="SELECT * FRO..." />
-            <marker date="1405869861162" expanded="true" signature="5434:5562" placeholder="UPDATE user ..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
           </folding>
         </state>
       </provider>
@@ -649,15 +637,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="19" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1649">
           <folding>
-            <marker date="1405908498689" expanded="true" signature="4576:5527" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4576:5516" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4576:5501" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4576:4780" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4576:4757" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4576:4730" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4576:4699" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4576:4664" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4816:5482" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -693,13 +681,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="89" column="9" selection-start="2417" selection-end="2417" vertical-scroll-proportion="0.0" vertical-offset="1306" max-vertical-offset="2669">
           <folding>
-            <marker date="1405869861162" expanded="true" signature="535:581" placeholder="SELECT id FR..." />
-            <marker date="1405869861162" expanded="true" signature="1328:1441" placeholder="insert into ..." />
-            <marker date="1405869861162" expanded="true" signature="1829:1904" placeholder="SELECT id FR..." />
-            <marker date="1405869861162" expanded="true" signature="2433:2479" placeholder="UPDATE user ..." />
-            <marker date="1405869861162" expanded="true" signature="2914:2982" placeholder="SELECT * FRO..user..." />
-            <marker date="1405869861162" expanded="true" signature="4518:4563" placeholder="SELECT * FRO..." />
-            <marker date="1405869861162" expanded="true" signature="5434:5562" placeholder="UPDATE user ..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
           </folding>
         </state>
       </provider>
@@ -819,11 +807,6 @@
         <state line="77" column="28" selection-start="3369" selection-end="3369" vertical-scroll-proportion="-11.423077" vertical-offset="1012" max-vertical-offset="1581" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/activitiesmodel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="17" selection-start="405" selection-end="405" vertical-scroll-proportion="-9.5" vertical-offset="110" max-vertical-offset="1445" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/users/register.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="44" selection-start="641" selection-end="641" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="850" />
@@ -832,11 +815,6 @@
     <entry file="file://$PROJECT_DIR$/application/models/articlesmodel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="5" selection-start="2250" selection-end="2250" vertical-scroll-proportion="0.5600739" vertical-offset="1074" max-vertical-offset="1615" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/locationsmodel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="57" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="867" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
@@ -856,31 +834,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/map.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="490" selection-end="490" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="21" selection-start="1544" selection-end="1544" vertical-scroll-proportion="0.0" vertical-offset="371" max-vertical-offset="1003">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/articles/detail.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="19" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="1700">
           <folding>
-            <marker date="1405908498689" expanded="true" signature="4576:5527" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4576:5516" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4576:5501" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4576:4780" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4576:4757" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4576:4730" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4576:4699" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4576:4664" placeholder="..." />
-            <marker date="1405908498689" expanded="true" signature="4816:5482" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405908498689" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -899,35 +865,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/home/index.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="39" selection-start="2142" selection-end="2143" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="2125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/usersmodel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="59" selection-start="3473" selection-end="3473" vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="3213">
           <folding>
-            <marker date="1405869861162" expanded="true" signature="535:581" placeholder="SELECT id FR..." />
-            <marker date="1405869861162" expanded="true" signature="1328:1441" placeholder="insert into ..." />
-            <marker date="1405869861162" expanded="true" signature="1829:1904" placeholder="SELECT id FR..." />
-            <marker date="1405869861162" expanded="true" signature="2433:2479" placeholder="UPDATE user ..." />
-            <marker date="1405869861162" expanded="true" signature="2914:2982" placeholder="SELECT * FRO..user..." />
-            <marker date="1405869861162" expanded="true" signature="4518:4563" placeholder="SELECT * FRO..." />
-            <marker date="1405869861162" expanded="true" signature="5434:5562" placeholder="UPDATE user ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/application/function.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="15" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1581">
-          <folding>
-            <marker date="1405936174698" expanded="false" signature="2833:2845" placeholder="..." />
-            <marker date="1405936174698" expanded="false" signature="3247:3263" placeholder="..." />
-            <marker date="1405936174698" expanded="false" signature="3349:3369" placeholder="..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
           </folding>
         </state>
       </provider>
@@ -939,17 +887,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/locationsmodel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="9" selection-start="1427" selection-end="1427" vertical-scroll-proportion="-13.730769" vertical-offset="306" max-vertical-offset="867">
+          <folding>
+            <marker date="1405850478740" expanded="true" signature="368:544" placeholder="SELECT `name..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/home/index.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="39" selection-start="2142" selection-end="2143" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="2125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/map.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="5" selection-start="535" selection-end="535" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/activities.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="74" selection-start="366" selection-end="366" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="62" selection-start="741" selection-end="741" vertical-scroll-proportion="-8.884615" vertical-offset="143" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/activitiesmodel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="38" selection-start="3570" selection-end="3570" vertical-scroll-proportion="-19.846153" vertical-offset="1320" max-vertical-offset="2261">
+          <folding>
+            <marker date="1405958290148" expanded="true" signature="1199:1223" placeholder="SELECT * FRO..activities..." />
+            <marker date="1405958290148" expanded="true" signature="2557:2927" placeholder="SELECT a.`id..." />
+            <marker date="1405958290148" expanded="true" signature="2557:2804" placeholder="SELECT a.`id..." />
+            <marker date="1405958290148" expanded="true" signature="3831:3870" placeholder="SELECT * FRO..activities..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/application/function.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="14" selection-start="4642" selection-end="4642" vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="1649">
+          <folding>
+            <element signature="n#!!block;n#getLocation#0" expanded="false" />
+            <marker date="1405958800948" expanded="false" signature="3070:3082" placeholder="..." />
+            <marker date="1405958800948" expanded="false" signature="3484:3500" placeholder="..." />
+            <marker date="1405958800948" expanded="false" signature="3586:3606" placeholder="..." />
+            <marker date="1405958800948" expanded="true" signature="5616:5628" placeholder="..." />
+            <marker date="1405958800948" expanded="true" signature="6128:6148" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/map/index.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="61" selection-start="969" selection-end="969" vertical-scroll-proportion="0.06563707" vertical-offset="255" max-vertical-offset="1921">
+        <state line="17" column="108" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.57227725" vertical-offset="0" max-vertical-offset="1921">
           <folding>
             <element signature="e#252#276#0" expanded="true" />
             <element signature="e#335#354#0" expanded="true" />
-            <element signature="e#5639#5726#0" expanded="true" />
-            <element signature="e#5767#5787#0" expanded="true" />
-            <element signature="e#5888#5915#0" expanded="true" />
-            <element signature="e#6001#6049#0" expanded="true" />
-            <element signature="e#6161#6180#0" expanded="true" />
+            <element signature="e#5932#6019#0" expanded="true" />
+            <element signature="e#6060#6080#0" expanded="true" />
+            <element signature="e#6181#6208#0" expanded="true" />
+            <element signature="e#6294#6342#0" expanded="true" />
+            <element signature="e#6454#6473#0" expanded="true" />
           </folding>
         </state>
       </provider>

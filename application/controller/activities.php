@@ -13,7 +13,7 @@ class Activities extends Controller
         $activities_model = $this->loadModel('ActivitiesModel');
         $activity = $activities_model->getActivityById($id);
 
-        $otherActivities = $activities_model->getSomeActivities(0, 2, 6);
+        $otherActivities = $activities_model->getSomeActivities(0, 0, 2, 3);
 
         $comments_model = $this->loadModel('CommentsModel');
         $comments = $comments_model->getSomeComments(2, $id, 2, 0);
@@ -37,5 +37,11 @@ class Activities extends Controller
             }
         }
         header('location: ' . URL . 'activities/detail/' . $id);
+    }
+    public function getActivityShortDesByType()
+    {
+        $type = $_POST['type'];
+        $activities_model = $this->loadModel('ActivitiesModel');
+        echo $activities_model->getActivityShortDesByType($type);
     }
 }
