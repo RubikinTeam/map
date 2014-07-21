@@ -18,7 +18,7 @@
                 <nav class="sidebar light">
                     <ul>
                         <li class="title">Loại hình</li>
-                        <li class="active"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
+                        <li class="active" onmouseup="getLocation(0)"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
                         <li class="stick bg-red">
                             <a class="dropdown-toggle" href="#"><i class="icon-tree-view"></i>Hoạt động</a>
                             <ul class="dropdown-menu" data-role="dropdown">
@@ -94,6 +94,7 @@
             </div>
             <div id="map-canvas" style="width: 900px;height: 600px;float: right;">
             </div>
+            <div id = "locationList" class = "span3">Locations list</div>
             <div style="clear: both"></div>
         </div>
     </div>

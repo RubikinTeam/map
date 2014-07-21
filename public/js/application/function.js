@@ -4,7 +4,7 @@
 /**
  * Hien Login Form
  */
-$(function() {
+$(function () {
     $("#userLoginButton").on('click', function () {
         $.Dialog({
             overlay: true,
@@ -37,22 +37,82 @@ $(function() {
 /**
  * Load google Map
  */
-window.onload = function() {
-    var mapDiv = document.getElementById('map-canvas');
-    var latlng = new google.maps.LatLng(37.09, -95.71);
+window.onload = function () {
+    var position = new google.maps.LatLng(11.8649, 106.612);
     var options = {
         zoom: 12,
-        center: new google.maps.LatLng(-28.643387, 153.612224),
+        center: position,
         mapTypeControl: true,
         disableDefaultUI: true,
-        mapTypeControlOptions: {
-            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-            position: google.maps.ControlPosition.BOTTOM_CENTER
-        },
-        panControl: true,
-        panControlOptions: {
-            position: google.maps.ControlPosition.TOP_RIGHT
-        }
+        panControl: true
     };
-    var map = new google.maps.Map(mapDiv, options);
+    var map = new google.maps.Map(document.getElementById('map-canvas'), options);
+}
+function getLocation(id) {
+    if (window.XMLHttpRequest) {
+        ajax = new XMLHttpRequest();
+    }
+    ajax.onreadystatechange = function () {
+        if (ajax.readyState == 4 && ajax.status == 200) {
+            var text = ajax.responseText;
+            var obj = JSON.parse(text);
+            var n = Object.keys(obj).length;
+            var textContent = "";
+            var position = new google.maps.LatLng(10.8649, 106.612);
+            var options = {
+                zoom: 12,
+                center: position,
+                mapTypeControl: true,
+                disableDefaultUI: true,
+                panControl: true
+            };
+            var map = new google.maps.Map(document.getElementById('map-canvas'), options);
+            var markers = [];
+            var infoContents = [];
+            var infoWindows = [];
+            for (var i = 0; i < n; i += 1) {
+                markers[i] =
+                    new google.maps.Marker(
+                        {
+                            position: new google.maps.LatLng(obj[i].lat, obj[i].long),
+                            map: map,
+                            title: obj[i].lat + ' | ' + obj[i].long
+                        }
+                    );
+                infoContents[i] = 'Cơ sở: ' + obj[i].name + '</br>'
+                    + 'Địa chỉ: số ' + obj[i].no + ' ' + obj[i].street + ', phường ' + obj[i].ward + ', Quận '
+                    + obj[i].dist + ', ' + obj[i].city + '</br>'
+                    + 'Điện thoại: ' + obj[i].phone + '</br>'
+                    + 'Email: ' + obj[i].email + '</br>';
+                google.maps.event.addListener(markers[i], 'click', function () {
+                    infoWindows[i] = new google.maps.InfoWindow({
+                        content: infoContents[i],
+                        maxWidth: 200
+                    });
+                    infoWindows[i].open(map, markers[i]);
+                });
+                // alert(infoContents[i])
+                textContent = textContent + (obj[i].lat + " - " + obj[i].long + "</br>");
+            }
+              google.maps.event.addListener(markers[0], 'click', function () {
+                infoWindows[0] = new google.maps.InfoWindow({
+                    content: infoContents[0],
+                    maxWidth: 200
+                });
+                infoWindows[0].open(map, markers[0]);
+            });
+            google.maps.event.addListener(markers[1], 'click', function () {
+                infoWindows[1] = new google.maps.InfoWindow({
+                    content: infoContents[1],
+                    maxWidth: 200
+                });
+                infoWindows[1].open(map, markers[1]);
+            });
+            document.getElementById('locationList').innerHTML = textContent;
+
+        }
+    }
+    ajax.open("POST", "map/getLocationById/", true);
+    ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    ajax.send("id=" + id);
 }

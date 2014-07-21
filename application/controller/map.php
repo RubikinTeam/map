@@ -13,4 +13,10 @@ class Map extends Controller
         $userLogged = $users_model->checkUserLogged();
         $this->render('map/index', array('userLogged' => $userLogged));
     }
+    public function getLocationById()
+    {
+        $id = $_POST['id'];
+        $locations_model = $this->loadModel('locationsmodel');
+        echo $locations_model->getLocationById($id);
+    }
 }

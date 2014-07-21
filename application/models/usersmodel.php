@@ -104,6 +104,8 @@ class UsersModel
     {
         if (!is_null($email) && !is_null($password)) {
             $sql = "SELECT * FROM user WHERE email = '$email' AND password = '$password'";
+            $query = $this->db->prepare("SET NAMES 'UTF8'");
+            $query->execute();
             $query = $this->db->prepare($sql);
             $query->execute();
             $result = $query->fetchAll();
