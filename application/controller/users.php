@@ -25,6 +25,11 @@ class Users extends Controller
     {
         session_start();
         session_destroy();
-        header("location: ../../");
+        if(isset($_SERVER['HTTP_REFERER'])) {
+            header('Location: '.$_SERVER['HTTP_REFERER']);
+        } else {
+            header('Location: '. URL .'/home');
+        }
+        exit;
     }
 }

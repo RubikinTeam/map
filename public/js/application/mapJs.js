@@ -24,16 +24,13 @@ function getLocation(id) {
             //var markers = [];
             var infoContents = [];
             //var infoWindows = [];
-            var image = new google.maps.MarkerImage(
-                'http://mapicons.nicolasmollet.com/wp-content/uploads/mapicons/shape-default/color-ffc11f/shapecolor-white/shadow-1/border-color/symbolstyle-color/symbolshadowstyle-no/gradient-no/townhouse.png'
-            )
             for (var i = 0; i < n; i += 1) {
                 var marker =
                     new google.maps.Marker(
                         {
                             position: new google.maps.LatLng(obj[i].lat, obj[i].long),
                             map: map,
-                            icon: image,
+                            icon: 'http://tuoitrebachkhoa.edu.vn/images/markers/place.png',
                             title: obj[i].lat + ' | ' + obj[i].long
                         }
                     );
@@ -73,16 +70,13 @@ function getActivityByType(type) {
                 var textContent = "";
                 var map = new google.maps.Map(document.getElementById('map-canvas'), options);
                 var infoContents = [];
-                var image = new google.maps.MarkerImage(
-                    'http://mapicons.nicolasmollet.com/wp-content/uploads/mapicons/shape-default/color-003df5/shapecolor-color/shadow-1/border-dark/symbolstyle-white/symbolshadowstyle-dark/gradient-no/summercamp.png'
-                )
                 for (var i = 0; i < n; i += 1) {
                     var marker =
                         new google.maps.Marker(
                             {
                                 position: new google.maps.LatLng(obj[i].lat, obj[i].long),
                                 map: map,
-                                icon: image,
+                                icon: 'http://tuoitrebachkhoa.edu.vn/images/markers/activity.png',
                                 title: obj[i].lat + ' | ' + obj[i].long
                             }
                         );
