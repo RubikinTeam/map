@@ -14,6 +14,11 @@
 </head>
 <body class="metro">
 {% block javascripts %}
+    <script src="{{ constant('URL') }}public/js/jquery/jquery-2.1.0.min.js"></script>
+    <script src="{{ constant('URL') }}public/js/jquery/jquery.min.js"></script>
+    <script src="{{ constant('URL') }}public/js/jquery/jquery.widget.min.js"></script>
+    <script src="{{ constant('URL') }}public/js/metro.min.js"></script>
+    <script src="{{ constant('URL') }}public/js/application/userJs.js"></script>
 {% endblock %}
 <header>
     <nav class="navigation-bar bg-green fixed-top shadow">
@@ -43,7 +48,7 @@
                 </form>
             </div>
             {% if userLogged == 0 %}
-                <a class="element place-right" id="userLoginButton" name = "loginButton" href = "#"><span class="icon-user"></span>&nbsp;&nbsp;Đăng nhập</a>
+                <a class="element place-right" id= "userLoginButton" href = "#"><span class="icon-user"></span>&nbsp;&nbsp;Đăng nhập</a>
             {% else %}
                 <div class="element place-right">
                     <a class="dropdown-toggle" href="#">
@@ -57,7 +62,7 @@
                     </ul>
                 </div>
                 <span class="element-divider place-right"></span>
-                <a class="element place-right" href="{{ constant('URL') ~ 'home/userlogout/' }}"><span
+                <a class="element place-right" href="{{ constant('URL') ~ 'users/userlogout/' }}"><span
                             class="icon-exit"></span></a>
                 <span class="element-divider place-right"></span>
                 <button class="element image-button image-left place-right">
@@ -113,10 +118,5 @@
         <p class="text-center">© 2014 VMap Team.</p>
     </div>
 </footer>
-<script src="{{ constant('URL') }}public/js/jquery/jquery-2.1.0.min.js"></script>
-<script src="{{ constant('URL') }}public/js/jquery/jquery.min.js"></script>
-<script src="{{ constant('URL') }}public/js/jquery/jquery.widget.min.js"></script>
-<script src="{{ constant('URL') }}public/js/metro.min.js"></script>
-<script src="{{ constant('URL') }}public/js/application/function.js"></script>
 </body>
 </html>

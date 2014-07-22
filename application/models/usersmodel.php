@@ -102,30 +102,24 @@ class UsersModel
      */
     public function userLogin($email, $password)
     {
-        if (!is_null($email) && !is_null($password)) {
-            $sql = "SELECT * FROM user WHERE email = '$email' AND password = '$password'";
-            $query = $this->db->prepare("SET NAMES 'UTF8'");
-            $query->execute();
-            $query = $this->db->prepare($sql);
-            $query->execute();
-            $result = $query->fetchAll();
-            //var_dump($result);
-            if (count($result) == 1) {
-                session_start();
-                $_SESSION['fname'] = $result[0]->fname;
-                $_SESSION['lname'] = $result[0]->lname;
-                $_SESSION['groupId'] = $result[0]->groupId;
-                if ($result[0]->imageUrl == '') {
-                    $_SESSION['image'] = URL . "/public/img/avatars/default.jpg";
-                } else {
-                    $_SESSION['image'] = URL . $result[0]->imageUrl;
-                }
-                header("location: " . URL);
-                return 1;
+        $sql = "SELECT * FROM user WHERE email = '$email' AND password = '$password'";
+        $query = $this->db->prepare("SET NAMES 'UTF8'");
+        $query->execute();
+        $query = $this->db->prepare($sql);
+        $query->execute();
+        $result = $query->fetchAll();
+        if (count($result) == 1) {
+            session_start();
+            $_SESSION['fname'] = $result[0]->fname;
+            $_SESSION['lname'] = $result[0]->lname;
+            $_SESSION['groupId'] = $result[0]->groupId;
+            if ($result[0]->imageUrl == '') {
+                $_SESSION['image'] = URL . "/public/img/avatars/default.jpg";
             } else {
-                header("location: " . URL);
-                return 0;
+                $_SESSION['image'] = URL . $result[0]->imageUrl;
             }
+            header("location: " . URL);
+            return 1;
         } else {
             header("location: " . URL);
             return 0;

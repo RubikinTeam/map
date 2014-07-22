@@ -36,18 +36,4 @@ class Home extends Controller
 	    // render the view, pass the data
         $this->render('home/index', array('articles' => $articles, 'activities' => $activities, 'userLogged'=>$userLogged));
 	}
-    public function userLogin()
-    {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $users_model = $this->loadModel('usersmodel');
-        $users_model->userLogin($email, $password);
-    }
-
-    public function userLogOut()
-    {
-        session_start();
-        session_destroy();
-        header("location: ../../");
-    }
 }

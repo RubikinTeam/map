@@ -26,7 +26,7 @@
       <file leaf-file-name="index.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/home/index.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="39" selection-start="2142" selection-end="2143" vertical-scroll-proportion="-0.0" vertical-offset="578" max-vertical-offset="2125">
+            <state line="34" column="39" selection-start="2142" selection-end="2143" vertical-scroll-proportion="-22.23077" vertical-offset="0" max-vertical-offset="2125">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file leaf-file-name="index.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/map/index.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="29" selection-start="2952" selection-end="2952" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="1921">
+            <state line="45" column="29" selection-start="2952" selection-end="2952" vertical-scroll-proportion="12.764706" vertical-offset="1416" max-vertical-offset="1921">
               <folding>
                 <element signature="e#279#303#0" expanded="true" />
                 <element signature="e#362#381#0" expanded="true" />
@@ -48,43 +48,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="function.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/js/application/function.js">
+      <file leaf-file-name="mapJs.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/application/mapJs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="33" selection-start="1501" selection-end="1723" vertical-scroll-proportion="0.9172662" vertical-offset="204" max-vertical-offset="2652">
+            <state line="3" column="52" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1989">
               <folding>
-                <marker date="1406001081861" expanded="false" signature="3300:3312" placeholder="..." />
-                <marker date="1406001081861" expanded="false" signature="3714:3730" placeholder="..." />
-                <marker date="1406001081861" expanded="false" signature="3816:3836" placeholder="..." />
-                <marker date="1406001081861" expanded="true" signature="5963:5975" placeholder="..." />
-                <marker date="1406001081861" expanded="true" signature="6491:6511" placeholder="..." />
+                <element signature="e#0#40#0" expanded="false" />
+                <marker date="1406017372591" expanded="false" signature="1572:1584" placeholder="..." />
+                <marker date="1406017372591" expanded="false" signature="1986:2002" placeholder="..." />
+                <marker date="1406017372591" expanded="false" signature="2088:2108" placeholder="..." />
+                <marker date="1406017372591" expanded="true" signature="4235:4247" placeholder="..." />
+                <marker date="1406017372591" expanded="true" signature="4763:4783" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activitiesmodel.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/activitiesmodel.php">
+      <file leaf-file-name="userJs.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/application/userJs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="38" selection-start="3570" selection-end="3570" vertical-scroll-proportion="-19.846153" vertical-offset="1320" max-vertical-offset="2261">
-              <folding>
-                <marker date="1405958290148" expanded="true" signature="1199:1223" placeholder="SELECT * FRO..activities..." />
-                <marker date="1405958290148" expanded="true" signature="2557:2927" placeholder="SELECT a.`id..." />
-                <marker date="1405958290148" expanded="true" signature="2557:2804" placeholder="SELECT a.`id..." />
-                <marker date="1405958290148" expanded="true" signature="3831:3870" placeholder="SELECT * FRO..activities..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="articlesmodel.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/articlesmodel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="5" selection-start="2221" selection-end="2221" vertical-scroll-proportion="-42.884617" vertical-offset="262" max-vertical-offset="1683">
-              <folding>
-                <marker date="1405908498667" expanded="true" signature="1102:1124" placeholder="SELECT * FRO..articles..." />
-                <marker date="1405908498667" expanded="true" signature="2409:2446" placeholder="SELECT * FRO..articles..." />
-              </folding>
+            <state line="18" column="71" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,23 +102,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/libs/controller.php">
+      <file leaf-file-name="users.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controller/users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="512" selection-end="512" vertical-scroll-proportion="-5.5384617" vertical-offset="196" max-vertical-offset="1156">
+            <state line="13" column="8" selection-start="270" selection-end="302" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="595">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commentsmodel.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/commentsmodel.php">
+      <file leaf-file-name="base.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/_templates/base.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="10" selection-start="2176" selection-end="2176" vertical-scroll-proportion="0.0" vertical-offset="1282" max-vertical-offset="1904">
-              <folding>
-                <marker date="1405570067284" expanded="true" signature="1052:1073" placeholder="SELECT * FRO..comment..." />
-                <marker date="1405570067284" expanded="true" signature="2809:2912" placeholder="INSERT INTO ..." />
-              </folding>
+            <state line="64" column="80" selection-start="3181" selection-end="3181" vertical-scroll-proportion="-1.0528302" vertical-offset="1646" max-vertical-offset="2176">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/activities/detail.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2142">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -166,15 +156,18 @@
         <option value="$PROJECT_DIR$/application/libs/controller.php" />
         <option value="$PROJECT_DIR$/application/controller/map.php" />
         <option value="$PROJECT_DIR$/application/models/locationsmodel.php" />
-        <option value="$PROJECT_DIR$/application/models/usersmodel.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/views/home/index.twig" />
-        <option value="$PROJECT_DIR$/application/views/_templates/base.twig" />
         <option value="$PROJECT_DIR$/application/controller/activities.php" />
-        <option value="$PROJECT_DIR$/application/controller/home.php" />
         <option value="$PROJECT_DIR$/application/models/activitiesmodel.php" />
         <option value="$PROJECT_DIR$/application/views/map/index.twig" />
         <option value="$PROJECT_DIR$/public/js/application/function.js" />
+        <option value="$PROJECT_DIR$/public/js/application/mapJs.js" />
+        <option value="$PROJECT_DIR$/application/controller/home.php" />
+        <option value="$PROJECT_DIR$/application/controller/users.php" />
+        <option value="$PROJECT_DIR$/public/js/application/userJs.js" />
+        <option value="$PROJECT_DIR$/application/models/usersmodel.php" />
+        <option value="$PROJECT_DIR$/application/views/_templates/base.twig" />
       </list>
     </option>
   </component>
@@ -243,6 +236,24 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MapPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -273,6 +284,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -295,6 +310,152 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="map" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MapPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MapPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MapPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="articles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MapPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MapPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MapPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MapPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -384,15 +545,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21676737" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23564954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -400,7 +562,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -448,33 +609,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/usersmodel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="59" selection-start="3473" selection-end="3473" vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="3213">
-          <folding>
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/map.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/articles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="22" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="187">
@@ -485,17 +619,7 @@
     <entry file="file://$PROJECT_DIR$/application/views/articles/detail.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="19" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1649">
-          <folding>
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -530,13 +654,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="89" column="9" selection-start="2417" selection-end="2417" vertical-scroll-proportion="0.0" vertical-offset="1306" max-vertical-offset="2669">
           <folding>
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1406020692615" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
+            <marker date="1406020692615" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1406020692615" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
+            <marker date="1406020692615" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1406020692615" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1406020692615" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1406020692615" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
           </folding>
         </state>
       </provider>
@@ -655,25 +779,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="77" column="10" selection-start="2176" selection-end="2176" vertical-scroll-proportion="0.0" vertical-offset="1282" max-vertical-offset="1904">
           <folding>
-            <marker date="1405570067284" expanded="true" signature="1052:1073" placeholder="SELECT * FRO..comment..." />
-            <marker date="1405570067284" expanded="true" signature="2809:2912" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/articles/detail.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="19" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="1700">
-          <folding>
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406000310640" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1405570067284" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..comment..." />
+            <marker date="1405570067284" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -692,41 +799,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/usersmodel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="59" selection-start="3473" selection-end="3473" vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="3213">
-          <folding>
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1405869861162" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/_templates/base.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="39" selection-start="3880" selection-end="3880" vertical-scroll-proportion="-9.346154" vertical-offset="1236" max-vertical-offset="2176">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/locationsmodel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="9" selection-start="1427" selection-end="1427" vertical-scroll-proportion="-13.730769" vertical-offset="306" max-vertical-offset="867">
           <folding>
             <marker date="1405850478740" expanded="true" signature="368:544" placeholder="SELECT `name..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/home/index.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="39" selection-start="2142" selection-end="2143" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="2125">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,31 +822,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="62" selection-start="741" selection-end="741" vertical-scroll-proportion="-8.884615" vertical-offset="143" max-vertical-offset="1003">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/activitiesmodel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="108" column="38" selection-start="3570" selection-end="3570" vertical-scroll-proportion="-19.846153" vertical-offset="1320" max-vertical-offset="2261">
           <folding>
-            <marker date="1405958290148" expanded="true" signature="1199:1223" placeholder="SELECT * FRO..activities..." />
-            <marker date="1405958290148" expanded="true" signature="2557:2927" placeholder="SELECT a.`id..." />
-            <marker date="1405958290148" expanded="true" signature="2557:2804" placeholder="SELECT a.`id..." />
-            <marker date="1405958290148" expanded="true" signature="3831:3870" placeholder="SELECT * FRO..activities..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/articlesmodel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="5" selection-start="2221" selection-end="2221" vertical-scroll-proportion="-42.884617" vertical-offset="262" max-vertical-offset="1683">
-          <folding>
-            <marker date="1405908498667" expanded="true" signature="1102:1124" placeholder="SELECT * FRO..articles..." />
-            <marker date="1405908498667" expanded="true" signature="2409:2446" placeholder="SELECT * FRO..articles..." />
+            <marker date="1405958290148" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..activities..." />
+            <marker date="1405958290148" expanded="true" signature="-1:-1" placeholder="SELECT a.`id..." />
+            <marker date="1405958290148" expanded="true" signature="-1:-1" placeholder="SELECT a.`id..." />
+            <marker date="1405958290148" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..activities..." />
           </folding>
         </state>
       </provider>
@@ -794,9 +855,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/application/mapJs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="52" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1989">
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <marker date="1406017372591" expanded="false" signature="1572:1584" placeholder="..." />
+            <marker date="1406017372591" expanded="false" signature="1986:2002" placeholder="..." />
+            <marker date="1406017372591" expanded="false" signature="2088:2108" placeholder="..." />
+            <marker date="1406017372591" expanded="true" signature="4235:4247" placeholder="..." />
+            <marker date="1406017372591" expanded="true" signature="4763:4783" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/home/index.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="39" selection-start="2142" selection-end="2143" vertical-scroll-proportion="-22.23077" vertical-offset="0" max-vertical-offset="2125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="5" selection-start="1653" selection-end="1653" vertical-scroll-proportion="-15.653846" vertical-offset="222" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/application/userJs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="71" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="8" selection-start="270" selection-end="302" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/usersmodel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="28" selection-start="3210" selection-end="3210" vertical-scroll-proportion="0.6528302" vertical-offset="1558" max-vertical-offset="3111">
+          <folding>
+            <marker date="1406020692615" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
+            <marker date="1406020692615" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1406020692615" expanded="true" signature="-1:-1" placeholder="SELECT id FR..." />
+            <marker date="1406020692615" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1406020692615" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1406020692615" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1406020692615" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/articles/detail.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="19" selection-start="498" selection-end="498" vertical-scroll-proportion="0.3528302" vertical-offset="0" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/activities/detail.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/map/index.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="29" selection-start="2952" selection-end="2952" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="1921">
+        <state line="45" column="29" selection-start="2952" selection-end="2952" vertical-scroll-proportion="12.764706" vertical-offset="1416" max-vertical-offset="1921">
           <folding>
             <element signature="e#279#303#0" expanded="true" />
             <element signature="e#362#381#0" expanded="true" />
@@ -808,16 +940,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/application/function.js">
+    <entry file="file://$PROJECT_DIR$/application/models/articlesmodel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="33" selection-start="1501" selection-end="1723" vertical-scroll-proportion="0.9172662" vertical-offset="204" max-vertical-offset="2652">
+        <state line="81" column="5" selection-start="2221" selection-end="2221" vertical-scroll-proportion="2.5359116" vertical-offset="0" max-vertical-offset="1683">
           <folding>
-            <marker date="1406001081861" expanded="false" signature="3300:3312" placeholder="..." />
-            <marker date="1406001081861" expanded="false" signature="3714:3730" placeholder="..." />
-            <marker date="1406001081861" expanded="false" signature="3816:3836" placeholder="..." />
-            <marker date="1406001081861" expanded="true" signature="5963:5975" placeholder="..." />
-            <marker date="1406001081861" expanded="true" signature="6491:6511" placeholder="..." />
+            <marker date="1405908498667" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..articles..." />
+            <marker date="1405908498667" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..articles..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/_templates/base.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="80" selection-start="3181" selection-end="3181" vertical-scroll-proportion="-1.0528302" vertical-offset="1646" max-vertical-offset="2176">
+          <folding />
         </state>
       </provider>
     </entry>

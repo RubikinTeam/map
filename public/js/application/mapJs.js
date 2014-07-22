@@ -1,40 +1,7 @@
 /**
  * Created by Nguyen on 7/19/14.
  */
-/**
- * Hien Login Form
- */
-$(function () {
-    $("#userLoginButton").on('click', function () {
-        $.Dialog({
-            overlay: true,
-            shadow: true,
-            flat: true,
-            draggable: true,
-            icon: '<span class = "icon-user">',
-            title: 'Flat window',
-            content: '',
-            padding: 10,
-            onShow: function (_dialog) {
-                var content = '<form class="user-input" action = "home/userLogin/" method="POST">' +
-                    '<label for = "email">Email</label>' +
-                    '<div class="input-control text"><input type="text"><button class="btn-clear"></button></div>' +
-                    '<label for = "password">Mật khẩu</label>' +
-                    '<div class="input-control password"><input type="password" name="password"><button class="btn-reveal"></button></div>' +
-                    '<div class="input-control checkbox"><label><input type="checkbox" name="c1" checked/><span class="check"></span>Ghi nhớ</label></div>' +
-                    '<div class="form-actions">' +
-                    '<button class="button primary">Đăng nhập</button>&nbsp;' +
-                    '<button class="button" type="button" onclick="$.Dialog.close()">Cancel</button> ' +
-                    '</div>' +
-                    '</form>';
-
-                $.Dialog.title("Đăng nhập");
-                $.Dialog.content(content);
-            }
-        });
-    });
-});
-/*var position = new google.maps.LatLng(10.8649, 106.612);
+var position = new google.maps.LatLng(10.7649, 106.712);
 var options = {
     zoom: 12,
     center: position,
@@ -42,13 +9,7 @@ var options = {
     disableDefaultUI: true,
     panControl: true
 };
-window.onload = getLocation(0);*/
-
-//$("#map-type-all").on('click', getLocation(0));
-//$("#map-location-all").on('click', getLocation(0));
-//$("#map-activities-all").on('click', getActivityByType(0));
-//document.getElementById("map-activities-all").addEventListener('click',getActivityByType(0));
-
+window.onload = getLocation(0);
 function getLocation(id) {
     if (window.XMLHttpRequest) {
         ajax = new XMLHttpRequest();
