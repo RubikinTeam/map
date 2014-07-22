@@ -1,6 +1,7 @@
-{% for comment in comments %}
-    <div class="list"  id="c{{ comment.id }}" style="cursor:default;">
-        <div class="list-content">
+<div id="tab_2" data-value="{{ comments|length }}">
+    {% for comment in comments %}
+        <div class="list"  id="c{{ comment.id }}" style="cursor:default;">
+            <div class="list-content">
             <span class="list-icon">
                 <img src="{{ constant('URL') }}public/img/avatar.png" class="pull-left">
             </span>
@@ -15,6 +16,7 @@
                 </span>
                 {{ comment.content }}
             </span>
+            </div>
         </div>
-    </div>
-{% endfor %}
+    {% endfor %}
+</div>
