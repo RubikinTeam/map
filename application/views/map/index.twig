@@ -1,8 +1,9 @@
 {% extends "_templates/base.twig" %}
-{% block content %}
-    <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMO6grIC9wDQ6rvbhXx3dAeV5__UsqVtY&sensor=true">
+{% block javascripts %}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMO6grIC9wDQ6rvbhXx3dAeV5__UsqVtY&sensor=true">
     </script>
+{% endblock %}
+{% block content %}
     <body onload="load()">
     <div class="container" style="margin-top: 40px">
         <div class="row">
@@ -44,19 +45,19 @@
                             </ul>
                         </li>
 
-                        <li class="title">Vị trí</li>
-                        <li class="active" id = "map-location-all"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
-                        <li class="stick bg-red">
-                            <a class="dropdown-toggle" href="#"><i class="icon-cars"></i>Ngoại thành</a>
-                            <ul class="dropdown-menu" data-role="dropdown">
-                                <li><a href="">Bình Chánh</a></li>
-                                <li><a href="">Cần Giờ</a></li>
-                                <li><a href="">Hóc Môn</a></li>
-                                <li><a href="">Nhà Bè</a></li>
-                            </ul>
-                        </li>
-                        <li class="stick bg-pink">
-                            <a class="dropdown-toggle" href="#"><i class="icon-compass"></i>Nội thành</a>
+                            <li class="title">Vị trí</li>
+                            <li class="active" id = "map-location-all"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
+                            <li class="stick bg-red">
+                                <a class="dropdown-toggle" href="#"><i class="icon-cars"></i>Ngoại thành</a>
+                                <ul class="dropdown-menu" data-role="dropdown">
+                                    <li><a href="">Bình Chánh</a></li>
+                                    <li><a href="">Cần Giờ</a></li>
+                                    <li><a href="">Hóc Môn</a></li>
+                                    <li><a href="">Nhà Bè</a></li>
+                                </ul>
+                            </li>
+                            <li class="stick bg-pink">
+                                <a class="dropdown-toggle" href="#"><i class="icon-compass"></i>Nội thành</a>
                                 <ul class="dropdown-menu" data-role="dropdown">
                                     <li><a href="">Quận 1</a></li>
                                     <li><a href="">Quận 2</a></li>
@@ -79,32 +80,29 @@
                                     <li><a href="">Gò Vấp</a></li>
                                 </ul>
 
-                        </li>
-                        <li class="stick bg-blue">
-                            <a class="dropdown-toggle" href="#"><i class="icon-earth"></i>Nước ngoài</a>
-                            <ul class="dropdown-menu" data-role="dropdown">
-                                <li><a href="">Subitem 1</a></li>
-                                <li><a href="">Subitem 2</a></li>
-                                <li><a href="">Subitem 3</a></li>
-                                <li class="divider"></li>
-                                <li><a href="">Subitem 4</a></li>
-                                <li class="disabled"><a href="">Subitem 4</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div>
-                <div style="position: absolute; margin-top: 10px;margin-left: 40%; z-index: 2; float: right">
-                    <input type="text" style="width: 300px" placeholder="Nhập từ khóa tìm kiếm..."/>
-                    <button class="btn-search icon-search" style="background: #ffffff"></button>
+                            </li>
+                            <li class="stick bg-blue">
+                                <a class="dropdown-toggle" href="#"><i class="icon-earth"></i>Nước ngoài</a>
+                                <ul class="dropdown-menu" data-role="dropdown">
+                                    <li><a href="">Subitem 1</a></li>
+                                    <li><a href="">Subitem 2</a></li>
+                                    <li><a href="">Subitem 3</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="">Subitem 4</a></li>
+                                    <li class="disabled"><a href="">Subitem 4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
+                <div>
+                    <div style="position: absolute; margin-top: 10px;margin-left: 40%; z-index: 2; float: right">
+                        <input type="text" style="width: 300px" placeholder="Nhập từ khóa tìm kiếm..."/>
+                        <button class="btn-search icon-search" style="background: #ffffff"></button>
+                    </div>
+                </div>
+                <div id="map-canvas" style="width: 900px;height: 600px;float: right;"></div>
             </div>
-            <div id="map-canvas" style="width: 900px;height: 600px;float: right;">
-            </div>
-            <div id = "locationList" class = "span3">Locations list</div>
-            <div style="clear: both"></div>
         </div>
-    </div>
     </body>
 {% endblock %}

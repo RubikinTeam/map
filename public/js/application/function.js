@@ -33,8 +33,8 @@ $(function () {
             }
         });
     });
-})
-var position = new google.maps.LatLng(10.8649, 106.612);
+});
+/*var position = new google.maps.LatLng(10.8649, 106.612);
 var options = {
     zoom: 12,
     center: position,
@@ -42,7 +42,7 @@ var options = {
     disableDefaultUI: true,
     panControl: true
 };
-window.onload = getLocation(0);
+window.onload = getLocation(0);*/
 
 //$("#map-type-all").on('click', getLocation(0));
 //$("#map-location-all").on('click', getLocation(0));

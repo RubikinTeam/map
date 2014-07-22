@@ -21,23 +21,6 @@ class Activities extends Controller
         $this->render('activities/detail', array('activity' => $activity, 'comments' => $comments, 'otherActivities' => $otherActivities));
     }
 
-    public function addComment($id)
-    {
-        if (isset($_POST["submit_add_comment"])) {
-            $comments_model = $this->loadModel('CommentsModel');
-
-            $users_model = $this->loadModel('UsersModel');
-            $userLogged = $users_model->checkUserLogged();
-
-            if($userLogged == 0) {
-                $comments_model->addComment($_POST["type"], $id, 'Anonymous', $_POST["comment"]);
-            }
-            else {
-                $comments_model->addComment($_POST["type"], $id, $userLogged['fname'].' '.$userLogged['lname'], $_POST["comment"]);
-            }
-        }
-        header('location: ' . URL . 'activities/detail/' . $id);
-    }
     public function getActivityShortDesByType()
     {
         $type = $_POST['type'];

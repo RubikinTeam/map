@@ -1,14 +1,43 @@
 {% extends "_templates/base.twig" %}
 {% block javascripts %}
     <div id="fb-root"></div>
-    <script>
-        (function(d, s, id) {
+    <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
             js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=576254322458716&version=v2.0";
             fjs.parentNode.insertBefore(js, fjs);
-        }({d: document, s: 'script', id: 'facebook-jssdk'}));
+        }(document, 'script', 'facebook-jssdk'));
+
+        function text(comment) {
+            if (comment.length > 0) {
+                $('#submit').show().fadeIn();
+            }
+            else {
+                $('#submit').hide().fadeOut();
+            }
+        }
+
+        function addComment(type, id) {
+            var comment = $('#comment').val();
+            $.ajax({
+                type: "POST",
+                url: "{{ constant('URL') }}comments/add/",
+                data: "type=" + type + "&id=" + id + "&comment=" + comment,
+                success: function() {
+                    $.get("{{ constant('URL') }}/comments/get/"+id+"/"+type, function(data) {
+                        $(".listComments").html(data);
+                        $('#comment').val('');
+                        $('#submit').hide().fadeOut();
+                        var tab = $('#tab_2');
+                        var nComments = tab.data('value');
+                        nComments++;
+                        tab.html('<i class="icon-star"></i>VMap ('+nComments+')');
+                        tab.data('value', nComments);
+                    })
+                }
+            });
+        }
     </script>
 {% endblock %}
 {% block content %}
@@ -32,7 +61,7 @@
                         <ul class="tabs">
                             <li><h2>Bình Luận</h2></li>
                             <li class="place-right"><a href="#_tab_1"><i class="icon-facebook"></i>Facebook</a></li>
-                            <li class="place-right active"><a href="#_tab_2"><i class="icon-star"></i>VMap ({{ comments|length }})</a></li>
+                            <li class="place-right active"><a href="#_tab_2" id="tab_2" data-value="{{ comments|length }}"><i class="icon-star"></i>VMap ({{ comments|length }})</a></li>
                         </ul>
                         <div class="frames">
                             <div class="frame" id="_tab_1">
@@ -42,33 +71,16 @@
                                 <div class="listview-outlook">
                                     <div class="list">
                                         <div class="list-content">
-                                            <form action="{{ constant('URL') }}activities/addComment/{{ activity.id }}" method="POST">
-                                                <textarea class="list-title place-right" name="comment" placeholder="Ý kiến của bạn" required></textarea>
-                                                <span class="list-subtitle">&nbsp;</span>
-                                                <label>
-                                                    <input type="text" name="type" value="2" style="display:none;"/>
-                                                </label>
-                                                <input class="place-right" type="submit" name="submit_add_comment" value="Gửi" />
-                                            </form>
+                                            <textarea class="list-title place-right" id="comment" placeholder="Ý kiến của bạn" onkeyup="text(this.value)"></textarea>
+                                            <span class="list-subtitle">&nbsp;</span>
+                                            <input class="place-right" id="submit" type="button" onclick="addComment(2,{{ activity.id }})" value="Gửi" style="display:none;" />
                                         </div>
                                     </div>
-                                    {% for comment in comments %}
-                                        <div class="list"  id="c{{ comment.id }}" style="cursor:default;">
-                                            <div class="list-content">
-                                                <span class="list-icon">
-                                                    <img src="{{ constant('URL') }}public/img/avatar.png" class="pull-left">
-                                                </span>
-                                                <span class="list-subtitle">
-                                                    <span class="place-right">{{ comment.date }}</span>
-                                                    {{ comment.name }}
-                                                </span>
-                                                <span class="list-title">
-                                                    <span class="place-bottom-right"><a href="" id="l{{ comment.id }}"><i class="icon-thumbs-up"></i></a> . {{ comment.like }} <a href="" id="d{{ comment.id }}"><i class="icon-thumbs-down"></i></a> . {{ comment.dislike }}</span>
-                                                    {{ comment.content }}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    {% endfor %}
+                                    <div class="listComments">
+                                        {% block listComments %}
+                                            {{ include('comments/get.twig', { 'comments': comments }) }}
+                                        {% endblock %}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +98,7 @@
                             <div class="countdown" data-style-background="bg-lightRed" data-role="countdown" data-stoptimer="{{ activity.startday }}"></div>
                             <p>Ngày bắt đầu: {{ activity.startday }}</p>
                             <p>Ngày kết thúc: {{ activity.endday }}</p>
-                            <p>Địa điểm: <a href="">Xem bản đồ</a></p>
+                            <p>Địa điểm: <a href="{{ constant('URL') }}map">Xem bản đồ</a></p>
                         </div>
                     </div>
                     <div class="margin20"></div>
