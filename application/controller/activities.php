@@ -10,6 +10,9 @@ class Activities extends Controller
 {
     public function detail($id)
     {
+        $users_model = $this->loadModel('usersmodel');
+        $userLogged = $users_model->checkUserLogged();
+
         $activities_model = $this->loadModel('ActivitiesModel');
         $activity = $activities_model->getActivityById($id);
 
@@ -18,7 +21,7 @@ class Activities extends Controller
         $comments_model = $this->loadModel('CommentsModel');
         $comments = $comments_model->getSomeComments(2, $id, 2, 0);
 
-        $this->render('activities/detail', array('activity' => $activity, 'comments' => $comments, 'otherActivities' => $otherActivities));
+        $this->render('activities/detail', array('activity' => $activity, 'comments' => $comments, 'otherActivities' => $otherActivities, 'userLogged' => $userLogged));
     }
 
     public function getActivityShortDesByType()
