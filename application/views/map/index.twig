@@ -12,15 +12,16 @@
                         <li class="title">Loại hình</li>
                         <li class="active" id = "map-type-all"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
                         <li class="stick bg-red">
-                            <a class="dropdown-toggle" name = "map-activities-all" onclick="getActivityByType(0)" href="#"><i class="icon-tree-view"></i>Hoạt động</a>
+                            <a class="dropdown-toggle" name = "map-activities-all" href = ""><i class="icon-tree-view"></i>Hoạt động</a>
                             <ul class="dropdown-menu" data-role="dropdown">
-                                <li><a href="">Vì cộng đồng</a></li>
-                                <li onclick="getActivityByType(2)"><a href="" onclick="getActivityByType(1)">An sinh xã hội</a></li>
-                                <li onclick="getActivityByType(3)"><a href="">Tuyên truyền - GD</a></li>
-                                <li onclick="getActivityByType(4)"><a href="">Cải tạo môi trường</a></li>
-                                <li onclick="getActivityByType(5)"><a href="">Đền ơn đáp nghĩa</a></li>
-                                <li onclick="getActivityByType(6)"><a href="">Chuyên môn</a></li>
-                                <li onclick="getActivityByType(7)"><a href="">Khác</a></li>
+                                <li onclick="getActivityByType(0)"><a><b>Tất cả</b></a></li>
+                                <li onclick="getActivityByType(1)"><a>Vì cộng đồng</a></li>
+                                <li onclick="getActivityByType(2)"><a onclick="getActivityByType(1)">An sinh xã hội</a></li>
+                                <li onclick="getActivityByType(3)"><a>Tuyên truyền - GD</a></li>
+                                <li onclick="getActivityByType(4)"><a>Cải tạo môi trường</a></li>
+                                <li onclick="getActivityByType(5)"><a>Đền ơn đáp nghĩa</a></li>
+                                <li onclick="getActivityByType(6)"><a>Chuyên môn</a></li>
+                                <li onclick="getActivityByType(7)"><a>Khác</a></li>
                                 <!--<li class="divider"></li><li class="disabled"><a href="">Subitem 4</a></li>-->
                             </ul>
                         </li>
@@ -28,6 +29,7 @@
                         <li class="stick bg-yellow">
                             <a class="dropdown-toggle" href="#"><i class="icon-location"></i>Địa điểm</a>
                             <ul class="dropdown-menu" data-role="dropdown">
+                                <li onclick="getLocation(0)"><a><b>Tất cả</b></a></li>
                                 <li><a href="">Trung tâm bảo trợ</a></li>
                                 <li><a href="">Mái ấm - nhà mở</a></li>
                                 <li><a href="">Bệnh viện</a></li>
