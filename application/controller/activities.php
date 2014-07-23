@@ -20,7 +20,7 @@ class Activities extends Controller
 
         $comments_model = $this->loadModel('CommentsModel');
         $comments = $comments_model->getSomeComments(2, $id, 2, 0);
-
+        var_dump($comments);
         $this->render('activities/detail', array('activity' => $activity, 'comments' => $comments, 'otherActivities' => $otherActivities, 'userLogged' => $userLogged));
     }
 

@@ -1,45 +1,52 @@
 {% extends "_templates/base.twig" %}
 {% block content %}
-    <div class="main-content clearfix">
+    <script src="{{ constant('URL') }}public/js/application/userJs.js"></script>
+    <div class="grid" style="margin-top: 40px">
         <nav class="breadcrumbs small">
             <ul>
                 <li><a href="{{ constant('URL') }}home"><i class="icon-home"></i></a></li>
                 <li><a href="#">Đăng ký</a></li>
             </ul>
         </nav>
-        <div class="row clearfix">
-            <div class="col-sm-12 column">
-                <div class="row clearfix">
-                    <div class="col-sm-3 column"></div>
-                    <div class="col-sm-6 column">
-                        <form role="form">
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password">
-                            </div>
-                            <div class="form-group">
-                                <label for="dob">Date of birth</label>
-                                <input type="datetime" class="form-control" id="dob">
-                            </div>
-                            <div class="form-group">
-                                <label>Upload file</label>
-                                <input type="file">
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox">Check me out
-                                </label>
-                            </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </form>
+        <div class="example" style="margin-top: 20px">
+            <form action="{{ constant('URL') }}users/register/" method="POST">
+                <fieldset>
+                    <legend>Đăng kí</legend>
+                    <label>Họ</label>
+
+                    <div class="input-control text" data-role="input-control">
+                        <input type="text" name="fname" tabindex="1" autofocus="" required>
+                        <button class="btn-clear" ></button>
                     </div>
-                    <div class="col-sm-3 column"></div>
-                </div>
-            </div>
+                    <label>Tên lót - Tên</label>
+                    <div class="input-control text" data-role="input-control">
+                        <input type="text" name ="lname" tabindex="2" required>
+                        <button class="btn-clear" ></button>
+                    </div>
+                    <label>Email: </label>
+                    <div class="input-control text" data-role="input-control">
+                        <input type="email" name="email" tabindex="3" required>
+                        <button class="btn-clear" ></button>
+                    </div>
+                    <label>Password: </label>
+                    <div class="input-control password"  data-role="input-control">
+                        <input type="password" tabindex="4" name="password" id = "password" onkeyup="checkPassword(this.value)" required>
+                        <button class="btn-reveal" ></button>
+                        <div id = "pwStatus"></div>
+                    </div>
+                    <label>Nhập lại password: </label>
+                    <div class="input-control password"  data-role="input-control">
+                        <input type="password" tabindex="5" onkeyup="checkPasswordSame(this.value, document.getElementById('password').value)" name="repassword" required>
+                        <button class="btn-reveal" ></button>
+                        <div id = "confirmPwStatus"></div>
+                    </div>
+                    <div class = "row">
+                        <div class = "span2"><input type="submit" value="Đăng kí"></div>
+                        <div class="span2"><input type="reset" value="Xóa"></div>
+                    </div>
+
+                </fieldset>
+            </form>
         </div>
     </div>
 {% endblock %}

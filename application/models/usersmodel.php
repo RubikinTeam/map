@@ -50,7 +50,7 @@ class UsersModel
         $code = md5($number);
         $code = substr($code, 0, 10);
         if (!$this->checkUserExist($email)) {
-            $sql = "insert into user(fname,lname,email,password,activationCode) values('$fname','$lname','$email','md5($pw)','$code');";
+            $sql = "insert into user(fname,lname,email,password,activationCode) values('$fname','$lname','$email','$pw','$code');";
             $query = $this->db->prepare($sql);
             $query->execute();
             return 1;
@@ -118,11 +118,20 @@ class UsersModel
             } else {
                 $_SESSION['image'] = URL . $result[0]->imageUrl;
             }
-            header("location: " . URL);
+            if (isset($_SERVER['HTTP_REFERER'])) {
+                header('Location: ' . $_SERVER['HTTP_REFERER']);
+            } else {
+                header('Location: ' . URL . '/home');
+            }
+            exit;
             return 1;
         } else {
-            header("location: " . URL);
-            return 0;
+            if (isset($_SERVER['HTTP_REFERER'])) {
+                header('Location: ' . $_SERVER['HTTP_REFERER']);
+            } else {
+                header('Location: ' . URL . '/home');
+            }
+            exit;
         }
     }
 
