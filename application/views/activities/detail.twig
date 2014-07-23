@@ -1,5 +1,6 @@
 {% extends "_templates/base.twig" %}
 {% block javascripts %}
+    {{ parent() }}
     <div id="fb-root"></div>
     <script>(function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
@@ -25,20 +26,33 @@
                 type: "POST",
                 url: "{{ constant('URL') }}comments/add/",
                 data: "type=" + type + "&id=" + id + "&comment=" + comment,
-                success: function () {
-                    $.get("{{ constant('URL') }}/comments/get/" + id + "/" + type, function (data) {
-                        $(".listComments").html(data);
-                        $('#comment').val('');
-                        $('#submit').hide().fadeOut();
-                        var tab = $('#tab_2');
-                        var nComments = tab.data('value');
-                        nComments++;
-                        tab.html('<i class="icon-star"></i>VMap (' + nComments + ')');
-                        tab.data('value', nComments);
-                    })
+                success: function() {
+                    $('#comment').val('');
+                    $('#submit').hide().fadeOut();
+                    getComments(id, type);
+                    var tab = $('#tab_2');
+                    var nComments = tab.data('value');
+                    $('#stat_2').html('<i class="icon-star"></i>VMap ('+nComments+')');
                 }
             });
         }
+
+        function getComments(id, type)
+        {
+            $.get("{{ constant('URL') }}/comments/get/"+id+"/"+type, function(data) {
+                $(".listComments").html(data);
+                var tab = $('#tab_2');
+                var nComments = tab.data('value');
+                $('#stat_2').html('<i class="icon-star"></i>VMap ('+nComments+')');
+            })
+        }
+
+        setInterval(function() {
+            var tab = $('#_tab_2');
+            var id = tab.data('value');
+            var type = tab.data('role');
+            getComments(id, type);
+        }, 3000);
     </script>
 {% endblock %}
 {% block content %}
@@ -64,9 +78,13 @@
                         <ul class="tabs">
                             <li><h2>Bình Luận</h2></li>
                             <li class="place-right"><a href="#_tab_1"><i class="icon-facebook"></i>Facebook</a></li>
+<<<<<<< HEAD
                             <li class="place-right active"><a href="#_tab_2" id="tab_2"
                                                               data-value="{{ comments|length }}"><i
                                             class="icon-star"></i>VMap ({{ comments|length }})</a></li>
+=======
+                            <li class="place-right active"><a href="#_tab_2" id="stat_2"><i class="icon-star"></i>VMap ({{ comments|length }})</a></li>
+>>>>>>> 86dd6a8acbcefae345dd5443b04051c943d6e839
                         </ul>
                         <div class="frames">
                             <div class="frame" id="_tab_1">
@@ -74,7 +92,7 @@
                                      data-href="{{ constant('URL') }}activities/detail/{{ activity.id }}"
                                      data-width="658" data-numposts="5" data-colorscheme="light"></div>
                             </div>
-                            <div class="frame" id="_tab_2">
+                            <div class="frame" id="_tab_2" data-role="2" data-value="{{ activity.id }}">
                                 <div class="listview-outlook">
                                     <div class="list">
                                         <div class="list-content">

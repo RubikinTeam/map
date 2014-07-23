@@ -25,7 +25,7 @@ class Application
     {
         // create array with URL parts in $url
         $this->splitUrl();
-
+        //TODO
         // check for controller: does such a controller exist ?
         if (file_exists('./application/controller/' . $this->url_controller . '.php')) {
 
