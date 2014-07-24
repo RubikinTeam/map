@@ -1,0 +1,178 @@
+{% extends "_templates/base.twig" %}
+{% block javascripts %}
+    {{ parent() }}
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=576254322458716&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        function text(comment) {
+            if (comment.length > 0) {
+                $('#submit').show().fadeIn();
+            }
+            else {
+                $('#submit').hide().fadeOut();
+            }
+        }
+
+        function addComment(type, id) {
+            var comment = $('#comment').val();
+            $.ajax({
+                type: "POST",
+                url: "{{ constant('URL') }}comments/add/",
+                data: "type=" + type + "&id=" + id + "&comment=" + comment,
+                success: function() {
+                    $('#comment').val('');
+                    $('#submit').hide().fadeOut();
+                    getComments(id, type);
+                    var tab = $('#tab_2');
+                    var nComments = tab.data('value');
+                    $('#stat_2').html('<i class="icon-star"></i>VMap ('+nComments+')');
+                }
+            });
+        }
+
+        function getComments(id, type)
+        {
+            $.get("{{ constant('URL') }}/comments/get/"+id+"/"+type, function(data) {
+                $(".listComments").html(data);
+                var tab = $('#tab_2');
+                var nComments = tab.data('value');
+                $('#stat_2').html('<i class="icon-star"></i>VMap ('+nComments+')');
+            })
+        }
+
+        setInterval(function() {
+            var tab = $('#_tab_2');
+            var id = tab.data('value');
+            var type = tab.data('role');
+            getComments(id, type);
+        }, 3000);
+    </script>
+{% endblock %}
+{% block content %}
+    <div class="main-content clearfix">
+        <nav class="breadcrumbs small">
+            <ul>
+                <li><a href="{{ constant('URL') }}home"><i class="icon-home"></i></a></li>
+                <li><a href="{{ constant('URL') }}places">Địa điểm</a></li>
+            </ul>
+        </nav>
+        <div class="grid">
+            <div class="row">
+                <div class="span9">
+                    <!--Place's content-->
+                    <h2><strong>{{ place.name }}</strong></h2>
+
+                    <p>{{ place.description }}</p>
+
+                    <div class="margin20"></div>
+
+                    <!-- Place's comments-->
+                    <div class="tab-control" data-role="tab-control">
+                        <ul class="tabs">
+                            <li><h2>Bình Luận</h2></li>
+                            <li class="place-right"><a href="#_tab_1"><i class="icon-facebook"></i>Facebook</a></li>
+
+                            <li class="place-right active"><a href="#_tab_2" id="stat_2"><i class="icon-star"></i>VMap ({{ comments|length }})</a></li>
+                        </ul>
+                        <div class="frames">
+                            <div class="frame" id="_tab_1">
+                                <div class="fb-comments"
+                                     data-href="{{ constant('URL') }}places/detail/{{ place.id }}"
+                                     data-width="658" data-numposts="5" data-colorscheme="light"></div>
+                            </div>
+                            <div class="frame" id="_tab_2" data-role="3" data-value="{{ place.id }}">
+                                <div class="listview-outlook">
+                                    <div class="list">
+                                        <div class="list-content">
+                                            <textarea class="list-title place-right" id="comment"
+                                                      placeholder="Ý kiến của bạn"
+                                                      onkeyup="text(this.value)"></textarea>
+                                            <span class="list-subtitle">&nbsp;</span>
+                                            <input class="place-right" id="submit" type="button"
+                                                   onclick="addComment(3,{{ place.id }})" value="Gửi"
+                                                   style="display:none;"/>
+                                        </div>
+                                    </div>
+                                    {#<div class="listComments">#}
+                                        {#{% block listComments %}#}
+                                            {#{{ include('comments/get.twig', { 'comments': comments }) }}#}
+                                        {#{% endblock %}#}
+                                    {#</div>#}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin20"></div>
+                    <!-- View Map -->
+                    <div class=""></div>
+                </div>
+                <div class="span4">
+                    <div class="panel">
+                        <div class="panel-header">
+                            Thông tin địa điểm
+                        </div>
+                        <div class="panel-content">
+                            <p>SĐT: {{ place.phone }}</p>
+
+                            <p>Email: {{ place.email }}</p>
+
+                            <p>Địa chỉ: <a href="{{ constant('URL') }}map">Xem bản đồ</a></p>
+                        </div>
+                    </div>
+                    <div class="margin20"></div>
+                    <div class="panel">
+                        <div class="panel-header">
+                            Hoạt động liên quan
+                        </div>
+                        <div class="panel-content">
+                            {#<ul>#}
+                                {#{% for activity in otherActivities %}#}
+                                    {#<li>#}
+                                        {#<a href="{{ constant('URL') }}activities/detail/{{ activity.id }}">{{ activity.name }}</a>#}
+                                    {#</li>#}
+                                {#{% endfor %}#}
+                            {#</ul>#}
+                        </div>
+                    </div>
+                    <div class="margin20"></div>
+                    <div class="panel">
+                        <div class="panel-header">
+                            Bài viết liên quan
+                        </div>
+                        <div class="panel-content">
+                            {#<ul>#}
+                            {#{% for activity in otherActivities %}#}
+                            {#<li>#}
+                            {#<a href="{{ constant('URL') }}activities/detail/{{ activity.id }}">{{ activity.name }}</a>#}
+                            {#</li>#}
+                            {#{% endfor %}#}
+                            {#</ul>#}
+                        </div>
+                    </div>
+                    <div class="margin20"></div>
+                    <div class="panel">
+                        <div class="panel-header">
+                            Địa điểm khác
+                        </div>
+                        <div class="panel-content">
+                            <ul>
+                                {% for place in otherPlaces %}
+                                    <li>
+                                        <a href="{{ constant('URL') }}places/detail/{{ place.id }}">{{ place.name }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
