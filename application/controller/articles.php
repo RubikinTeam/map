@@ -8,6 +8,13 @@
 
 class Articles extends Controller
 {
+    public function index()
+    {
+        $articles_model = $this->loadModel('ArticlesModel');
+        $articles = $articles_model->getSomeArticles(0, 2, 6);
+        $this->render('articles/index', array('articles' => $articles));
+    }
+
     public function detail($id)
     {
         $users_model = $this->loadModel('usersmodel');
@@ -15,7 +22,7 @@ class Articles extends Controller
         $articles_model = $this->loadModel('ArticlesModel');
         $article = $articles_model->getArticleById($id);
 
-        $otherArticles = $articles_model->getSomeArticles(0, 2, 6);
+        $otherArticles = $articles_model->getSomeArticles(0, 2, 0);
 
         $comments_model = $this->loadModel('CommentsModel');
         $comments = $comments_model->getSomeComments(1, $id, 2, 0);
