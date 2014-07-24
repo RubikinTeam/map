@@ -18,7 +18,7 @@ class Users extends Controller
             $password = md5($_POST['password']);
             if ($users_model->addUser($fname, $lname, $email, $password))
             {
-               echo $email;
+               echo 1;
             }
             else {
                 echo 0;

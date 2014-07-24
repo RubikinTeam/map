@@ -18,7 +18,7 @@
     <script src="{{ constant('URL') }}public/js/jquery/jquery.min.js"></script>
     <script src="{{ constant('URL') }}public/js/jquery/jquery.widget.min.js"></script>
     <script src="{{ constant('URL') }}public/js/metro.min.js"></script>
-    <script src="{{ constant('URL') }}public/js/application/userJs.js"></script>
+    <script src="{{ constant('URL') }}public/js/application/userLogin.js"></script>
 {% endblock %}
 <header>
     <nav class="navigation-bar bg-green fixed-top shadow">
@@ -36,7 +36,7 @@
             </div>
 
             <span class="element-divider"></span>
-            <a class="element brand" href="{{ constant('URL') }}home"><span class="icon-home"></span></a>
+            <a class="element brand" id = "homeButton" href="{{ constant('URL') }}home"><span class="icon-home"></span></a>
             <span class="element-divider"></span>
 
             <div class="element input-element">
@@ -48,9 +48,9 @@
                 </form>
             </div>
             {% if userLogged == 0 %}
-                <a class="element place-right" id="userSignUpButton" href="#"><span class="icon-user"></span>&nbsp;&nbsp;Đăng
+                <a class="element place-right" id="userSignUpButton" href="{{ constant('URL') ~ 'users/register/' }}"><span class="icon-user"></span>&nbsp;&nbsp;Đăng
                     ký</a>
-                <a class="element place-right" id="userLoginButton" href="#"><span class="icon-key-2"></span>&nbsp;&nbsp;Đăng
+                <a class="element place-right" id="userLoginButton"  href="#"><span class="icon-key-2"></span>&nbsp;&nbsp;Đăng
                     nhập</a>
             {% else %}
                 <div class="element place-right">

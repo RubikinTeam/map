@@ -53,9 +53,9 @@ class UsersModel
             $sql = "insert into user(fname,lname,email,password,activationCode) values('$fname','$lname','$email','$pw','$code');";
             $query = $this->db->prepare($sql);
             $query->execute();
-            return 1;
+            return true;
         } else {
-            return 0;
+            return false;
         }
     }
 
