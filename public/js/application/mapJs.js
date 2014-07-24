@@ -109,24 +109,32 @@ function clearMarker() {
     markers = [];
 }
 $("input:checkbox").change(function () {
-    clearMarker();
-    for (var i = 1; i <= 7; i++) {
-        if ($("#" + i).is(":checked")) {
-            getActivityByType(i);
+    if ($(this).is(":checked")) {
+        getActivityByType($(this).attr("id").substr(2, 1));
+    } else if (!($(this).is(":checked"))) {
+        clearMarker();
+        for (var i = 1; i <= 7; i++) {
+            if ($("#at" + i).is(":checked")) {
+                getActivityByType(i);
+            }
         }
     }
 });
-$("#0").change(function () {
+$("#at0").change(function () {
     if ($(this).is(":checked")) {
         clearMarker();
         for (var i = 1; i <= 7; i++) {
-            $("#" + i).attr("disabled", true);
+            $("#at" + i).attr("disabled", true);
         }
         getActivityByType(0);
     }
     else {
+        clearMarker();
         for (var i = 1; i <= 7; i++) {
-            $("#" + i).removeAttr("disabled");
+            $("#at" + i).removeAttr("disabled");
+            if ($("#at" + i).is(":checked")) {
+                getActivityByType(i);
+            }
         }
     }
 })
