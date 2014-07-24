@@ -1,51 +1,144 @@
 {% extends "_templates/base.twig" %}
 {% block content %}
-    <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMO6grIC9wDQ6rvbhXx3dAeV5__UsqVtY&sensor=true">
-    </script>
     <script src="{{ constant('URL') }}public/js/application/mapJs.js"></script>
-    <body>
-    <div class="container" style="margin-top: 40px">
-        <div class="row">
-            <div class="span3" style="float: left">
-                <nav class="sidebar light">
-                    <ul>
-                        <li class="title">Loại hình</li>
-                        <li class="active" id="map-type-all"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
-                        <li class="stick bg-red">
-                            <a class="dropdown-toggle" name="map-activities-all" href=""><i class="icon-tree-view"></i>Hoạt
-                                động</a>
-                            <ul class="dropdown-menu" data-role="dropdown">
-                                <li onclick="getActivityByType(0)"><a><b>Tất cả</b></a></li>
-                                <li onclick="getActivityByType(1)"><a>Vì cộng đồng</a></li>
-                                <li onclick="getActivityByType(2)"><a onclick="getActivityByType(1)">An sinh xã hội</a>
-                                </li>
-                                <li onclick="getActivityByType(3)"><a>Tuyên truyền - GD</a></li>
-                                <li onclick="getActivityByType(4)"><a>Cải tạo môi trường</a></li>
-                                <li onclick="getActivityByType(5)"><a>Đền ơn đáp nghĩa</a></li>
-                                <li onclick="getActivityByType(6)"><a>Chuyên môn</a></li>
-                                <li onclick="getActivityByType(7)"><a>Khác</a></li>
-                                <!--<li class="divider"></li><li class="disabled"><a href="">Subitem 4</a></li>-->
-                            </ul>
-                        </li>
+    <style>
+        #googlemap img, object, embed {
+            max-width: none;
+        }
 
-                        <li class="stick bg-yellow">
-                            <a class="dropdown-toggle" href="#"><i class="icon-location"></i>Địa điểm</a>
-                            <ul class="dropdown-menu" data-role="dropdown">
-                                <li onclick="getLocation(0)"><a><b>Tất cả</b></a></li>
-                                <li><a href="">Trung tâm bảo trợ</a></li>
-                                <li><a href="">Mái ấm - nhà mở</a></li>
-                                <li><a href="">Bệnh viện</a></li>
-                                <li><a href="">Khác</a></li>
-                            </ul>
-                        </li>
-                        <li class="stick bg-green">
-                            <a class="dropdown-toggle" href="#"><i class="icon-newspaper"></i>Bài viết</a>
-                            <ul class="dropdown-menu" data-role="dropdown">
-                                <li><a href="">Cơ sở tình nguyện</a></li>
-                                <li><a href="">Hoạt động tình nguyện</a></li>
-                            </ul>
-                        </li>
+        #maps embed {
+            max-width: none;
+        }
+
+        #map img {
+            max-width: none;
+        }
+
+        #map object {
+            max-width: none;
+        }
+    </style>
+    <div>
+        <div style="margin-top: 60px;">
+            <nav class="sidebar light" style="width: 260px; height: auto; float: left;">
+                <ul>
+                    <li class="title">Loại hình</li>
+                    <li class="active" id="map-type-all"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
+                    <li class="stick bg-red"></li>
+                    <div class="panel" data-role="panel">
+                        <div class="panel-header">
+                            <a class="panel" collapse name="map-activities-all" href="#">&nbsp;&nbsp;<i
+                                        class="icon-tree-view"
+                                        style="color: #000000">
+                                    &nbsp;&nbsp;</i>Hoạt
+                                động</a>
+                        </div>
+                        <div class="panel-content">
+                            <li><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox" id = "0"/><span
+                                                    class="check"></span><b>&nbsp;Tất cả</b></label></div>
+                                </a></li>
+                            <li><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox" id = "1" /><span
+                                                    class="check"></span>&nbsp;An sinh xã hội</label></div>
+                                </a></li>
+                            <li><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox"/><span
+                                                    class="check"></span>&nbsp;Tuyên truyền - giáo dục</label></div>
+                                </a></li>
+                            <li><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox" /><span
+                                                    class="check"></span>&nbsp;Đền ơn đáp nghĩa</label></div>
+                                </a></li>
+                            <li><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox" /><span
+                                                    class="check"></span>&nbsp;Nâng cao dân trí</label></div>
+                                </a></li>
+                            <li><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox"/><span
+                                                    class="check"></span>&nbsp;Cải tạo môi trường</label></div>
+                                </a></li>
+                            <li><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox" onchange="checkbox(6)"/><span
+                                                    class="check"></span>&nbsp;Xây dựng cơ sở vật chất</label></div>
+                                </a></li>
+                            <li><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox" onchange="checkbox(7)"/><span
+                                                    class="check"></span>&nbsp;Phục vụ/UD chuyên môn</label></div>
+                                </a></li>
+                        </div>
+                    </div>
+                    <li class="stick bg-yellow"></li>
+                    <div class="panel" data-role="panel">
+                        <div class="panel-header">
+                            <a class="panel" collapse name="map-activities-all" href="#">&nbsp;
+                                <i class="icon-location" style="color: #000000"></i>&nbsp;&nbsp;&nbsp;Địa điểm</a>
+                        </div>
+                        <div class="panel-content">
+                            <li onclick="getActivityByType(1)"><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox" checked/><span
+                                                    class="check"></span><b>&nbsp;Tất cả</b></label></div>
+                                </a></li>
+                            <li onclick="getActivityByType(1)"><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox"/><span
+                                                    class="check"></span>&nbsp;Mái ấm - nhà mở</label></div>
+                                </a></li>
+                            <li onclick="getActivityByType(1)"><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox"/><span
+                                                    class="check"></span>&nbsp;TT Bảo trợ/làng SOS</label></div>
+                                </a></li>
+                            <li onclick="getActivityByType(1)"><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox"/><span
+                                                    class="check"></span>&nbsp;Chùa/nhà thờ</label></div>
+                                </a></li>
+                            <li onclick="getActivityByType(1)"><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox"/><span
+                                                    class="check"></span>&nbsp;B. viện/Viện dưỡng lão</label></div>
+                                </a></li>
+                            <li onclick="getActivityByType(1)"><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox"/><span
+                                                    class="check"></span>&nbsp;Trường học/Lớp học</label></div>
+                                </a></li>
+                            <li onclick="getActivityByType(1)"><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox"/><span
+                                                    class="check"></span>&nbsp;Quán ăn/Bếp ăn</label></div>
+                                </a></li>
+                            <li onclick="getActivityByType(1)"><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox"/><span
+                                                    class="check"></span>&nbsp;Công cộng</label></div>
+                                </a></li>
+                            <li onclick="getActivityByType(1)"><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox"/><span
+                                                    class="check"></span>&nbsp;Tư nhân/tổ chức</label></div>
+                                </a></li>
+                            <li onclick="getActivityByType(1)"><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox"/><span
+                                                    class="check"></span>&nbsp;Khác</label></div>
+                                </a></li>
+                        </div>
+                    </div>
+                    <li class="stick bg-green"></li>
+                    <div class="panel" data-role="panel">
+                        <div class="panel-header">
+                            <a class="panel" collapse name="map-activities-all" href="#">&nbsp;
+                                <i class="icon-newspaper" style="color: #000000"></i>&nbsp;&nbsp;&nbsp;Bài viết</a>
+                        </div>
+                        <div class="panel-content">
+                            <li onclick="getActivityByType(1)"><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox" checked/><span
+                                                    class="check"></span><b>&nbsp;Tất cả</b></label></div>
+                                </a></li>
+                            <li onclick="getActivityByType(1)"><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox"/><span
+                                                    class="check"></span>&nbsp;Địa điểm</label></div>
+                                </a></li>
+                            </li>
+                            <li onclick="getActivityByType(1)"><a href="#">
+                                    <div class="input-control checkbox"><label><input type="checkbox"/><span
+                                                    class="check"></span>&nbsp;Hoạt động</label></div>
+                                </a></li>
+                            </li>
+                        </div>
 
                         <li class="title">Vị trí</li>
                         <li class="active" id="map-location-all"><a href="#"><i class="icon-home"></i>Tất cả</a></li>
@@ -94,20 +187,25 @@
                                 <li class="disabled"><a href="">Subitem 4</a></li>
                             </ul>
                         </li>
-                    </ul>
-                </nav>
-            </div>
-            <div>
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="span12">
                 <div style="position: absolute; margin-top: 10px;margin-left: 40%; z-index: 2; float: right">
                     <input type="text" style="width: 300px" placeholder="Nhập từ khóa tìm kiếm..."/>
                     <button class="btn-search icon-search" style="background: #ffffff"></button>
                 </div>
             </div>
-            <div id="map-canvas" style="width: 900px;height: 600px;float: right;">
-            </div>
-            <div id="locationList" class="span3">Locations list</div>
-            <div style="clear: both"></div>
+        </div>
+        <div id="map" style="max-width: none;max-height: none; width: 860px;; height: 600px; float: right">
         </div>
     </div>
-    </body>
+    {#
+    <div id="locationList" class="span3">Locations list</div>
+    <div style="clear: both"></div>#}
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMO6grIC9wDQ6rvbhXx3dAeV5__UsqVtY&sensor=true">
+    </script>
+    <script src="{{ constant('URL') }}public/js/application/mapJs.js"></script>
 {% endblock %}

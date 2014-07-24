@@ -2,7 +2,6 @@
  * Created by Nguyen on 7/19/14.
  */
 var map;
-var markers = [];
 function initialize() {
     var options = {
         center: new google.maps.LatLng(10.81779956817627, 106.6179962158203),
@@ -28,7 +27,9 @@ function getLocation(id) {
             var obj = JSON.parse(text);
             var n = Object.keys(obj).length;
             var textContent = "";
+            //var markers = [];
             var infoContents = [];
+            //var infoWindows = [];
             for (var i = 0; i < n; i += 1) {
                 var marker =
                     new google.maps.Marker(
@@ -52,6 +53,7 @@ function getLocation(id) {
                         infoWindow.open(map, marker);
                     }
                 })(marker, i));
+                textContent = textContent + (obj[i].lat + " - " + obj[i].long + "</br>");
             }
             document.getElementById('locationList').innerHTML = textContent;
         }
@@ -70,6 +72,8 @@ function getActivityByType(type) {
             if (text != '0') {
                 var obj = JSON.parse(text)
                 var n = Object.keys(obj).length;
+                var markers = [];
+                var textContent = "";
                 var infoContents = [];
                 for (var i = 0; i < n; i += 1) {
                     var marker =
@@ -94,6 +98,7 @@ function getActivityByType(type) {
                             infoWindow.open(map, marker);
                         }
                     })(marker, i));
+                    textContent = textContent + (obj[i].lat + " - " + obj[i].long + "</br>");
                 }
             }
         }
@@ -102,18 +107,3 @@ function getActivityByType(type) {
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajax.send("type=" + type);
 }
-function clearMarker() {
-    for (var i = 0; i < markers.length; i++) {
-        markers[i].setMap(null);
-    }
-    markers = [];
-}
-$("input:checkbox").change(function () {
-    var $this = $(this);
-    if ($this.is(":checked")) {
-        getActivityByType($this.attr("id"));
-    }
-    else {
-        clearMarker();
-    }
-});
