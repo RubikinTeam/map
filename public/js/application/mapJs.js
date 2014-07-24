@@ -84,7 +84,7 @@ function getActivityByType(type) {
                     markers.push(marker);
                     infoContents[i] = '<div style="width: 300px"><b>Hoạt động:</b>' + obj[i].activityName + '</br>'
                         + '<b>Ngày bắt đầu:</b>' + obj[i].startday + '</br>' + '<b>Ngày kết thúc: </b> ' + obj[i].endday + '</br>'
-                        + '<b>Đơn vị tổ chức: </b> ' + '<a href = "vplaces/detail/' + obj[i].placeId + '">'
+                        + '<b>Đơn vị tổ chức: </b> ' + '<a href = "places/detail/' + obj[i].placeId + '">'
                         + obj[i].placeName + '</a></br>'
                         + '<a href = "activities/detail/' + obj[i].activityId + '">Chi tiết...</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = "#" style="align-self: flex-end">Bài viết liên quan</a></div>';
                     var infoWindow = new google.maps.InfoWindow(), marker, i;
