@@ -5,8 +5,8 @@
         $(document).ready(function() {
             $(".truncate").each(function() {
                 var text = this.innerHTML;
-                if (text.length > 100) {
-                    text = text.substring(0, 100);
+                if (text.length > 180) {
+                    text = text.substring(0, 180);
                     text = text.replace(/\w+$/, '');
                     text += '<a href="#" ' +
                             'onclick="this.parentNode.innerHTML=' +
