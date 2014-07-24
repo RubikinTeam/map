@@ -79,15 +79,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="38" selection-start="613" selection-end="613" vertical-scroll-proportion="-6.3461537" vertical-offset="90" max-vertical-offset="680">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="map.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controller/map.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -185,11 +176,11 @@
         <option value="$PROJECT_DIR$/application/views/activities/detail.twig" />
         <option value="$PROJECT_DIR$/application/views/users/register.twig" />
         <option value="$PROJECT_DIR$/application/views/_templates/base.twig" />
-        <option value="$PROJECT_DIR$/public/css/metro-bootstrap.css" />
         <option value="$PROJECT_DIR$/public/js/application/temp.js" />
         <option value="$PROJECT_DIR$/application/views/map/index.twig" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/public/js/application/mapJs.js" />
+        <option value="$PROJECT_DIR$/public/css/metro-bootstrap.css" />
       </list>
     </option>
   </component>
@@ -846,13 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/metro-bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7176" column="44" selection-start="185472" selection-end="185477" vertical-scroll-proportion="0.3326886" vertical-offset="121820" max-vertical-offset="178942">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/panique/laravel-sass/sass-compiler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="38" selection-start="1302" selection-end="1302" vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="1105" />
@@ -930,6 +914,13 @@
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="38" selection-start="613" selection-end="613" vertical-scroll-proportion="-6.3461537" vertical-offset="90" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/metro-bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8441" column="12" selection-start="214850" selection-end="214850" vertical-scroll-proportion="0.8876812" vertical-offset="143007" max-vertical-offset="179027">
           <folding />
         </state>
       </provider>
