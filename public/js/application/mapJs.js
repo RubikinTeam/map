@@ -109,11 +109,24 @@ function clearMarker() {
     markers = [];
 }
 $("input:checkbox").change(function () {
-    var $this = $(this);
-    if ($this.is(":checked")) {
-        getActivityByType($this.attr("id"));
-    }
-    else {
-        clearMarker();
+    clearMarker();
+    for (var i = 1; i <= 7; i++) {
+        if ($("#" + i).is(":checked")) {
+            getActivityByType(i);
+        }
     }
 });
+$("#0").change(function () {
+    if ($(this).is(":checked")) {
+        clearMarker();
+        for (var i = 1; i <= 7; i++) {
+            $("#" + i).attr("disabled", true);
+        }
+        getActivityByType(0);
+    }
+    else {
+        for (var i = 1; i <= 7; i++) {
+            $("#" + i).removeAttr("disabled");
+        }
+    }
+})

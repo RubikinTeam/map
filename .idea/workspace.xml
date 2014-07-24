@@ -67,13 +67,13 @@
       <file leaf-file-name="mapJs.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/application/mapJs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="24" selection-start="4880" selection-end="4880" vertical-scroll-proportion="0.35326087" vertical-offset="1573" max-vertical-offset="2125">
+            <state line="112" column="17" selection-start="5064" selection-end="5064" vertical-scroll-proportion="0.32246378" vertical-offset="1726" max-vertical-offset="2346">
               <folding>
-                <marker date="1406192080609" expanded="true" signature="1399:1411" placeholder="..." />
-                <marker date="1406192080609" expanded="true" signature="1813:1829" placeholder="..." />
-                <marker date="1406192080609" expanded="true" signature="1915:1935" placeholder="..." />
-                <marker date="1406192080609" expanded="true" signature="3642:3654" placeholder="..." />
-                <marker date="1406192080609" expanded="true" signature="4170:4190" placeholder="..." />
+                <marker date="1406194617611" expanded="true" signature="1399:1411" placeholder="..." />
+                <marker date="1406194617611" expanded="true" signature="1813:1829" placeholder="..." />
+                <marker date="1406194617611" expanded="true" signature="1915:1935" placeholder="..." />
+                <marker date="1406194617611" expanded="true" signature="3642:3654" placeholder="..." />
+                <marker date="1406194617611" expanded="true" signature="4170:4190" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -97,18 +97,18 @@
       <file leaf-file-name="index.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/map/index.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="110" selection-start="1474" selection-end="1474" vertical-scroll-proportion="-4.576923" vertical-offset="510" max-vertical-offset="2873">
+            <state line="58" column="17" selection-start="3110" selection-end="3110" vertical-scroll-proportion="-22.307692" vertical-offset="406" max-vertical-offset="2856">
               <folding>
-                <element signature="e#447#472#0" expanded="true" />
-                <element signature="e#513#561#0" expanded="true" />
-                <element signature="e#1114#1136#0" expanded="true" />
+                <element signature="e#367#392#0" expanded="true" />
+                <element signature="e#433#481#0" expanded="true" />
+                <element signature="e#1034#1056#0" expanded="true" />
                 <element signature="tag#div#1;tag#ul#0;tag#nav#0;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="e#4224#4246#0" expanded="true" />
-                <element signature="e#8098#8120#0" expanded="true" />
-                <element signature="e#12413#12500#0" expanded="true" />
-                <element signature="e#12541#12561#0" expanded="true" />
-                <element signature="e#12662#12689#0" expanded="true" />
-                <element signature="e#12779#12863#0" expanded="true" />
+                <element signature="e#4151#4173#0" expanded="true" />
+                <element signature="e#8025#8047#0" expanded="true" />
+                <element signature="e#12340#12427#0" expanded="true" />
+                <element signature="e#12468#12488#0" expanded="true" />
+                <element signature="e#12589#12616#0" expanded="true" />
+                <element signature="e#12706#12790#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -249,6 +249,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MapPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panique" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -897,6 +915,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/_templates/base.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="20" selection-start="675" selection-end="675" vertical-scroll-proportion="-5.230769" vertical-offset="102" max-vertical-offset="2227">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/users/register.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="86" selection-start="227" selection-end="227" vertical-scroll-proportion="-1.4230769" vertical-offset="14" max-vertical-offset="1071">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/activities/index.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
@@ -918,47 +950,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/_templates/base.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="20" selection-start="675" selection-end="675" vertical-scroll-proportion="-5.230769" vertical-offset="102" max-vertical-offset="2227">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/users/register.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="86" selection-start="227" selection-end="227" vertical-scroll-proportion="-1.4230769" vertical-offset="14" max-vertical-offset="1071">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/map/index.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="110" selection-start="1474" selection-end="1474" vertical-scroll-proportion="-4.576923" vertical-offset="510" max-vertical-offset="2873">
+        <state line="58" column="17" selection-start="3110" selection-end="3110" vertical-scroll-proportion="-22.307692" vertical-offset="406" max-vertical-offset="2856">
           <folding>
-            <element signature="e#447#472#0" expanded="true" />
-            <element signature="e#513#561#0" expanded="true" />
-            <element signature="e#1114#1136#0" expanded="true" />
+            <element signature="e#367#392#0" expanded="true" />
+            <element signature="e#433#481#0" expanded="true" />
+            <element signature="e#1034#1056#0" expanded="true" />
             <element signature="tag#div#1;tag#ul#0;tag#nav#0;tag#div#0;tag#div#0" expanded="false" />
-            <element signature="e#4224#4246#0" expanded="true" />
-            <element signature="e#8098#8120#0" expanded="true" />
-            <element signature="e#12413#12500#0" expanded="true" />
-            <element signature="e#12541#12561#0" expanded="true" />
-            <element signature="e#12662#12689#0" expanded="true" />
-            <element signature="e#12779#12863#0" expanded="true" />
+            <element signature="e#4151#4173#0" expanded="true" />
+            <element signature="e#8025#8047#0" expanded="true" />
+            <element signature="e#12340#12427#0" expanded="true" />
+            <element signature="e#12468#12488#0" expanded="true" />
+            <element signature="e#12589#12616#0" expanded="true" />
+            <element signature="e#12706#12790#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/application/mapJs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="24" selection-start="4880" selection-end="4880" vertical-scroll-proportion="0.35326087" vertical-offset="1573" max-vertical-offset="2125">
+        <state line="112" column="17" selection-start="5064" selection-end="5064" vertical-scroll-proportion="0.32246378" vertical-offset="1726" max-vertical-offset="2346">
           <folding>
-            <marker date="1406192080609" expanded="true" signature="1399:1411" placeholder="..." />
-            <marker date="1406192080609" expanded="true" signature="1813:1829" placeholder="..." />
-            <marker date="1406192080609" expanded="true" signature="1915:1935" placeholder="..." />
-            <marker date="1406192080609" expanded="true" signature="3642:3654" placeholder="..." />
-            <marker date="1406192080609" expanded="true" signature="4170:4190" placeholder="..." />
+            <marker date="1406194617611" expanded="true" signature="1399:1411" placeholder="..." />
+            <marker date="1406194617611" expanded="true" signature="1813:1829" placeholder="..." />
+            <marker date="1406194617611" expanded="true" signature="1915:1935" placeholder="..." />
+            <marker date="1406194617611" expanded="true" signature="3642:3654" placeholder="..." />
+            <marker date="1406194617611" expanded="true" signature="4170:4190" placeholder="..." />
           </folding>
         </state>
       </provider>
