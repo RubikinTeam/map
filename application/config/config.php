@@ -25,10 +25,21 @@ define('URL', 'http://localhost/MapPro/');
  * This is the place where you define your database credentials, database type etc.
  */
 define('DB_TYPE', 'mysql');
-define('DB_HOST', 'localhost');
+define('DB_HOST', '127.0.0.1');
 define('DB_NAME', 'map_db');
 define('DB_USER', 'root');
 define('DB_PASS', '');
+/**
+ * Configuration for: Mailer (SMTP)
+ *
+ */
+define('MAILER_HOST', 'serv11.hostvn.net');
+define('MAILER_PORT', '465');
+define('MAILER_USER', 'info@tuoitrebachkhoa.edu.vn');
+define('MAILER_PASS', '123456');
+define('MAILER_FROM', 'info@tuoitrebachkhoa.edu.vn');
+define('MAILER_FROM_NAME', 'Cổng thông tin tình nguyện TP.HCM');
+
 
 /**
  * Configuration for: Views

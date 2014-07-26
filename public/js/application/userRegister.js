@@ -2,7 +2,7 @@
  * Created by Nguyen on 7/23/14.
  */
 $(function () {
-    $("#submit").on("click", function () {
+    $("#submit").on('click', function () {
         $.post("users/register/",
             {
                 fname: $("#fname").val(),
@@ -12,9 +12,9 @@ $(function () {
             }, function (data, status) {
                 data = data.substr(0, 1);
                 if (status == "success" && data == "1") {
-                    $("#content").html('<h3>Đăng ký thành công với email: <b>'
-                        + $("#email").val() + '</b> , vui lòng mở mail để xác nhận tài khoản</h3>'
-                        + '. Nhấn <a href = "../../">vào đây</a> để về trang chủ</h3>');
+                    $("#content").html('<h3>Đăng ký thành công với email: <b><span style="color: #0000ff"> '
+                        + $("#email").val() + '</span></b>, vui lòng mở mail để kích hoạt</h3>'
+                        + ' Nhấn <a href = "../../">vào đây</a> để về trang chủ</h3>');
                 }
                     else {
                         $("#content").html('<h3>Đăng ký không thành công, email: '
@@ -25,6 +25,10 @@ $(function () {
             }, "text");
     });
 })
+/**
+ *
+ * @param pass
+ */
 function checkPassword(pass) {
     if (pass.length < 6) {
         document.getElementById('pwStatus').innerHTML = "<p style='color: #ff0000'><b>" + "Mật khẩu phải lớn hơn 6 kí tự" + "</b></p>";

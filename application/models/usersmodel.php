@@ -24,7 +24,7 @@ class UsersModel
      */
     public function checkUserExist($email)
     {
-        $sql = "SELECT id FROM `user` WHERE `email` = '$email'";
+        $sql = "SELECT `id` FROM `user` WHERE email = '$email'";
         $query = $this->db->prepare($sql);
         $query->execute();
         $result = $query->fetchAll();
@@ -42,15 +42,12 @@ class UsersModel
      * @param $pw
      * @return int 1: Add user successful 0: unsuccessful
      */
-    public function addUser($fname, $lname, $email, $pw)
+    public function addUser($fname, $lname, $email, $pw, $activationCode)
     {
         $query = $this->db->prepare("SET NAMES 'UTF8'");
         $query->execute();
-        $number = rand();
-        $code = md5($number);
-        $code = substr($code, 0, 10);
-        if (!$this->checkUserExist($email)) {
-            $sql = "insert into user(fname,lname,email,password,activationCode) values('$fname','$lname','$email','$pw','$code');";
+        if (!($this->checkUserExist($email))) {
+            $sql = "insert into user(fname,lname,email,password,activationCode) values('$fname','$lname','$email','$pw','$activationCode');";
             $query = $this->db->prepare($sql);
             $query->execute();
             return true;
@@ -83,15 +80,15 @@ class UsersModel
      * @param $code
      * @return string
      */
-    public function ActivationUser($email, $code)
+    public function userActivation($email, $code)
     {
         if ($this->checkActivationUser($email, $code)) {
-            $sql = "UPDATE user SET groupID=1 WHERE email='$email'";
+            $sql = "UPDATE user SET status=1 WHERE email='$email'";
             $query = $this->db->prepare($sql);
             $query->execute();
-            return "tai khoan da duoc kich hoat";
+            return 1;
         } else {
-            return "Kich hoat khong thanh cong";
+            return 0;
         }
     }
 

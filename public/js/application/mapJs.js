@@ -2,7 +2,8 @@
  * Created by Nguyen on 7/19/14.
  */
 var map;
-var markers = [];
+var ActivitiesMarkers = [];
+var PlaceMarkers = [];
 function initialize() {
     var options = {
         center: new google.maps.LatLng(10.81779956817627, 106.6179962158203),
@@ -17,6 +18,8 @@ function initialize() {
     return map;
 }
 google.maps.event.addDomListener(window, 'load', initialize());
+google.maps.event.addDomListener(window, 'load', getActivityByType(0));
+google.maps.event.addDomListener(window, 'load', getLocation(0));
 
 function getLocation(id) {
     if (window.XMLHttpRequest) {
@@ -27,7 +30,6 @@ function getLocation(id) {
             var text = ajax.responseText;
             var obj = JSON.parse(text);
             var n = Object.keys(obj).length;
-            var textContent = "";
             var infoContents = [];
             for (var i = 0; i < n; i += 1) {
                 var marker =
@@ -39,12 +41,13 @@ function getLocation(id) {
                             title: obj[i].lat + ' | ' + obj[i].long
                         }
                     );
+                PlaceMarkers.push(marker);
                 infoContents[i] = '<div style="width: 200px"><b>Cơ sở:</b> ' + obj[i].name + '</br>'
                     + '<b>Địa chỉ:</b> số ' + obj[i].no + ' ' + obj[i].street + ', phường ' + obj[i].ward + ', Quận '
                     + obj[i].dist + ', ' + obj[i].city + '</br>'
                     + '<b>Điện thoại:</b> ' + obj[i].phone + '</br>'
                     + '<b>Email:</b> ' + obj[i].email + '</br>'
-                    + '<a href = "#" style="text-align: left">Xem thêm...</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = "#" style="align-self: flex-end">Bài viết liên quan</a></div>';
+                    + '<a href = "places/detail/' + id + '" style = "text-align: left">Xem thêm...</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = "#" style="align-self: flex-end">Bài viết liên quan</a></div>';
                 var infoWindow = new google.maps.InfoWindow(), marker, i;
                 google.maps.event.addListener(marker, 'click', (function (marker, i) {
                     return function () {
@@ -53,7 +56,6 @@ function getLocation(id) {
                     }
                 })(marker, i));
             }
-            document.getElementById('locationList').innerHTML = textContent;
         }
     }
     ajax.open("POST", "map/getLocationById/", true);
@@ -81,7 +83,7 @@ function getActivityByType(type) {
                                 title: obj[i].lat + ' | ' + obj[i].long
                             }
                         );
-                    markers.push(marker);
+                    ActivitiesMarkers.push(marker);
                     infoContents[i] = '<div style="width: 300px"><b>Hoạt động:</b>' + obj[i].activityName + '</br>'
                         + '<b>Ngày bắt đầu:</b>' + obj[i].startday + '</br>' + '<b>Ngày kết thúc: </b> ' + obj[i].endday + '</br>'
                         + '<b>Đơn vị tổ chức: </b> ' + '<a href = "places/detail/' + obj[i].placeId + '">'
@@ -102,39 +104,82 @@ function getActivityByType(type) {
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajax.send("type=" + type);
 }
-function clearMarker() {
+function clearMarker(markers) {
     for (var i = 0; i < markers.length; i++) {
         markers[i].setMap(null);
     }
     markers = [];
 }
-$("input:checkbox").change(function () {
-    if ($(this).is(":checked")) {
-        getActivityByType($(this).attr("id").substr(2, 1));
-    } else if (!($(this).is(":checked"))) {
-        clearMarker();
-        for (var i = 1; i <= 7; i++) {
-            if ($("#at" + i).is(":checked")) {
-                getActivityByType(i);
+$(".activity li label  input:checkbox").each(function () {
+    $(this).change(function () {
+        if ($(this).is(":checked")) {
+            getActivityByType($(this).attr("id").substring(2));
+        } else if (!($(this).is(":checked"))) {
+            clearMarker(ActivitiesMarkers);
+            for (var i = 1; i <= 7; i++) {
+                if ($("#at" + i).is(":checked")) {
+                    getActivityByType(i);
+                }
             }
         }
-    }
+    })
 });
+/**
+ *
+ */
+$(".place li label  input:checkbox").each(function () {
+    $(this).change(function () {
+        if ($(this).is(":checked")) {
+            getLocation($(this).attr("id").substring(2));
+        } else if (!($(this).is(":checked"))) {
+            clearMarker(PlaceMarkers);
+            for (var i = 1; i <= 7; i++) {
+                if ($("#pl" + i).is(":checked")) {
+                    getLocation(i);
+                }
+            }
+        }
+    })
+});
+/**
+ *
+ */
+$("#pl0").change(function () {
+    if ($(this).is(":checked")) {
+        clearMarker(PlaceMarkers);
+        for (var i = 1; i <= 7; i++) {
+            $("#pl" + i).attr("disabled", true);
+        }
+        getLocation(0);
+    }
+    else {
+        clearMarker(PlaceMarkers);
+        for (var i = 1; i <= 7; i++) {
+            if ($("#pl" + i).is(":checked")) {
+                getLocation(i);
+            }
+            $("#pl" + i).removeAttr("disabled");
+        }
+    }
+})
+/**
+ *
+ */
 $("#at0").change(function () {
     if ($(this).is(":checked")) {
-        clearMarker();
+        clearMarker(ActivitiesMarkers);
         for (var i = 1; i <= 7; i++) {
             $("#at" + i).attr("disabled", true);
         }
         getActivityByType(0);
     }
     else {
-        clearMarker();
+        clearMarker(ActivitiesMarkers);
         for (var i = 1; i <= 7; i++) {
-            $("#at" + i).removeAttr("disabled");
             if ($("#at" + i).is(":checked")) {
                 getActivityByType(i);
             }
+            $("#at" + i).removeAttr("disabled");
         }
     }
 })
