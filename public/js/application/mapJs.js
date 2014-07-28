@@ -9,7 +9,7 @@ function initialize() {
         center: new google.maps.LatLng(10.81779956817627, 106.6179962158203),
         zoom: 13,
         zoomControlOptions: {
-            style: google.maps.ZoomControlStyle.SMALL
+            style: google.maps.ZoomControlStyle.LARGE
         }
     };
     map = new google.maps.Map(document.getElementById("map"),
@@ -37,17 +37,18 @@ function getLocation(id) {
                         {
                             position: new google.maps.LatLng(obj[i].lat, obj[i].long),
                             map: map,
-                            icon: 'http://tuoitrebachkhoa.edu.vn/images/markers/place.png',
+                            icon: 'http://tuoitrebachkhoa.edu.vn/images/markers/location3.png',
                             title: obj[i].lat + ' | ' + obj[i].long
                         }
                     );
                 PlaceMarkers.push(marker);
-                infoContents[i] = '<div style="width: 200px"><b>Cơ sở:</b> ' + obj[i].name + '</br>'
+                infoContents[i] = '<div class = "infoImages"><a href = "#"><img src="http://placehold.it/100x100" style="width: 100px; height: 100px"></a></div><div class = "infoWindow"><span class = "title">' + obj[i].name + '</span></br>'
                     + '<b>Địa chỉ:</b> số ' + obj[i].no + ' ' + obj[i].street + ', phường ' + obj[i].ward + ', Quận '
                     + obj[i].dist + ', ' + obj[i].city + '</br>'
                     + '<b>Điện thoại:</b> ' + obj[i].phone + '</br>'
                     + '<b>Email:</b> ' + obj[i].email + '</br>'
-                    + '<a href = "places/detail/' + id + '" style = "text-align: left">Xem thêm...</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = "#" style="align-self: flex-end">Bài viết liên quan</a></div>';
+                    + '<b>Đánh giá:</b> ' + '</br>'
+                    + '<div style="text-align: justify"><a href = "places/detail/' + id + '" style = "text-align: left">Xem thêm&nbsp;&nbsp;|&nbsp;&nbsp;</a><a href = "#">Bài viết liên quan&nbsp;&nbsp;|&nbsp;&nbsp;</a><a href = "#">Lịch sử hoạt động&nbsp;&nbsp;|&nbsp;&nbsp;</a></div></div>';
                 var infoWindow = new google.maps.InfoWindow(), marker, i;
                 google.maps.event.addListener(marker, 'click', (function (marker, i) {
                     return function () {
@@ -84,10 +85,11 @@ function getActivityByType(type) {
                             }
                         );
                     ActivitiesMarkers.push(marker);
-                    infoContents[i] = '<div style="width: 300px"><b>Hoạt động:</b>' + obj[i].activityName + '</br>'
-                        + '<b>Ngày bắt đầu:</b>' + obj[i].startday + '</br>' + '<b>Ngày kết thúc: </b> ' + obj[i].endday + '</br>'
-                        + '<b>Đơn vị tổ chức: </b> ' + '<a href = "places/detail/' + obj[i].placeId + '">'
+                    infoContents[i] = '<div class = "infoImages"><a href = "#"><img src="http://placehold.it/100x100" style="width: 100px; height: 100px"></a></div><div class = "infoWindow""><span class = "title">' + obj[i].activityName + '</span></br>'
+                        + '<b>Ngày bắt đầu:&nbsp;</b>' + obj[i].startday + '</br>' + '<b>Ngày kết thúc:&nbsp;&nbsp; </b> ' + obj[i].endday + '</br>'
+                        + '<b>Đơn vị tổ chức:&nbsp; </b> ' + '<a href = "places/detail/' + obj[i].placeId + '">'
                         + obj[i].placeName + '</a></br>'
+                        + '<b>Đánh giá:&nbsp;</b>' +  '</br>'
                         + '<a href = "activities/detail/' + obj[i].activityId + '">Chi tiết...</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = "#" style="align-self: flex-end">Bài viết liên quan</a></div>';
                     var infoWindow = new google.maps.InfoWindow(), marker, i;
                     google.maps.event.addListener(marker, 'click', (function (marker, i) {

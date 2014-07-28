@@ -27,3 +27,19 @@ footer { clear: both; }
     height: 0;
 }
 .truncate { font-size: 14px; }
+.infoWindow {
+    width: 350px;
+}
+.infoImages {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 5px;
+}
+.title {
+    font-style: oblique;
+    color: #d01d33;
+    font-size: larger;
+    font-weight: 400;
+    text-align: inherit;
+}
