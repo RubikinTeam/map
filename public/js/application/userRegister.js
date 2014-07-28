@@ -3,14 +3,13 @@
  */
 $(function () {
     $("#submit").on('click', function () {
-        $.post("users/register/",
+        $.post("../userRegister/",
             {
                 fname: $("#fname").val(),
                 lname: $("#lname").val(),
                 email: $("#email").val(),
                 password: $("#password").val()
             }, function (data, status) {
-                data = data.substr(0, 1);
                 if (status == "success" && data == "1") {
                     $("#content").html('<h3>Đăng ký thành công với email: <b><span style="color: #0000ff"> '
                         + $("#email").val() + '</span></b>, vui lòng mở mail để kích hoạt</h3>'
@@ -19,7 +18,7 @@ $(function () {
                     else {
                         $("#content").html('<h3>Đăng ký không thành công, email: '
                             + $("#email").val() + ' đã được đăng kí</h3>'
-                            + '. Nhấn <a href = "../passwordrecovery/">vào đây</a> khôi phục mật khẩu</h3>');
+                            + '. Nhấn <a href = "../passwordRecovery/">vào đây</a> khôi phục mật khẩu</h3>');
                 }
 
             }, "text");

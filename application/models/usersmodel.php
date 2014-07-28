@@ -33,7 +33,35 @@ class UsersModel
             return true;
         else return false;
     }
-
+    public function checkPasswordRecoveryCode($email, $code){
+        $sql = "SELECT id FROM `user` WHERE email = '$email' AND passwordRecoveryCode = '$code'";
+        $query = $this->db->prepare($sql);
+        $query->execute();
+        $result = $query->fetchAll();
+        $count = sizeof($result);
+        if ($count > 0)
+            return true;
+        else return false;
+    }
+    public function setRecoveryCode($email, $code) {
+        if ($this->checkUserExist($email)) {
+            $sql = "UPDATE user SET passwordRecoveryCode = '$code' WHERE email = '$email'";
+            $query = $this->db->prepare($sql);
+            $query->execute();
+            return true;
+        }
+        else return false;
+    }
+    function updatePassword($email, $newPassword) {
+        $sql = "UPDATE user SET password = '$newPassword', passwordRecoveryCode = NULL WHERE email = '$email'";
+        if ($query = $this->db->prepare($sql)) {
+            $query->execute();
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
     /**
      * Ham add user vao database va tu sinh ma kich hoat
      * @param $fname
@@ -120,8 +148,8 @@ class UsersModel
             } else {
                 header('Location: ' . URL . '/home');
             }
-            exit;
             return 1;
+            exit;
         } else {
             if (isset($_SERVER['HTTP_REFERER'])) {
                 header('Location: ' . $_SERVER['HTTP_REFERER']);
