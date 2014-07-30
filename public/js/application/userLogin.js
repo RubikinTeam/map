@@ -17,7 +17,7 @@ $(function () {
             content: '',
             padding: 10,
             onShow: function (_dialog) {
-                var content = '<form class="user-input" action = "users/userLogin/" method="POST">' +
+                var content = '<form class="user-input" action = "http://localhost/MapPro/users/userLogin/" method="POST">' +
                     '<label for = "email">Email</label>' +
                     '<div class="input-control text"><input type="text" name="email" tabindex="1" autofocus="1"><button class="btn-clear"></button></div>' +
                     '<label for = "password">Mật khẩu</label>' +

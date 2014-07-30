@@ -12,13 +12,14 @@
     <link href="{{ constant('URL') }}public/css/iconFont.css" rel="stylesheet">
     <link href="{{ constant('URL') }}public/css/style.css" rel="stylesheet">
 </head>
-<body class = "metro">
+<body class="metro">
 {% block javascripts %}
     <script src="{{ constant('URL') }}public/js/jquery/jquery-2.1.0.min.js"></script>
     <script src="{{ constant('URL') }}public/js/jquery/jquery.min.js"></script>
     <script src="{{ constant('URL') }}public/js/jquery/jquery.widget.min.js"></script>
     <script src="{{ constant('URL') }}public/js/metro.min.js"></script>
     <script src="{{ constant('URL') }}public/js/application/userLogin.js"></script>
+    <script src="{{ constant('URL') }}public/js/application/NavSearch.js"></script>
 {% endblock %}
 <header>
     <nav class="navigation-bar bg-green fixed-top shadow">
@@ -36,21 +37,28 @@
             </div>
 
             <span class="element-divider"></span>
-            <a class="element brand" id = "homeButton" href="{{ constant('URL') }}home"><span class="icon-home"></span></a>
+            <a class="element brand" id="homeButton" href="{{ constant('URL') }}home"><span
+                        class="icon-home"></span></a>
             <span class="element-divider"></span>
 
             <div class="element input-element">
                 <form>
                     <div class="input-control text">
-                        <input type="text" placeholder="Search...">
+                        <input id = "txt-search" type="text" style="width: 400px" placeholder="Search...">
                         <button class="btn-search"></button>
+                    </div>
+                    <div class="search-result">
+                        <ul>
+
+                        </ul>
                     </div>
                 </form>
             </div>
             {% if userLogged == 0 %}
-                <a class="element place-right" id="userSignUpButton" href="{{ constant('URL') ~ 'users/register/' }}"><span class="icon-user"></span>&nbsp;&nbsp;Đăng
+                <a class="element place-right" id="userSignUpButton"
+                   href="{{ constant('URL') ~ 'users/register/' }}"><span class="icon-user"></span>&nbsp;&nbsp;Đăng
                     ký</a>
-                <a class="element place-right" id="userLoginButton"  href="#"><span class="icon-key-2"></span>&nbsp;&nbsp;Đăng
+                <a class="element place-right" id="userLoginButton" href="#"><span class="icon-key-2"></span>&nbsp;&nbsp;Đăng
                     nhập</a>
             {% else %}
                 <div class="element place-right">
@@ -91,24 +99,6 @@
             <a class="place-left" href="{{ constant('URL') }}home" title="">
                 {#<h1>VMAP PRO</h1>#}
             </a>
-        </div>
-        <div class="main-menu-wrapper">
-            <ul class="horizontal-menu">
-                {#<li><a href="#">news</a></li>#}
-                {#<li><a href="#">sports</a></li>#}
-                {#<li><a href="#">entertainment</a></li>#}
-                {#<li><a href="#">money</a></li>#}
-                {#<li><a href="#">autos</a></li>#}
-                {#<li><a href="#">living</a></li>#}
-                {#<li><a href="#">health</a></li>#}
-                {#<li class="place-right">
-                    <a href="#" class="dropdown-toggle">options</a>
-                    <ul class="dropdown-menu place-right" data-show="hover" style="display: none;">
-                        <li><a href="#">Go to Classic MSN</a></li>
-                        <li><a href="#">MSN Worldwide</a></li>
-                    </ul>
-                </li>#}
-            </ul>
         </div>
     </div>
     <!-- Content, will be passed here via Twig -->

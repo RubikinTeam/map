@@ -37,6 +37,6 @@ class Home extends Controller
         // debug message to show where you are, just for the demo
         //echo 'Message from Controller: You are in the controller home, using the method index()';
 	    // render the view, pass the data
-        $this->render('home/index', array('articles' => $articles, 'activities' => $activities, 'places' => $places, 'userLogged'=>$userLogged));
+        $this->render('home/index', array('articles' => $articles, 'activities' => $activities, 'places' => $places, 'userLogged' => $userLogged));
 	}
 }

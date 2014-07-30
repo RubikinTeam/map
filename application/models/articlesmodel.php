@@ -91,4 +91,13 @@ class ArticlesModel
         $query->execute();
         return $query->fetch(PDO::FETCH_OBJ);
     }
+    public function searchArticle($str)
+    {
+        $query = $this->db->prepare("SET NAMES 'UTF8'");
+        $query->execute();
+        $sql = "SELECT a.id, a.title, i.imageUrl FROM articles a JOIN images i ON a.thumbnailImageId = i.id WHERE a.titleASCII LIKE '$str'";
+        $query = $this->db->prepare($sql);
+        $query->execute();
+        return json_encode($query->fetchAll());
+    }
 }

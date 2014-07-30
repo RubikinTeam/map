@@ -3,6 +3,7 @@
  */
 $(function () {
     $("#submit").on('click', function () {
+        $("#loadImage").html('<img src="../../public/img/loading2.gif">');
         $.post("../userRegister/",
             {
                 fname: $("#fname").val(),

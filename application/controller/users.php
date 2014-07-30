@@ -11,7 +11,12 @@ class Users extends Controller
      */
     public function register()
     {
-        $this->render('users/register');
+        $users_model = $this->loadModel('usersmodel');
+        if ($users_model->checkUserLogged()) {
+            header("location: ".URL);
+        } else {
+            $this->render('users/register');
+        }
     }
     public function userRegister() {
         $users_model = $this->loadModel('usersmodel');
@@ -91,6 +96,7 @@ class Users extends Controller
         $users_model = $this->loadModel('usersmodel');
         $users_model->userLogin($email, $password);
     }
+
 
     public function userLogOut()
     {

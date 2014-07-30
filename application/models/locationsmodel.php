@@ -17,7 +17,7 @@ class LocationsModel
     }
     public function getLocationById($id)
     {
-        $sql = "SELECT `name`, `email`, `phone`, `no`, `street`,`ward`, `dist`, `city`, `lat`, `long` FROM v_place v JOIN address a ON v.addressId = a.id JOIN location l ON v.locationId = l.id";
+        $sql = "SELECT `name`, `email`, `phone`, `no`, `street`,`ward`, `dist`, `city`, `lat`, `long`, `imageUrl` FROM v_place v JOIN address a ON v.addressId = a.id JOIN location l ON v.locationId = l.id JOIN images i on v.thumbnailImageId = i.id";
         if ($id != 0)
         $sql .= " WHERE v.id = $id";
         $query=$this->db->prepare("SET NAMES 'UTF8'");
@@ -32,7 +32,7 @@ class LocationsModel
                 $text .= '{"lat" : "'.$element->lat.'", "long" : "'.$element->long.'", "name" : "'.$element->name.
                     '", "email" : "'.$element->email.'", "phone" : "'.$element->phone.'", "no" : "'.$element->no.
                     '", "street" : "'.$element->street.'", "ward" : "'.$element->ward.'", "dist" : "'.$element->dist.
-                    '", "city" : "'.$element->city.'"},';
+                    '", "city" : "'.$element->city.'", "thumbnail" : "'.$element->imageUrl.'"},';
             }
             $text = rtrim($text, ",");
             $text .= "]";

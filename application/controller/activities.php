@@ -12,7 +12,11 @@ class Activities extends Controller
     {
         $activities_model = $this->loadModel('ActivitiesModel');
         $activities = $activities_model->getSomeActivities(0, 0, 2, 0);
-        $this->render('activities/index', array('activities' => $activities));
+
+        $users_model = $this->loadModel('usersmodel');
+        $userLogged = $users_model->checkUserLogged();
+
+        $this->render('activities/index', array('activities' => $activities, 'userLogged' => $userLogged));
     }
 
     public function detail($id)

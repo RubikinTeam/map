@@ -37,16 +37,16 @@ function getLocation(id) {
                         {
                             position: new google.maps.LatLng(obj[i].lat, obj[i].long),
                             map: map,
-                            icon: 'http://tuoitrebachkhoa.edu.vn/images/markers/location3.png',
+                            icon: 'http://tuoitrebachkhoa.edu.vn/images/markers/location.png',
                             title: obj[i].lat + ' | ' + obj[i].long
                         }
                     );
                 PlaceMarkers.push(marker);
-                infoContents[i] = '<div class = "infoImages"><a href = "#"><img src="http://placehold.it/100x100" style="width: 100px; height: 100px"></a></div><div class = "infoWindow"><span class = "title">' + obj[i].name + '</span></br>'
-                    + '<b>Địa chỉ:</b> số ' + obj[i].no + ' ' + obj[i].street + ', phường ' + obj[i].ward + ', Quận '
+                infoContents[i] = '<a href = "#"><img class = "infoImages" src="http://tuoitrebachkhoa.edu.vn/images/'+ obj[i].thumbnail +'"' + '></a><div class = "infoWindow"><span class = "title">' + obj[i].name + '</span></br>'
+                    + '<i class= "icon-home infoIcon"></i>  ' + obj[i].no + ' ' + obj[i].street + ', phường ' + obj[i].ward + ', Quận '
                     + obj[i].dist + ', ' + obj[i].city + '</br>'
-                    + '<b>Điện thoại:</b> ' + obj[i].phone + '</br>'
-                    + '<b>Email:</b> ' + obj[i].email + '</br>'
+                    + '<i class= "icon-phone infoIcon"></i>  ' + obj[i].phone + '</br>'
+                    + '<i class= "icon-mail infoIcon"></i>  ' + obj[i].email + '</br>'
                     + '<b>Đánh giá:</b> ' + '</br>'
                     + '<div style="text-align: justify"><a href = "places/detail/' + id + '" style = "text-align: left">Xem thêm&nbsp;&nbsp;|&nbsp;&nbsp;</a><a href = "#">Bài viết liên quan&nbsp;&nbsp;|&nbsp;&nbsp;</a><a href = "#">Lịch sử hoạt động&nbsp;&nbsp;|&nbsp;&nbsp;</a></div></div>';
                 var infoWindow = new google.maps.InfoWindow(), marker, i;
@@ -80,7 +80,7 @@ function getActivityByType(type) {
                             {
                                 position: new google.maps.LatLng(obj[i].lat, obj[i].long),
                                 map: map,
-                                icon: 'http://tuoitrebachkhoa.edu.vn/images/markers/activity.png',
+                                icon: 'http://tuoitrebachkhoa.edu.vn/images/markers/event.png',
                                 title: obj[i].lat + ' | ' + obj[i].long
                             }
                         );

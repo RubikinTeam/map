@@ -11,7 +11,10 @@ class Places extends Controller
     {
         $places_model = $this->loadModel('PlacesModel');
         $places = $places_model->getSomePlaces(2, 0);
-        $this->render('places/index', array('places' => $places));
+
+        $users_model = $this->loadModel('usersmodel');
+        $userLogged = $users_model->checkUserLogged();
+        $this->render('places/index', array('places' => $places, 'userLogged' => $userLogged));
     }
 
     public function detail($id)

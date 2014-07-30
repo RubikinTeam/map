@@ -1,6 +1,6 @@
 {% extends "_templates/base.twig" %}
 {% block javascripts %}
-    <script src="{{ constant('URL') }}public/js/jquery/jquery.min.js"></script>
+    {{ parent() }}
     <script src="{{ constant('URL') }}public/js/application/userRegister.js"></script>
 {% endblock %}
 {% block content %}
@@ -52,6 +52,8 @@
                 <div class="row">
                     <div class="span2">
                         <button class="button success" id="submit">Đăng ký</button>
+                        <div id="loadImage" style="width: 30%; height: 30%">
+                        </div>
                     </div>
                     <div class="span2"><input type="reset" value="Xóa"></div>
                 </div>

@@ -12,7 +12,11 @@ class Articles extends Controller
     {
         $articles_model = $this->loadModel('ArticlesModel');
         $articles = $articles_model->getSomeArticles(0, 2, 6);
-        $this->render('articles/index', array('articles' => $articles));
+
+        $users_model = $this->loadModel('usersmodel');
+        $userLogged = $users_model->checkUserLogged();
+
+        $this->render('articles/index', array('articles' => $articles, 'userLogged' => $userLogged));
     }
 
     public function detail($id)
